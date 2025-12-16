@@ -42,7 +42,7 @@ A: Go to the app's **Settings** page and look for a "Restore Purchases" button. 
 ### Privacy & Data
 
 **Q: Do you collect my personal data?**  
-A: I prioritize user privacy. Most apps operate offline or store data in your personal iCloud. For detailed information, please review the Privacy Policy linked below.
+A: I prioritize user privacy. Most apps operate offline or store data in your personal iCloud. For detailed information, please review the Privacy Policy.
 
 ---
 
