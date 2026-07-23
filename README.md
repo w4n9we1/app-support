@@ -9,8 +9,14 @@ Welcome to the official support page for my applications. Whether you have a que
 - [NoNag](nonag/)
 - [Note to Post](note2poster/)
 - [Shift](shift/privacy/)
+- [Masked](masked/privacy/)
 - [VoxMail](voxmail/)
 - [Walldone](walldone/)
+
+### Terms of Use
+
+- [Masked](masked/terms/)
+- [Shift](shift/terms/)
 
 ---
 
