@@ -15,6 +15,7 @@ Welcome to the official support page for my applications. Whether you have a que
 
 ### Terms of Use
 
+- [Note to Post](note2poster/terms/)
 - [Masked](masked/terms/)
 - [Shift](shift/terms/)
 

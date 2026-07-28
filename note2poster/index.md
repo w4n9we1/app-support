@@ -1,13 +1,13 @@
-# Privacy Policy for Note to Post
+# Note to Post Privacy Policy
 
-**Last Updated:** April 25, 2026
+**Last Updated:** July 28, 2026
 
-Your privacy is important to us. It is Note to Post's policy to respect your privacy regarding any information we may collect from you across our application, Note to Post, and other sites we own and operate.
+Note to Post is an iPhone app published by W4N9WE1. This Privacy Policy explains what Note to Post handles when you import Apple Notes content, create poster images, and use the optional lifetime in-app purchase.
 
 ## 1. Information We Collect
 
 ### Personal Data
-**We do not collect, store, or share any personal information.** Note to Post is designed to be an offline-first application.
+**Note to Post does not require an account and does not collect, store, or share your personal content on our servers.** The app is designed to process your note content and poster projects on your device.
 
 ### User Content
 All content you create within Note to Post, including:
@@ -17,7 +17,7 @@ All content you create within Note to Post, including:
 - Poster layouts and theme configurations
 - Custom signatures added during export
 
-...is processed entirely on your device and is never uploaded to our servers.
+...is processed locally on your device and is not uploaded to W4N9WE1 or RevenueCat.
 
 ## 2. Permissions and Access
 
@@ -39,14 +39,18 @@ All your data is stored locally on your device. If you delete the Note to Post a
 ### iCloud Backup
 If you have iCloud Backup enabled on your device, your local app data may be backed up to Apple's iCloud servers securely, governed by Apple's privacy policy.
 
-## 4. Purchases
+## 4. Purchases and RevenueCat
 
-Note to Post is a paid download app available on the App Store.
-- **Transactions:** All financial transactions are handled directly by Apple via the App Store. We do not process, store, or have access to your credit card or banking information.
+Note to Post is distributed as a free download with an optional one-time, non-consumable lifetime in-app purchase.
 
-## 5. Third-Party Services
+- **Apple:** Apple processes payment details and transaction records through the App Store. We do not receive or store your payment card or banking information.
+- **RevenueCat:** Note to Post uses RevenueCat to provide purchase validation, entitlement status, and Restore Purchases. RevenueCat may process an anonymous App User ID, app/device technical information, and product/transaction/entitlement information needed for these functions.
+- **No content sharing:** RevenueCat does not receive your Apple Notes content, imported images, poster images, signatures, or ShareCache files from Note to Post.
+- **RevenueCat privacy policy:** [RevenueCat Privacy Policy](https://www.revenuecat.com/privacy/)
 
-We do not use third-party analytics services (like Google Analytics or Mixpanel) or advertising networks that track you across apps.
+## 5. Analytics and Advertising
+
+Note to Post does not use advertising networks, cross-app tracking, or third-party analytics services such as Google Analytics or Mixpanel. RevenueCat is used only for purchase and entitlement operations described above.
 
 ## 6. Children's Privacy
 
@@ -61,3 +65,7 @@ We may update our Privacy Policy from time to time. Thus, you are advised to rev
 If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at:
 
 **Email:** [w4n9we1@gmail.com](mailto:w4n9we1@gmail.com)
+
+## 9. Related Terms
+
+See the [Note to Post Terms of Use](../terms/).
