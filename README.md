@@ -10,7 +10,7 @@ Welcome to the official support page for my applications. Whether you have a que
 - [Note to Post](note2poster/)
 - [Shift](shift/privacy/)
 - [Masked](masked/)
-- [VoxMail](voxmail/)
+- [VoxMail](voxmail/privacy/)
 - [Walldone](walldone/)
 
 ### Terms of Use
@@ -18,6 +18,11 @@ Welcome to the official support page for my applications. Whether you have a que
 - [Note to Post](note2poster/terms/)
 - [Masked](masked/terms/)
 - [Shift](shift/terms/)
+- [VoxMail](voxmail/terms/)
+
+### Support Centers
+
+- [VoxMail](voxmail/)
 
 ---
 

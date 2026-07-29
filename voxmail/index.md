@@ -1,77 +1,32 @@
-# VoxMail — Support & Privacy
+# VoxMail Support
 
-**Last Updated:** July 6, 2026
+**Last Updated:** July 29, 2026
 
-VoxMail lets you record voice messages, transcribe them on-device, and send the text as an email — all within the app.
+VoxMail lets you record a voice message, review an on-device transcription, and prepare an email containing the text and original audio.
 
----
-
-## Privacy Policy
-
-Your privacy is important. VoxMail is designed to keep your data on your device.
-
-### 1. Information We Collect
-
-**We do not collect, store, or share any personal information.** VoxMail operates entirely on-device:
-- Voice recordings are stored locally in the app's private documents directory.
-- Transcriptions are performed entirely on-device using Apple's speech recognition engine.
-- Email sending is handled through the iOS Mail compose interface. VoxMail does not have access to your email account credentials or sent messages.
-
-### 2. Permissions
-
-VoxMail requests the following permissions to function:
-
-**Microphone** — Required to record your voice messages. Recordings are processed and stored locally; nothing is streamed or uploaded.
-
-**Speech Recognition** — Required to transcribe your recordings into text. All transcription happens on-device. Apple may process limited anonymized audio data to improve speech recognition if you have opted into "Improve Siri & Dictation" in your device settings.
-
-**Contacts** — Required to select email recipients. VoxMail only accesses contacts when you tap the recipient field; it does not scan, upload, or store your contacts.
-
-### 3. Data Storage
-
-- **Local Storage:** All recordings (WAV files) and transcriptions are stored locally on your device using SwiftData and the app's documents directory.
-- **iCloud Backup:** If you have iCloud Backup enabled, your local app data may be included in device backups, governed by Apple's privacy policy.
-- **Data Deletion:** Deleting the app removes all recordings and transcriptions from your device.
-
-### 4. Third-Party Services
-
-VoxMail does not:
-- Use third-party analytics or crash reporting SDKs
-- Display advertisements
-- Require account creation
-- Use any backend servers
-
-### 5. Pricing
-
-VoxMail is a paid app ($3.99). There are no in-app purchases or subscriptions. All financial transactions are handled by Apple via the App Store.
-
-### 6. Children's Privacy
-
-VoxMail does not collect personal data and is safe for users of all ages.
-
-### 7. Changes to This Policy
-
-We may update this policy. Changes will be posted on this page.
-
-### 8. Contact
-
-**Email:** [w4n9we1@gmail.com](mailto:w4n9we1@gmail.com)
-
----
+- [Privacy Policy](privacy/)
+- [Terms of Use](terms/)
+- [Contact support](mailto:w4n9we1@gmail.com?subject=VoxMail%20Support)
 
 ## Support FAQ
 
 **Q: The transcription isn't accurate. What can I do?**
-A: Make sure you're recording in a quiet environment. You can also try switching the transcription language in Settings to match your spoken language.
+A: Record in a quiet environment and select the language that matches the recording. On-device speech recognition depends on the selected language, device, iOS version, and downloaded Apple speech resources. If a combination is not supported, VoxMail shows an error instead of sending the recording to a server.
 
 **Q: Why can't the app send emails?**
-A: VoxMail uses the iOS Mail compose interface. Make sure you have at least one email account configured in the iOS Mail app or have a third-party email app installed that supports the Mail compose extension.
+A: VoxMail uses Apple's Mail compose interface. Make sure an email account is configured in the iOS Mail app and that Mail is available on the device. VoxMail does not receive your email credentials or sent-mail contents.
 
 **Q: Where are my recordings stored?**
-A: Recordings are saved as WAV files in the app's private documents folder. They are only accessible within VoxMail. Deleting the app will remove all recordings.
+A: Recordings and transcriptions are stored in VoxMail's local app storage. Recent recipient addresses and send history are also stored locally to support the workflow. Use the delete controls in the app or delete VoxMail to remove local app data; copies exported or sent through another service are controlled by that service.
+
+**Q: What does the free version include?**
+A: A new free download includes three successful transcription uses. Failed transcriptions do not consume a use. VoxMail Pro is a one-time, non-consumable purchase that removes the free-use limit and unlocks the Pro features shown in the app.
 
 **Q: How do I restore my purchase?**
-A: VoxMail is a one-time paid app. If you've purchased it, re-downloading from the App Store with the same Apple ID will not charge you again.
+A: Open the VoxMail Pro screen and tap Restore Purchases while signed in to the Apple Account that made the purchase. Apple processes payments and refunds. Previously paid app downloads may also be recognized from Apple's verified purchase history.
+
+**Q: Does VoxMail send my recordings or transcriptions to a server?**
+A: Normal recording and transcription are on-device. When you send an email, iOS Mail sends the message and any audio attachment through the mail account and services you configured. VoxMail does not receive that email content. If you submit feedback, the information you choose to include is sent to the support service; see the Privacy Policy for details.
 
 **Q: The app isn't working properly. What should I do?**
 A: Try these steps:
@@ -80,12 +35,10 @@ A: Try these steps:
 3. Check for updates in the App Store.
 4. If the issue persists, contact support below.
 
----
-
 ## Contact Support
 
-- **Email:** [w4n9we1@gmail.com](mailto:w4n9we1@gmail.com)
-- **Response Time:** Usually within 24–48 hours
+- Email: [w4n9we1@gmail.com](mailto:w4n9we1@gmail.com?subject=VoxMail%20Support)
+- Response time: Usually within 24-48 hours
 
 When contacting, please include:
 1. The app version you're using
