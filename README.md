@@ -11,6 +11,7 @@ Welcome to the official support page for my applications. Whether you have a que
 - [Note to Post](note2poster/)
 - [Shift](shift/privacy/)
 - [Masked](masked/)
+- [SpeakMail](speakmail/privacy/)
 - [VoxMail](voxmail/privacy/)
 - [Walldone](walldone/)
 
@@ -19,10 +20,12 @@ Welcome to the official support page for my applications. Whether you have a que
 - [Note to Post](note2poster/terms/)
 - [Masked](masked/terms/)
 - [Shift](shift/terms/)
+- [SpeakMail](speakmail/terms/)
 - [VoxMail](voxmail/terms/)
 
 ### Support Centers
 
+- [SpeakMail](speakmail/)
 - [VoxMail](voxmail/)
 
 ---
