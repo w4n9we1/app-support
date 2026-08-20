@@ -31,7 +31,7 @@ The gateway is designed not to persist audio files, transcripts, or generated em
 
 Do not record or submit content unless you have the right and any consent required to process it.
 
-## 3. Permissions
+## 3. Permissions and Consent Infrastructure
 
 ### Microphone
 
@@ -41,9 +41,9 @@ SpeakMail uses the microphone only when you choose to record. The recording is s
 
 When you choose a recipient from your contacts, SpeakMail uses the system contact picker and receives the email address you select. It does not scan or upload your full address book.
 
-### Tracking and Advertising Consent
+### Advertising Consent Infrastructure
 
-SpeakMail includes Google Mobile Ads and Google's User Messaging Platform to manage advertising consent and privacy choices. Depending on app configuration, region, consent, and platform settings, Google may process device information, IP address, advertising identifiers, consent choices, and ad-interaction data. SpeakMail does not sell personal information. Where required, the app asks for consent or provides privacy controls before personalized advertising is used.
+The current SpeakMail build includes Google Mobile Ads and Google's User Messaging Platform consent infrastructure, but does not display ad units in the app. If advertising is enabled in a future build, Google may process device information, IP address, advertising identifiers, consent choices, and ad-interaction data depending on app configuration, region, consent, and platform settings. SpeakMail does not sell personal information. Where required, the app asks for consent or provides privacy controls before personalized advertising is used.
 
 - [Google Privacy & Terms](https://policies.google.com/privacy)
 - [How Google uses information from apps](https://policies.google.com/technologies/partner-sites)
