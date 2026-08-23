@@ -26,6 +26,10 @@ Text detection, screenshot OCR, face detection, masking, replacement, metadata c
 
 For complete details, read the [Masked Privacy Policy](privacy/).
 
+## Free-user advertising
+
+Free users may see Google-served ads. Masked Pro does not load or request in-app ads. Advertising consent is requested through Google's certified consent flow where required. Ads do not receive the text, images, work files, filenames, or detected sensitive values that you clean in Masked.
+
 ## Support
 
 **What should I include in a support request?**

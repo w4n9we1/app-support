@@ -1,6 +1,6 @@
 # Masked Privacy Policy
 
-**Last Updated:** July 23, 2026
+**Last Updated:** August 23, 2026
 
 Masked is a sensitive-data cleaning tool for text, screenshots, and supported work files. It is published by W4N9WE1. This Privacy Policy explains what Masked processes on your device and what information is handled by the services that support purchases and product analytics.
 
@@ -23,7 +23,7 @@ A file or image leaves your device only when you explicitly use an iOS Share, Sa
 
 Deleting Masked removes its local app data according to iOS behavior. Copies that you saved or shared, and records held by third-party services described below, are not removed automatically.
 
-## 3. Product Analytics
+## 3. Product Analytics and Advertising
 
 When Firebase Analytics is configured in a released build, Masked may send limited product-usage events to Firebase to understand reliability and improve the product. These events may include:
 
@@ -33,9 +33,13 @@ When Firebase Analytics is configured in a released build, Masked may send limit
 - Paywall display; and
 - completed product ID.
 
-Masked's analytics events are not intended to include the contents of your text, screenshots, work files, safe copies, filenames, metadata, or detected sensitive values. Firebase may also process app, device, and diagnostic information according to Google's policies. Masked does not use this analytics data to sell your content or display in-app advertising.
+Masked's analytics events are not intended to include the contents of your text, screenshots, work files, safe copies, filenames, metadata, or detected sensitive values. Firebase may also process app, device, and diagnostic information according to Google's policies.
 
-For more information, see [Google's Privacy & Terms](https://policies.google.com/privacy).
+Free users may see ads provided by Google Mobile Ads. To deliver, measure, protect, and improve advertising, Google Mobile Ads may process app and device information such as device identifiers, coarse location, advertising data, product interactions, performance information, crash information, and other diagnostic data. The SDK may use device identifiers for advertising-related tracking where permitted by applicable law and user choices. Masked does not send the text, OCR content, images, work files, filenames, or detected sensitive values to the ad SDK for targeting.
+
+Masked Pro does not load or request in-app ads. The current iOS implementation does not request Apple's App Tracking Transparency permission; ad availability and personalization are therefore subject to the operating system, Google Mobile Ads settings, and the consent choices collected through Google's certified consent management flow. In regions where consent is required, the Google User Messaging Platform (UMP) SDK presents the applicable consent message before ad requests are made.
+
+For more information, see [Google's Privacy & Terms](https://policies.google.com/privacy) and [Google Mobile Ads data disclosure](https://developers.google.com/admob/ios/data-disclosure).
 
 ## 4. Purchases and RevenueCat
 
@@ -48,6 +52,8 @@ For more information, see [RevenueCat's Privacy Policy](https://www.revenuecat.c
 ## 5. Information We Do Not Collect for Masked's Cleaning Flow
 
 Masked does not require your name, email address, contacts, or cloud account to clean content. We do not sell your content or use the material you clean to train an AI model.
+
+The advertising service receives only the technical information needed for advertising and measurement. It is not used as a cloud scanning service for the material you choose to clean.
 
 ## 6. Children's Privacy
 
