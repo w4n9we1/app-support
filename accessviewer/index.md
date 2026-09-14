@@ -1,66 +1,39 @@
-# AccessViewer Privacy Policy
+# Database Viewer: MDB & ACCDB
 
-**Product:** AccessViewer (Access Database Viewer)  
-**Effective Date:** August 19, 2026  
-**Last Updated:** August 24, 2026
+Open, browse, edit and convert database and data files right on your phone — no desktop, no account, no upload.
 
-This Privacy Policy explains how AccessViewer (the “App”) handles information in the Android version published by W4N9WE1.
+## One App for Your Data Files
 
-## 1. Local database processing
+Database Viewer (AccessViewer) opens the file formats your work actually arrives in:
 
-AccessViewer is designed to process Microsoft Access database files locally on your device. Files you select, including `.mdb` and `.accdb` files, are copied to the App’s private storage when needed for parsing and browsing. Database contents, health reports, local query results, and exports remain on your device unless you explicitly share or export them.
+- **Microsoft Access** — MDB and ACCDB (Jet 3/4/2007+)
+- **SQLite** databases
+- **Excel** workbooks — XLSX
+- **OpenDocument** spreadsheets — ODS
+- **dBase** files — DBF (dBase III)
+- **CSV and TSV** text tables
+- **SQL dump** scripts (SQLite dialect)
 
-The App does not require an account, and it does not upload your original database file as part of normal browsing, diagnostics, SQL, or export workflows.
+## Built for Real Files
 
-## 2. Current feature status
+A native C engine keeps millions of rows and files of 1.5GB+ responsive. Every file gets a health check before you commit to it — format, readability, encoding, and damaged regions are analyzed with clear explanations. Browse tables, search across all of them at once, inspect any row, compare two files with a diff report, and understand your data with column profiling and charts.
 
-The current Android release does not expose an AI Query entry point. The implementation is retained for possible future evaluation. If the feature is restored, this policy will be updated before it becomes available.
+## Your Files Stay Yours
 
-## 3. Advertising and consent
+Files are processed on your device and are never uploaded to cloud servers. No account required. Edits happen on a private working copy, so your original file is never modified.
 
-The free version may display banner advertising through Google AdMob and may show an occasional interstitial ad when you replace an already-open database file. Interstitial ads are rate-limited and are not required to open or browse a database. Google may process device, advertising, diagnostic, and approximate location information as described in [Google’s Privacy Policy](https://policies.google.com/privacy).
+## Free to Browse, Pro to Do More
 
-Where required, the App uses Google’s User Messaging Platform (UMP) to request consent and provide privacy options. You can change available advertising privacy choices through the consent or privacy options UI. Pro users do not see banner or interstitial ads, and the App does not actively load new ad requests for Pro users.
+Browsing is free forever. **Pro** is a single one-time purchase that unlocks editing, SQL queries, SQLite conversion, CSV/XLSX/ZIP and original-format export, diff reports, column profiling, cross-table search, and ad removal. Pay once — no subscription, no tracking.
 
-## 4. AI query requests (future feature reference)
+## Get the App
 
-When you explicitly use the AI Query feature, the App sends a request to the App’s relay service at `relay.access-db-viewer.com`. The request may contain:
+- iPhone & iPad: download on the [App Store](https://apps.apple.com/)
+- Android: available on [Google Play](https://play.google.com/store)
 
-- The natural-language question you entered.
-- Sanitized database schema information, such as table names, column names, and data types.
+---
 
-The App is designed not to send the original MDB/ACCDB file or a full database dump in an AI request. The relay and its AI providers may process the request to return a SQL query and explanation. Do not include confidential information in an AI question or database field name if you do not want it sent to the relay.
-
-## 5. Purchases and subscriptions
-
-AccessViewer Pro is provided through Google Play Billing and RevenueCat. When you view a paywall, purchase, restore, or manage a purchase, Google Play and RevenueCat may process purchase records, transaction information, subscription status, and a pseudonymous App User ID to provide entitlement and restore functionality.
-
-The App uses the `AccessViewer Pro` entitlement to determine access to Pro features. See [RevenueCat’s Privacy Policy](https://www.revenuecat.com/privacy/) and [Google Play’s privacy information](https://policies.google.com/privacy) for the providers’ handling of this information.
-
-The App does not receive or store your payment card number or bank details.
-
-## 6. Diagnostics and technical information
-
-The App may process technical information required to operate the App, such as device and operating-system details, app version, file format, file size, and error details. These details are used to provide file diagnostics and explain failures. The current Android workflow does not require a user account.
-
-## 7. Sharing and retention
-
-We do not sell your personal information. Local files, reports, cached copies, and exports remain on your device until you delete them, clear the App’s data, or uninstall the App. Information handled by Google, RevenueCat, or the AI relay is subject to those providers’ retention practices and policies.
-
-You control any file or report that you explicitly export or share with another app or service.
-
-## 8. Children’s privacy
-
-AccessViewer is not directed to children under 13, and we do not knowingly collect personal information from children under 13 through the App.
-
-## 9. Security
-
-The App uses Android private storage and platform file-access permissions for local processing. No method of storage or transmission can guarantee absolute security. Do not open files you are not authorized to access, and avoid sending confidential content in AI questions.
-
-## 10. Changes to this policy
-
-We may update this Privacy Policy when the App or its supporting services change. The latest version will be published on this page with an updated date.
-
-## 11. Contact
-
-For privacy questions or requests, contact [w4n9we1@gmail.com](mailto:w4n9we1@gmail.com?subject=AccessViewer%20Privacy%20Question).
+- [Privacy Policy](privacy/)
+- [Terms of Use](terms/)
+- [Support Center](support/)
+- [Contact support](mailto:w4n9we1@gmail.com)

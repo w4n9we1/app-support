@@ -2,11 +2,11 @@
 
 **Last Updated:** August 31, 2026
 
-These Terms of Use govern your use of AccessViewer (Access Database Viewer), an Android app published by W4N9WE1. By downloading or using AccessViewer, you agree to these terms to the extent permitted by applicable law.
+These Terms of Use govern your use of Database Viewer: MDB & ACCDB (AccessViewer), an iOS and Android app published by W4N9WE1. Purchases on iOS are also subject to Apple’s standard Licensed Application End User License Agreement. By downloading or using AccessViewer, you agree to these terms to the extent permitted by applicable law.
 
 ## 1. Using AccessViewer
 
-AccessViewer lets you open, inspect, and work with Microsoft Access database files (`.mdb` and `.accdb`) on your device. You are responsible for:
+Database Viewer lets you open, inspect, and work with supported data files — Microsoft Access databases (`.mdb` and `.accdb`), SQLite databases, Excel workbooks (`.xlsx`), OpenDocument spreadsheets (`.ods`), dBase files (`.dbf`), CSV/TSV text tables, and SQL dump scripts — on your device. You are responsible for:
 
 - having the right to open, edit, export, and share the database files you select;
 - complying with any license or confidentiality obligation that applies to the data inside those files;

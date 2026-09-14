@@ -5,7 +5,7 @@ Welcome to the official support page for my applications. Whether you have a que
 ## Privacy Policies
 
 - [Access Database Viewer](access_db_viewer/)
-- [AccessViewer (Android)](accessviewer/)
+- [Database Viewer: MDB & ACCDB (AccessViewer)](accessviewer/)
 - [MemoSnap](memosnap/)
 - [NoNag](nonag/)
 - [Note to Post](note2poster/)
