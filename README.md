@@ -14,6 +14,7 @@ Welcome to the official support page for my applications. Whether you have a que
 - [SpeakMail](speakmail/privacy/)
 - [VoxMail](voxmail/privacy/)
 - [Walldone](walldone/)
+- [RingLight](ringlight/privacy/)
 
 ### Terms of Use
 
@@ -25,6 +26,7 @@ Welcome to the official support page for my applications. Whether you have a que
 
 ### Support Centers
 
+- [RingLight](ringlight/)
 - [SpeakMail](speakmail/)
 - [VoxMail](voxmail/)
 
