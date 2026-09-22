@@ -2,7 +2,7 @@
 
 **Product:** Database Viewer: MDB & ACCDB (AccessViewer)  
 **Effective Date:** August 19, 2026  
-**Last Updated:** August 24, 2026
+**Last Updated:** September 22, 2026
 
 This Privacy Policy explains how Database Viewer (AccessViewer, the “App”) handles information in the iOS and Android versions published by W4N9WE1.
 
@@ -39,9 +39,15 @@ The App uses the `AccessViewer Pro` entitlement to determine access to Pro featu
 
 The App does not receive or store your payment card number or bank details.
 
-## 6. Diagnostics and technical information
+## 6. Diagnostics, crash reports, and usage analytics
 
-The App may process technical information required to operate the App, such as device and operating-system details, app version, file format, file size, and error details. These details are used to provide file diagnostics and explain failures. The current Android workflow does not require a user account.
+The App may process technical information required to operate the App, such as device and operating-system details, app version, file format, file size, and error details. These details are used to provide file diagnostics and explain failures.
+
+The App uses Google Firebase Crashlytics to collect crash and error reports. Crash reports may include device model and manufacturer, operating-system and app versions, stack traces, and related technical identifiers, and are used to diagnose and fix crashes.
+
+The App uses Google Analytics for Firebase to record limited usage events, such as app opens and feature-usage counters, together with an app-instance identifier. These events are used to understand which features are used and to improve the App. Google processes this information as described in [Google’s Privacy Policy](https://policies.google.com/privacy).
+
+The current Android workflow does not require a user account.
 
 ## 7. Sharing and retention
 
