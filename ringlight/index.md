@@ -36,3 +36,4 @@ Captured photos wait in the in-app tray. Open the tray from the gallery button, 
 When contacting support, please include your device model, OS version, and a short description of the issue (a screenshot helps a lot).
 
 - [Privacy Policy](privacy/)
+- [Terms of Use](terms/)

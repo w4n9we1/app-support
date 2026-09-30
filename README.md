@@ -23,6 +23,7 @@ Welcome to the official support page for my applications. Whether you have a que
 - [Shift](shift/terms/)
 - [SpeakMail](speakmail/terms/)
 - [VoxMail](voxmail/terms/)
+- [RingLight](ringlight/terms/)
 
 ### Support Centers
 
