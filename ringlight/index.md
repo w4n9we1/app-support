@@ -1,3 +1,8 @@
+---
+title: "Screen Fill Light for Selfies — RingLight"
+description: "Use your iPhone screen as a fill light for selfies, with timer, burst and mirror. Studio glow in your pocket."
+---
+
 # RingLight — Selfie Fill Light Camera
 
 RingLight turns your phone's screen into a soft, colored ring light. Light your face from the front, take bright selfies in the dark, shoot hands-free with the timer and burst, pick the keepers before anything hits your gallery, and use the built-in makeup mirror or full-screen lamp anytime.

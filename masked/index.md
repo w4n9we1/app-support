@@ -1,3 +1,8 @@
+---
+title: "Redact Photos, Text & PDFs on iPhone — Masked"
+description: "Blur faces, remove text and metadata from photos, text and PDFs before sharing. On-device redaction for iPhone."
+---
+
 # Masked
 
 **Safe Before AI**

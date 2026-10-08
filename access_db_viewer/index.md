@@ -1,3 +1,8 @@
+---
+title: "Database Viewer: Open MDB, ACCDB, SQLite, XLSX, ODS, DBF & CSV on iPhone"
+description: "One app to open Access MDB/ACCDB, SQLite, XLSX, ODS, DBF and CSV files on iPhone and Android. Native engine, health check, export."
+---
+
 # Privacy Policy
 
 **Product:** Access Database Viewer: MDB AI (Access DB Manager)  

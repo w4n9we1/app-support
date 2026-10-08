@@ -1,3 +1,8 @@
+---
+title: "Export Apple Notes as PDF & Long Image — WholeNote"
+description: "Turn Apple Notes into complete, searchable PDFs and long images on iPhone. Everything in one note, ready to archive or print."
+---
+
 # Note to Post Privacy Policy
 
 **Last Updated:** July 28, 2026

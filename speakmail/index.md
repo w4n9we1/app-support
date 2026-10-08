@@ -1,3 +1,8 @@
+---
+title: "Speak an Email, Review, Send — SpeakMail"
+description: "Say an email out loud, review the draft, and send. Voice to a finished email on iPhone."
+---
+
 # SpeakMail Support
 
 **Last Updated:** August 20, 2026

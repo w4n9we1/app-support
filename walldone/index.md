@@ -1,3 +1,8 @@
+---
+title: "Visual To-Do Wall for iPhone — WallDone"
+description: "Stick finished tasks on your wall and see progress pile up. A calm, visual alternative to deadline-driven lists."
+---
+
 # Privacy Policy for Walldone
 
 Last updated: March 2, 2026

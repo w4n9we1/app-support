@@ -1,3 +1,8 @@
+---
+title: "Voice to Text Email on iPhone — VoxMail"
+description: "Record a voice note, transcribe on-device, and send it as a finished email. From speaking to a sent message on iPhone."
+---
+
 # VoxMail Support
 
 **Last Updated:** July 29, 2026

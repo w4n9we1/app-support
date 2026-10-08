@@ -1,3 +1,8 @@
+---
+title: "Lock Screen To-Do & Wallpaper — MemoSnap"
+description: "Put to-dos and memo wallpapers on your iPhone lock screen. The reminder you literally cannot miss."
+---
+
 # Privacy Policy for MemoSnap
 
 **Last Updated:** December 16, 2025

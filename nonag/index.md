@@ -1,3 +1,8 @@
+---
+title: "Block "Open in App" Pop-ups in Safari — NoNag"
+description: "Safari extension that dismisses Open-in-App banners and redirect pop-ups automatically. Browse without being nagged."
+---
+
 # Privacy Policy for NoNag
 
 **Last Updated:** June 04, 2026

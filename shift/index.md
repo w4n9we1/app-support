@@ -1,3 +1,8 @@
+---
+title: "Export & Back Up iPhone Contacts — Shift"
+description: "Export contacts to VCF, CSV, XLSX or an encrypted local backup on iPhone. Private, on-device, no account."
+---
+
 # Shift
 
 Shift is a private, local-first way to export and move your iPhone contacts.

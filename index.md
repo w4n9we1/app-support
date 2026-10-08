@@ -1,3 +1,8 @@
+---
+title: "Lababacy — Practical iPhone Apps by Wei Wang"
+description: "Independent iPhone tools: open MDB and ACCDB databases, export contacts, redact photos, voice to email. Privacy-first, on-device."
+---
+
 # Lababacy Apps
 
 Practical, privacy-first tools for iPhone — built and maintained by an independent developer.
@@ -54,6 +59,6 @@ Stick finished tasks on your wall and see progress pile up — a calm, visual al
 
 [Download on the App Store](https://apps.apple.com/us/app/id6757802635)
 
-## Contact
+## Support & Contact
 
-Questions, feedback, or support for any app: [w4n9we1@gmail.com](mailto:w4n9we1@gmail.com)
+Questions, feedback, or help for any app: see the [Support Center](./support/) or email [w4n9we1@gmail.com](mailto:w4n9we1@gmail.com)

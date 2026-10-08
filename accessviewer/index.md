@@ -1,3 +1,8 @@
+---
+title: "Open MDB & ACCDB Files on iPhone — Access Database Viewer"
+description: "Open, browse and inspect Microsoft Access (.mdb/.accdb) databases directly on your iPhone. Native engine, on-device, no upload."
+---
+
 # Database Viewer: MDB & ACCDB
 
 Open, browse, edit and convert database and data files right on your phone — no desktop, no account, no upload.

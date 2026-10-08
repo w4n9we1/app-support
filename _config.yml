@@ -1,0 +1,11 @@
+title: Lababacy Apps
+description: Practical, privacy-first iPhone tools by an independent developer.
+url: "https://lababacy.com"
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
