@@ -87,3 +87,10 @@ I am constantly working to improve these applications.
 ---
 
 *© 2025 W4N9WE1. All rights reserved.*
+
+## 域名与 URL 策略（2026-10-08）
+
+- 自有域名 **lababacy.com** 已绑定本站（Cloudflare DNS + GitHub Pages，CNAME 文件在仓库根）。所有旧路径 `w4n9we1.github.io/app-support/<app>/` 永久 301 到 `lababacy.com/<app>/`，路径保持。
+- **已上架 App 的 ASC 三个 URL（marketing/support/privacy）保持原 github.io 值不动**（经 301 永久可达，所有者拍板 2026-10-08）；**新项目上架时直接填 lababacy.com 对应产品页**：`/<app>/`、`/<app>/support/`、`/<app>/privacy/`。
+- 结构约定：每 App 三页——产品页（直答句开头+描述全文+下载+互链）/ support（FAQ+恢复购买+联系方式）/ privacy。新增 App 时按 `docs` 模板补齐三页后再提审。
+- 遗留可选项：GitHub Pages Enforce HTTPS 未勾选（http://lababacy.com 暂不强制跳 https）；GitHub 账号级域名校验未做；Search Console 未提交。
