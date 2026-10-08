@@ -54,12 +54,6 @@ Stick finished tasks on your wall and see progress pile up — a calm, visual al
 
 [Download on the App Store](https://apps.apple.com/us/app/id6757802635)
 
-## Coming Soon
-
-- **Database Viewer: MDB & ACCDB** — the multi-format edition for Android and iOS: Access, SQLite, XLSX, ODS, DBF, and CSV in one app.
-- **RingLight** — your screen as a fill light for selfies, with timer and mirror.
-- **SpeakMail** — say an email, review it, send it.
-
 ## Contact
 
 Questions, feedback, or support for any app: [w4n9we1@gmail.com](mailto:w4n9we1@gmail.com)
