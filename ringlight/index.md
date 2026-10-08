@@ -7,6 +7,9 @@ description: "Use your iPhone screen as a fill light for selfies, with timer, bu
 
 RingLight turns your phone's screen into a soft, colored ring light. Light your face from the front, take bright selfies in the dark, shoot hands-free with the timer and burst, pick the keepers before anything hits your gallery, and use the built-in makeup mirror or full-screen lamp anytime.
 
+<!-- App Store URL goes live on release day (app id 6814347570) -->
+[**Download on the App Store**](https://apps.apple.com/app/id6814347570)
+
 ## Highlights
 
 - **Soft screen fill light** — curated color presets plus custom colors; much softer than the front flash
