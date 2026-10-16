@@ -1,0 +1,449 @@
+---
+layout: null
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Open winmail.dat on iPhone — Winmail Reader (MSG, EML, PST)</title>
+  <meta name="description" content="Open winmail.dat (TNEF), MSG, OFT, EML, MHT, XPS, MBOX and PST files on iPhone &amp; iPad. 100% on-device — no account, no uploads, no subscription.">
+  <link rel="canonical" href="https://lababacy.com/winmail/">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#100E0C">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lababacy.com/winmail/">
+  <meta property="og:title" content="Open winmail.dat on iPhone — Winmail Reader (MSG, EML, PST)">
+  <meta property="og:description" content="Open winmail.dat (TNEF), MSG, OFT, EML, MHT, XPS, MBOX and PST files on iPhone &amp; iPad. 100% on-device — no account, no uploads, no subscription.">
+  <meta property="og:image" content="https://lababacy.com/winmail/assets/icon-512.png">
+  <meta property="og:site_name" content="Lababacy">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Open winmail.dat on iPhone — Winmail Reader (MSG, EML, PST)">
+  <meta name="twitter:description" content="Open winmail.dat (TNEF), MSG, OFT, EML, MHT, XPS, MBOX and PST files on iPhone &amp; iPad. 100% on-device — no account, no uploads, no subscription.">
+  <meta name="twitter:image" content="https://lababacy.com/winmail/assets/icon-512.png">
+  <link rel="icon" type="image/png" href="/winmail/assets/favicon-64.png">
+  <link rel="apple-touch-icon" href="/winmail/assets/icon-180.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Winmail Reader - DAT, MSG, EML",
+    "operatingSystem": "iOS 17.0+",
+    "applicationCategory": "Utilities",
+    "author": { "@type": "Organization", "name": "Lababacy" },
+    "screenshot": [
+      "https://lababacy.com/winmail/assets/shot-open.jpg",
+      "https://lababacy.com/winmail/assets/shot-archive.jpg"
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a winmail.dat file?",
+        "acceptedAnswer": { "@type": "Answer", "text": "When Outlook sends a message in TNEF format, it packs the body, attachments and calendar invites into a single winmail.dat file. Other mail clients see only that one unopenable file. Winmail Reader unwraps the package and gives you back the message text, the attachments and the calendar invitation." }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I open winmail.dat on iPhone or iPad?",
+        "acceptedAnswer": { "@type": "Answer", "text": "In Mail or Files, tap Share (or Open In) and choose Winmail Reader, or send the file over from another app's share sheet. Decoding happens instantly on your device." }
+      },
+      {
+        "@type": "Question",
+        "name": "Which formats can it open?",
+        "acceptedAnswer": { "@type": "Answer", "text": "winmail.dat (TNEF), MSG, OFT, EML, MHT/MHTML, XPS, OXPS, MBOX, PST, OST and OLM — eleven legacy email and document formats in one app." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Winmail Reader free?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. The free download reads every format in full, lists attachments and previews archives. Exporting and converting (PDF, EML, HTML, TXT), extracting attachments, search inside mail and full archive browsing are part of Pro — unlocked with a single one-time purchase. No subscription, no quotas. The paywall lives inside the app." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you upload my files?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No. Decoding is 100% on-device: no account, no uploads. Your original file is opened read-only, and decoded copies stay inside the app's sandbox where you can delete them at any time." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I convert an email to PDF?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes — with Pro. You can convert an entire email to PDF, turn XPS documents into PDF, and export messages as EML, HTML or plain text." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does it open Gmail Takeout (MBOX) or Outlook (PST) archives?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. You can browse the folder tree and preview the newest message in each folder for free. Full archive browsing and search inside mail are part of Pro. OST stores are supported for browsing as well." }
+      },
+      {
+        "@type": "Question",
+        "name": "I already bought Pro — how do I restore it?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Open Settings in the app and tap Restore Purchases with the Apple ID you used for the purchase. Family Sharing is supported where available on the App Store." }
+      },
+      {
+        "@type": "Question",
+        "name": "A file still won't open — now what?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Run the built-in health check: it explains what the file really is, how confident it is, and what to do next. If you are still stuck, email w4n9we1@gmail.com." }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Lababacy", "item": "https://lababacy.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Winmail Reader", "item": "https://lababacy.com/winmail/" }
+    ]
+  }
+  </script>
+  <style>
+    :root{
+      --bg:#100E0C; --ink:#F3EFE7; --muted:#A79E94; --accent:#D9A15B;
+      --paper:#F7F4EE; --paper-ink:#1C1917; --paper-muted:#6E645A;
+      --hair-d:rgba(243,239,231,.14); --hair-l:rgba(28,25,23,.14);
+      --display:"Iowan Old Style","Palatino Linotype",Georgia,serif;
+      --body:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    }
+    *,*::before,*::after{box-sizing:border-box}
+    html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+    @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+    img{max-width:100%}
+    ::selection{background:rgba(217,161,91,.35)}
+    a:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+    .wrap{max-width:1080px;margin:0 auto;padding:0 1.5rem}
+    section[id]{scroll-margin-top:84px}
+
+    /* ---- nav ---- */
+    .nav{position:sticky;top:0;z-index:40;background:rgba(16,14,12,.92);backdrop-filter:saturate(150%) blur(12px);-webkit-backdrop-filter:saturate(150%) blur(12px);border-bottom:1px solid var(--hair-d)}
+    .nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:64px}
+    .brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;font-weight:650;letter-spacing:-.01em;color:var(--ink);white-space:nowrap}
+    .brand img{display:block;border-radius:8px}
+    .nav-links{display:flex;gap:1.7rem}
+    .nav-links a{color:var(--muted);text-decoration:none;font-size:.925rem;transition:color .15s}
+    .nav-links a:hover{color:var(--ink)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;border-radius:999px;text-decoration:none;font-weight:600;white-space:nowrap;transition:filter .15s,border-color .15s}
+    .btn-accent{background:var(--accent);color:#100E0C;padding:.5rem 1.05rem;font-size:.9rem}
+    .btn-accent:hover{filter:brightness(1.07)}
+    .btn-ivory{background:var(--paper);color:var(--paper-ink);padding:.85rem 1.5rem;font-size:1rem}
+    .btn-ivory:hover{filter:brightness(.96)}
+    .btn-ghost{border:1px solid var(--hair-d);color:var(--ink);padding:.85rem 1.5rem;font-size:1rem}
+    .btn-ghost:hover{border-color:rgba(243,239,231,.4)}
+    @media(max-width:780px){.nav-links{display:none}}
+
+    /* ---- hero ---- */
+    .hero{padding:6.5rem 0 5.5rem;text-align:center}
+    .eyebrow{display:inline-flex;align-items:center;gap:.55rem;border:1px solid var(--hair-d);border-radius:999px;padding:.42rem 1rem;font-size:.78rem;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+    .eyebrow i{width:8px;height:8px;border-radius:50%;background:var(--accent);display:inline-block}
+    h1{font-family:var(--display);font-weight:500;font-size:clamp(2.6rem,7vw,4.6rem);line-height:1.05;letter-spacing:-.015em;margin:2.1rem auto 1.6rem;max-width:20ch}
+    h1 em{font-style:italic;color:var(--ink)}
+    .lede{max-width:46rem;margin:0 auto;color:var(--muted);font-size:1.05rem;line-height:1.75}
+    .cta-row{display:flex;flex-wrap:wrap;gap:.9rem;justify-content:center;margin-top:2.4rem}
+    .trust{display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center;margin-top:1.7rem}
+    .trust span{border:1px solid var(--hair-d);border-radius:999px;color:var(--muted);font-size:.8rem;padding:.35rem .9rem}
+    .hero-shot{position:relative;max-width:430px;margin:4.8rem auto 0}
+    .hero-shot img{display:block;width:100%;height:auto;border:1px solid var(--hair-d);border-radius:20px}
+    .hero-shot::before{content:"";position:absolute;left:-1px;right:-1px;top:-1px;height:130px;border-radius:20px 20px 0 0;background:linear-gradient(180deg,var(--bg) 12%,rgba(16,14,12,0) 100%);z-index:1;pointer-events:none}
+
+    /* ---- section scaffolding ---- */
+    .sec{padding:6.5rem 0}
+    .kicker{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:650;margin:0 0 1.1rem}
+    h2{font-family:var(--display);font-weight:500;font-size:clamp(1.9rem,3.6vw,2.7rem);line-height:1.15;letter-spacing:-.01em;margin:0 0 1rem}
+    .sub{color:var(--muted);max-width:40rem;margin:0;font-size:1.02rem}
+    .paper{background:var(--paper);color:var(--paper-ink)}
+    .paper .kicker{color:#8F5D24}
+    .paper .sub{color:var(--paper-muted)}
+
+    /* ---- formats ---- */
+    .grid-formats{display:grid;grid-template-columns:repeat(auto-fill,minmax(232px,1fr));gap:.9rem;margin-top:2.9rem}
+    .fmt{border:1px solid var(--hair-d);border-radius:14px;padding:1.15rem 1.2rem;background:rgba(243,239,231,.03)}
+    .fmt b{font-family:var(--display);font-weight:550;font-size:1.09rem;display:block;letter-spacing:.005em}
+    .fmt span{display:block;color:var(--muted);font-size:.875rem;margin-top:.35rem;line-height:1.5}
+
+    /* ---- gallery ---- */
+    .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2.2rem;margin-top:3rem;align-items:start}
+    .shot{margin:0}
+    .frame{background:#0B0908;border:1px solid rgba(28,25,23,.28);border-radius:30px;padding:9px;box-shadow:0 30px 60px -30px rgba(28,25,23,.5)}
+    .frame img{display:block;width:100%;height:auto;border-radius:22px}
+    .shot figcaption{margin-top:1.05rem;color:var(--paper-muted);font-size:.9rem;line-height:1.55;text-align:center;padding:0 .4rem}
+    @media(max-width:860px){.gallery-grid{grid-template-columns:1fr;max-width:340px;margin-left:auto;margin-right:auto}}
+
+    /* ---- plans ---- */
+    .plans{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem;margin-top:2.9rem}
+    .plan{border:1px solid var(--hair-d);border-radius:18px;padding:2rem}
+    .plan-pro{border-color:rgba(217,161,91,.5)}
+    .plan h3{font-family:var(--display);font-weight:550;font-size:1.5rem;margin:0;letter-spacing:-.005em}
+    .plan .tag{color:var(--muted);font-size:.92rem;margin:.45rem 0 1.5rem}
+    .plan ul{list-style:none;margin:0;padding:0}
+    .plan li{padding:.6rem 0 .6rem 1.75rem;position:relative;border-top:1px solid var(--hair-d);font-size:.98rem}
+    .plan li:first-child{border-top:0}
+    .plan li::before{content:"✓";position:absolute;left:0;top:.6rem;color:var(--muted);font-weight:700}
+    .plan-pro li::before{color:var(--accent)}
+    .fineprint{color:var(--muted);font-size:.85rem;margin:1.5rem 0 0}
+    @media(max-width:820px){.plans{grid-template-columns:1fr}}
+
+    /* ---- private ---- */
+    .private-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:4rem;align-items:center}
+    .private-icon{width:88px;height:88px;border-radius:22px;display:block;margin-bottom:1.7rem}
+    .claims{list-style:none;margin:2.1rem 0 1.6rem;padding:0}
+    .claims li{font-family:var(--display);font-size:clamp(1.25rem,2.4vw,1.7rem);line-height:1.35;padding:.95rem 0;border-top:1px solid var(--hair-d)}
+    .claims li:first-child{border-top:0}
+    .private .frame{box-shadow:0 30px 60px -30px rgba(0,0,0,.6);border-color:rgba(243,239,231,.1);max-width:400px;margin:0 auto}
+    @media(max-width:860px){.private-grid{grid-template-columns:1fr;gap:3rem}}
+
+    /* ---- faq ---- */
+    .faq{margin-top:2.6rem}
+    .faq details{border-top:1px solid var(--hair-l)}
+    .faq details:last-of-type{border-bottom:1px solid var(--hair-l)}
+    .faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:baseline;gap:1.2rem;padding:1.15rem .2rem;font-weight:600;font-size:1.02rem}
+    .faq summary::-webkit-details-marker{display:none}
+    .faq summary::after{content:"+";font-family:var(--display);font-size:1.45rem;line-height:1;color:#8F5D24;flex:none}
+    .faq details[open] summary::after{content:"–"}
+    .faq details p{margin:0;padding:0 2.5rem 1.3rem .2rem;color:var(--paper-muted);max-width:48rem}
+
+    /* ---- explained ---- */
+    .explained{max-width:58rem}
+    .explained h3{font-size:1rem;margin:2.3rem 0 .55rem;color:var(--paper-ink)}
+    .explained p{color:var(--paper-muted);font-size:.94rem;line-height:1.8;margin:0}
+
+    /* ---- footer ---- */
+    .site-footer{background:var(--bg);border-top:1px solid var(--hair-d);padding:3.6rem 0 2.6rem}
+    .foot-top{display:flex;flex-wrap:wrap;gap:1rem 2.2rem;align-items:center;justify-content:space-between}
+    .foot-links{display:flex;flex-wrap:wrap;gap:.6rem 1.8rem}
+    .site-footer a{color:var(--muted);text-decoration:none;font-size:.925rem;transition:color .15s}
+    .site-footer a:hover{color:var(--ink)}
+    .foot-bottom{margin-top:2.4rem;padding-top:1.6rem;border-top:1px solid var(--hair-d);display:flex;flex-wrap:wrap;gap:.4rem 1rem;justify-content:space-between;color:var(--muted);font-size:.85rem}
+
+    @media(max-width:600px){
+      .sec{padding:5rem 0}
+      .hero{padding:5rem 0 4rem}
+      .faq summary{font-size:.97rem}
+      .faq details p{padding-right:.2rem}
+    }
+  </style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="/winmail/">
+      <img src="/winmail/assets/icon-180.png" width="32" height="32" alt="Winmail Reader app icon">
+      Winmail Reader
+    </a>
+    <nav class="nav-links" aria-label="Page sections">
+      <a href="#formats">Formats</a>
+      <a href="#features">Features</a>
+      <a href="#faq">FAQ</a>
+      <a href="/winmail/privacy/">Privacy</a>
+    </nav>
+    <!-- TODO(release day): href = App Store URL -->
+    <a class="btn btn-accent" href="#">Get Winmail Reader</a>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow"><i aria-hidden="true"></i>For iPhone &amp; iPad · iOS 17+</p>
+      <h1>Open winmail.dat<br><em>on your iPhone.</em></h1>
+      <p class="lede">Winmail Reader opens winmail.dat (TNEF), MSG, OFT, EML, MHT, XPS, MBOX, PST, OST and OLM files on iPhone and iPad — decoded entirely on your device. No account. No uploads. Free to read, one-time purchase to unlock exports.</p>
+      <div class="cta-row">
+        <!-- TODO(release day): href = App Store URL -->
+        <a class="btn btn-ivory" href="#">Download free on the App Store</a>
+        <a class="btn btn-ghost" href="#formats">See what it opens</a>
+      </div>
+      <div class="trust">
+        <span>100% on-device</span>
+        <span>No account</span>
+        <span>No subscription</span>
+      </div>
+      <div class="hero-shot">
+        <img src="/winmail/assets/shot-open.jpg" width="1290" height="2796" loading="lazy" alt="Winmail Reader opening a winmail.dat attachment on iPhone, showing the decoded message text and its attachments">
+      </div>
+    </div>
+  </section>
+
+  <section id="formats">
+    <div class="wrap">
+      <p class="kicker">Formats</p>
+      <h2>Every legacy email format. One app.</h2>
+      <p class="sub">From a single mystery file to a whole mailbox backup — if it carries mail, it opens here, right on your device.</p>
+      <div class="grid-formats">
+        <div class="fmt"><b>winmail.dat</b><span>Outlook TNEF wrapper — the attachment every other mail app chokes on</span></div>
+        <div class="fmt"><b>TNEF</b><span>Transport-Neutral Encapsulation Format, the format inside winmail.dat</span></div>
+        <div class="fmt"><b>MSG</b><span>A message saved from Outlook on Windows</span></div>
+        <div class="fmt"><b>OFT</b><span>An Outlook message template</span></div>
+        <div class="fmt"><b>EML</b><span>Standard single-message file, exported from Gmail, Thunderbird or Apple Mail</span></div>
+        <div class="fmt"><b>MHT</b><span>MHTML web-archive email or page snapshot</span></div>
+        <div class="fmt"><b>XPS</b><span>Windows XML Paper Specification document</span></div>
+        <div class="fmt"><b>OXPS</b><span>Open XML Paper Specification, the newer XPS variant</span></div>
+        <div class="fmt"><b>MBOX</b><span>Mailbox export — what Gmail Takeout hands you</span></div>
+        <div class="fmt"><b>PST</b><span>Outlook data file, the classic mailbox backup</span></div>
+        <div class="fmt"><b>OST · OLM</b><span>Outlook offline store (Windows) and Outlook for Mac archive</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="paper sec">
+    <div class="wrap">
+      <p class="kicker">Screenshots</p>
+      <h2>See it in action.</h2>
+      <p class="sub">Real screens from the app — nothing staged.</p>
+      <div class="gallery-grid">
+        <figure class="shot">
+          <div class="frame"><img src="/winmail/assets/shot-archive.jpg" width="1290" height="2796" loading="lazy" alt="PST archive browser in Winmail Reader showing an Outlook mailbox folder tree"></div>
+          <figcaption>Browse a PST archive's folder tree and preview the newest mail in every folder.</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="/winmail/assets/shot-pdf.jpg" width="1290" height="2796" loading="lazy" alt="An email converted to PDF inside Winmail Reader, ready to share"></div>
+          <figcaption>Convert a whole email to PDF — or export it as EML, HTML or plain text.</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="/winmail/assets/shot-checkup.jpg" width="1290" height="2796" loading="lazy" alt="Health check screen diagnosing the true format of an unopenable file"></div>
+          <figcaption>Health-check tells you what an unopenable file really is, and what to do next.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="features" class="sec">
+    <div class="wrap">
+      <p class="kicker">Features</p>
+      <h2>Read free. Unlock the exit doors once.</h2>
+      <p class="sub">Reading costs nothing. When you need to get your data out, one purchase opens every exit door.</p>
+      <div class="plans">
+        <div class="plan">
+          <h3>Free</h3>
+          <p class="tag">Included with the download.</p>
+          <ul>
+            <li>Read every format in full</li>
+            <li>Browse archive trees with previews</li>
+            <li>XPS reader</li>
+            <li>Health-check any mystery file</li>
+          </ul>
+        </div>
+        <div class="plan plan-pro">
+          <h3>Pro</h3>
+          <p class="tag">Everything, unlocked once.</p>
+          <ul>
+            <li>Export to PDF, EML, HTML, TXT</li>
+            <li>Convert XPS to PDF</li>
+            <li>Extract &amp; save all attachments</li>
+            <li>Search inside mail</li>
+            <li>Browse full archives</li>
+          </ul>
+          <p class="fineprint">One-time purchase. No subscription.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="private sec">
+    <div class="wrap private-grid">
+      <div>
+        <img class="private-icon" src="/winmail/assets/icon-512.png" width="512" height="512" loading="lazy" alt="Winmail Reader app icon">
+        <p class="kicker">Privacy</p>
+        <h2>Private by design.</h2>
+        <ul class="claims">
+          <li>Your files never leave your device.</li>
+          <li>No account. No uploads.</li>
+          <li>Your originals are never modified.</li>
+        </ul>
+        <p class="sub">Decoding happens entirely on your iPhone or iPad. There is no server holding your files and no upload step — your originals are opened read-only, always.</p>
+        <p class="sub" style="margin-top:1rem"><a href="/winmail/privacy/" style="color:var(--accent)">Read the privacy policy →</a></p>
+      </div>
+      <div>
+        <div class="frame"><img src="/winmail/assets/shot-private.jpg" width="1290" height="2796" loading="lazy" alt="Winmail Reader on iPhone showing the private-by-design promise, with files decoded on device"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="paper sec">
+    <div class="wrap">
+      <p class="kicker">FAQ</p>
+      <h2>Frequently asked questions.</h2>
+      <div class="faq">
+        <details>
+          <summary>What is a winmail.dat file?</summary>
+          <p>When Outlook sends a message in TNEF format, it packs the body, attachments and calendar invites into a single winmail.dat file. Other mail clients see only that one unopenable file. Winmail Reader unwraps the package and gives you back the message text, the attachments and the calendar invitation.</p>
+        </details>
+        <details>
+          <summary>How do I open winmail.dat on iPhone or iPad?</summary>
+          <p>In Mail or Files, tap Share (or Open In) and choose Winmail Reader, or send the file over from another app's share sheet. Decoding happens instantly on your device.</p>
+        </details>
+        <details>
+          <summary>Which formats can it open?</summary>
+          <p>winmail.dat (TNEF), MSG, OFT, EML, MHT/MHTML, XPS, OXPS, MBOX, PST, OST and OLM — eleven legacy email and document formats in one app.</p>
+        </details>
+        <details>
+          <summary>Is Winmail Reader free?</summary>
+          <p>Yes. The free download reads every format in full, shows attachment lists and previews archives. Exporting and converting (PDF, EML, HTML, TXT), extracting attachments, search inside mail and full archive browsing are part of Pro — unlocked with a single one-time purchase. No subscription, no quotas. The paywall lives inside the app.</p>
+        </details>
+        <details>
+          <summary>Do you upload my files?</summary>
+          <p>No. Decoding is 100% on-device: no account, no uploads. Your original file is opened read-only, and decoded copies stay inside the app's sandbox where you can delete them at any time.</p>
+        </details>
+        <details>
+          <summary>Can I convert an email to PDF?</summary>
+          <p>Yes — with Pro. You can convert an entire email to PDF, turn XPS documents into PDF, and export messages as EML, HTML or plain text.</p>
+        </details>
+        <details>
+          <summary>Does it open Gmail Takeout (MBOX) or Outlook (PST) archives?</summary>
+          <p>Yes. You can browse the folder tree and preview the newest message in each folder for free. Full archive browsing and search inside mail are part of Pro. OST stores are supported for browsing as well.</p>
+        </details>
+        <details>
+          <summary>I already bought Pro — how do I restore it?</summary>
+          <p>Open Settings in the app and tap Restore Purchases with the Apple ID you used for the purchase. Family Sharing is supported where available on the App Store.</p>
+        </details>
+        <details>
+          <summary>A file still won't open — now what?</summary>
+          <p>Run the built-in health check: it explains what the file really is, how confident it is (magic bytes included), and what to do next. If you are still stuck, email w4n9we1@gmail.com.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="paper sec" style="padding-top:0">
+    <div class="wrap">
+      <div class="explained">
+        <h2 style="font-size:clamp(1.4rem,2.6vw,1.9rem)">Every format, explained.</h2>
+        <h3>winmail.dat and TNEF</h3>
+        <p>Winmail.dat appears when someone sends mail from Microsoft Outlook with rich formatting switched on: Outlook packs the message body, attachments and calendar invitations into a single TNEF wrapper (Transport-Neutral Encapsulation Format), and every other client — including Apple's Mail — sees an opaque dat file it cannot open. If Outlook mail won't open on iPhone, a TNEF wrapper is the most common reason. Winmail Reader unpacks that wrapper on your device and hands you back the real text, the attachments and the calendar invite inside.</p>
+        <h3>Single message files: MSG, OFT, EML and MHT</h3>
+        <p>An MSG file is a message saved from Outlook on Windows; an OFT is an Outlook template; an EML is what you get when a message is exported from Gmail, Windows Live Mail, Thunderbird or Apple Mail; MHT (also written MHTML) is a web-archive snapshot of an email or page. Winmail Reader opens each one on iPhone and iPad, shows the headers and the attachment list, lets you extract and save attachments, or convert to PDF — and export the same message as EML, HTML or plain text.</p>
+        <h3>Mailbox archives: MBOX, PST, OST and OLM</h3>
+        <p>Mailboxes travel as archives too. Gmail Takeout hands you MBOX files; an Outlook export on Windows produces PST data files (and OST offline stores); Outlook for Mac produces OLM archives. Winmail Reader browses these mailbox backups as a folder tree and previews the newest message in every folder for free — and with Pro you can search inside email across the whole archive, so an old mailbox backup becomes something you can actually use.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-links">
+        <a href="/winmail/support/">Support</a>
+        <a href="/winmail/privacy/">Privacy Policy</a>
+        <a href="/winmail/terms/">Terms of Use</a>
+        <a href="/">All our apps</a>
+        <a href="mailto:w4n9we1@gmail.com?subject=Winmail%20Reader">Email us</a>
+      </div>
+      <div class="foot-links">
+        <a href="#faq">FAQ</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Lababacy · Made by an independent developer</span>
+      <span>Winmail Reader for iPhone &amp; iPad</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

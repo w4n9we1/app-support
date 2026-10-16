@@ -11,6 +11,12 @@ Every app works on your device. Your files stay yours.
 
 ## On the App Store
 
+### [Winmail Reader - DAT, MSG, EML](./winmail/)
+
+Open winmail.dat (TNEF), MSG, EML, and Outlook PST archives right on your iPhone and iPad — decoded entirely on-device, with no account, no uploads, and no subscription. Reading is free; a one-time Pro purchase unlocks export to PDF and attachment extraction.
+
+<!-- App Store URL goes live on release day -->
+
 ### [Access Database Viewer: MDB AI](./accessviewer/)
 
 Open and inspect Microsoft Access (MDB / ACCDB) databases right on your iPhone. A native C engine keeps large files fast, every file gets a health check before you open it, and nothing is ever uploaded.
