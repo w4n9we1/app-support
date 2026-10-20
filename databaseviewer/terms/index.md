@@ -1,3 +1,7 @@
+---
+redirect_from:
+  - /accessviewer/terms/
+---
 # AccessViewer Terms of Use
 
 **Last Updated:** August 31, 2026

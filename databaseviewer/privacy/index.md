@@ -1,3 +1,7 @@
+---
+redirect_from:
+  - /accessviewer/privacy/
+---
 # AccessViewer Privacy Policy
 
 **Product:** Database Viewer: MDB & ACCDB (AccessViewer)  

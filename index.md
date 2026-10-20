@@ -17,7 +17,13 @@ Open winmail.dat (TNEF), MSG, EML, and Outlook PST archives right on your iPhone
 
 <!-- App Store URL goes live on release day -->
 
-### [Access Database Viewer: MDB AI](./accessviewer/)
+### [Database Viewer: SQLite & DBF](./databaseviewer/)
+
+Open MDB / ACCDB, SQLite, XLSX, ODS, DBF and CSV files on your Android phone or iPhone. A native C engine keeps large files fast, every file gets a health check before you open it, and nothing is ever uploaded.
+
+[Download on the App Store](https://apps.apple.com/app/database-viewer-sqlite-dbf/id6811615295) · [Get it on Google Play](https://play.google.com/store/apps/details?id=com.lababacy.accessviewer)
+
+### [Access Database Viewer: MDB AI](./access_db_viewer/)
 
 Open and inspect Microsoft Access (MDB / ACCDB) databases right on your iPhone. A native C engine keeps large files fast, every file gets a health check before you open it, and nothing is ever uploaded.
 

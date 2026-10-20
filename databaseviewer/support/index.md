@@ -1,3 +1,7 @@
+---
+redirect_from:
+  - /accessviewer/support/
+---
 # Database Viewer Support Center
 
 Help and answers for **Database Viewer: MDB & ACCDB** (AccessViewer) on iPhone, iPad, and Android.
