@@ -1,88 +1,195 @@
----
-title: "Privacy Policy — Publisher File Viewer"
-description: "How Publisher File Viewer handles your data: .pub files are parsed 100% on your device and never uploaded, originals are never modified, and the app contains no ads and no tracking — with plain-language disclosure of purchases, conversion events and crash reports."
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy — Publisher File Viewer</title>
+  <meta name="description" content="How Publisher File Viewer handles your data: .pub files processed on your device, crash reports that never include file content, purchases handled by Apple.">
+  <meta name="theme-color" content="#F7F2EA">
+  <link rel="icon" type="image/png" href="../assets/icon-180.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lababacy.com/pubview/privacy/">
+  <meta property="og:title" content="Privacy Policy — Publisher File Viewer">
+  <meta property="og:description" content="Publisher File Viewer processes .pub files entirely on your device. Crash reports never include file content.">
+  <meta property="og:image" content="https://lababacy.com/pubview/assets/icon-1024.png">
+  <style>
+    :root {
+      --paper: #F7F2EA;
+      --ink: #1F1914;
+      --muted: #6B6157;
+      --gold: #E6B366;
+      --line: rgba(31, 25, 20, 0.08);
+    }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: -apple-system, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+      font-size: 17.5px;
+      line-height: 1.6;
+    }
+    .wrap { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+    a {
+      color: inherit;
+      text-decoration: underline;
+      text-decoration-color: rgba(31, 25, 20, 0.25);
+      text-underline-offset: 3px;
+    }
+    a:hover { text-decoration-color: var(--gold); }
+    .site-header { padding: 26px 0 0; }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px 28px;
+      flex-wrap: wrap;
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 11px;
+      font-weight: 650;
+      font-size: 17px;
+      letter-spacing: -0.01em;
+      text-decoration: none;
+    }
+    .brand img { width: 30px; height: 30px; border-radius: 7px; display: block; }
+    .nav-links { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+    .nav-links a { text-decoration: none; color: var(--muted); font-size: 15.5px; }
+    .nav-links a:hover { color: var(--ink); }
 
-<style>
-  .wm-updated{display:inline-block;background:#f5f5f7;color:#6e6e73;font-size:.8rem;padding:.3rem .8rem;border-radius:999px;margin:.3rem 0 0}
-</style>
+    .page-title { padding: 88px 0 0; }
+    h1 {
+      margin: 0 0 10px;
+      font-size: 46px;
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+    }
+    .updated { margin: 0 0 8px; color: var(--muted); font-size: 15.5px; }
+    section { margin-top: 64px; }
+    h2 {
+      margin: 0 0 12px;
+      font-size: 23px;
+      font-weight: 650;
+      line-height: 1.3;
+      letter-spacing: -0.01em;
+    }
+    section p { margin: 0 0 14px; max-width: 680px; }
+    section p:last-child { margin-bottom: 0; }
+    .intro { margin-top: 40px; }
+    .intro p { font-size: 19px; max-width: 640px; }
 
-<h1>Privacy Policy — Publisher File Viewer</h1>
+    .site-footer {
+      margin-top: 112px;
+      border-top: 1px solid var(--line);
+      padding: 40px 0 72px;
+      font-size: 15px;
+      color: var(--muted);
+    }
+    .site-footer p { margin: 0 0 8px; }
+    .site-footer .legal-note { font-size: 13.5px; max-width: 620px; }
+    .site-footer .copy { margin-top: 20px; }
 
-<p><span class="wm-updated">Last updated: October 21, 2026</span></p>
+    @media (max-width: 720px) {
+      .page-title { padding-top: 64px; }
+      h1 { font-size: 36px; }
+      section { margin-top: 48px; }
+      .site-footer { margin-top: 88px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="../">
+        <img src="../assets/icon-180.png" alt="Publisher File Viewer app icon" width="180" height="180">
+        <span>Publisher File Viewer</span>
+      </a>
+      <nav class="nav-links" aria-label="Main">
+        <a href="../#how-it-works">How it works</a>
+        <a href="../#faq">FAQ</a>
+        <a href="../terms/">Terms</a>
+      </nav>
+    </div>
+  </header>
 
-<p>Publisher File Viewer ("we", "us", or "our") is built to open Microsoft Publisher files without putting your data at risk. This Privacy Policy explains what the app handles, what it never collects, and your choices. The short version: <strong>your files are parsed on your device and never uploaded.</strong></p>
+  <main>
+    <div class="wrap page-title">
+      <h1>Privacy Policy</h1>
+      <p class="updated">Last updated: October 22, 2026</p>
+    </div>
 
-<h2 id="scope">1. Scope</h2>
+    <section class="intro">
+      <div class="wrap">
+        <p>Privacy matters. This page explains, in plain language, what the app and this website do &mdash; and what they deliberately do not do. This site and the app are operated by Lababacy (lababacy.com). If anything here is unclear, write to <a href="mailto:w4n9we1@gmail.com">w4n9we1@gmail.com</a>.</p>
+      </div>
+    </section>
 
-<p>This policy applies to the iOS app <strong>Publisher File Viewer</strong> on iPhone and iPad, published by W4N9WE1 / Lababacy.</p>
+    <section>
+      <div class="wrap">
+        <h2>The app &mdash; your files</h2>
+        <p>Publisher File Viewer processes .pub files entirely on your iPhone or iPad. Your files are never uploaded to a server of ours &mdash; there is no server to upload them to.</p>
+        <p>The app is read-only by design: your original files are never modified. The app works without an account &mdash; no registration, no sign-in.</p>
+      </div>
+    </section>
 
-<h2 id="data">2. Data We Process</h2>
+    <section>
+      <div class="wrap">
+        <h2>The app &mdash; diagnostics</h2>
+        <p>Crash reports are collected through Firebase Crashlytics. A crash report contains technical information only: the stack trace, device model, operating system version and app version. Crash reports never include file content &mdash; we see the technical trace, not your document.</p>
+        <p>The app also records anonymous conversion-measurement events, such as the fact that an export completed. These events contain no file names and no file content.</p>
+      </div>
+    </section>
 
-<h3>2.1 Your files — processed on your device only</h3>
+    <section>
+      <div class="wrap">
+        <h2>The app &mdash; purchases</h2>
+        <p>Purchases are processed by Apple through App Store in-app purchase. Apple handles your payment details. Purchase receipts are validated through RevenueCat, our purchase-infrastructure provider, which stores an anonymous App Store receipt identifier so your purchase can be restored &mdash; never your files, and no identity beyond that identifier. Restore Purchases inside the app re-checks that identifier at any time.</p>
+      </div>
+    </section>
 
-<ul>
-  <li>Publisher File Viewer parses .pub files (Microsoft Publisher, Publisher 97–2003 document containers) <strong>entirely on your device</strong>. There is no Publisher File Viewer server, and no upload step.</li>
-  <li>Your original files are opened <strong>read-only</strong> — the app never modifies them.</li>
-  <li>When you open a file, the app makes a copy inside its own sandbox on your device (so your original stays untouched); exports you create are written to the app's export folder, where you can view, share, or delete them. Deleting a document inside the app removes its copy.</li>
-</ul>
+    <section>
+      <div class="wrap">
+        <h2>Support email</h2>
+        <p>When you write to <a href="mailto:w4n9we1@gmail.com">w4n9we1@gmail.com</a> for help, we receive your email address and the content of your message. We use it only to reply to your support request.</p>
+      </div>
+    </section>
 
-<h3>2.2 Permissions</h3>
+    <section>
+      <div class="wrap">
+        <h2>Website</h2>
+        <p>This website is a set of static pages &mdash; plain HTML, CSS and images. It sets no cookies and runs no analytics scripts.</p>
+      </div>
+    </section>
 
-<ul>
-  <li>The app requests <strong>no standing permissions</strong> — no camera, microphone, location, photo library, contacts, or calendar access is held while you use it.</li>
-  <li>Documents are read only from files <em>you</em> pick in the system file picker or share into the app.</li>
-</ul>
+    <section>
+      <div class="wrap">
+        <h2>Your rights (GDPR)</h2>
+        <p>You have the right to access, rectification, erasure, restriction of processing, data portability, and to object to the processing of your personal data. To exercise any of these rights, write to <a href="mailto:w4n9we1@gmail.com">w4n9we1@gmail.com</a>.</p>
+      </div>
+    </section>
 
-<h3>2.3 Settings stored on your device</h3>
+    <section>
+      <div class="wrap">
+        <h2>Changes</h2>
+        <p>We may update this policy from time to time. All changes will be published on this page.</p>
+      </div>
+    </section>
+  </main>
 
-<p>Your preferences (appearance, reading theme, App Lock state), the recent-files list, favorites, reading positions and the conversion history are stored locally on your device. You can delete documents — and their copies — from inside the app at any time.</p>
-
-<h2 id="not-collect">3. What We Do NOT Collect</h2>
-
-<ul>
-  <li><strong>No accounts.</strong> The app has no sign-up, no login, and no user profile.</li>
-  <li><strong>No file contents, ever.</strong> Your documents, their text, and their images are never transmitted anywhere.</li>
-  <li><strong>No advertising identifiers.</strong> The app contains no ads and no third-party ad SDKs.</li>
-  <li><strong>No behavioral profiling or cross-app tracking.</strong></li>
-</ul>
-
-<h2 id="purchases">4. Purchases</h2>
-
-<p>The optional one-time unlock (and the optional monthly subscription) is processed entirely by <strong>Apple</strong> through App Store in-app purchase. Apple handles your payment details. Purchase receipts are validated through <a href="https://www.revenuecat.com/privacy">RevenueCat</a>, our subscription infrastructure provider, which stores an anonymous App Store receipt identifier to restore your purchase — never your files and never your identity beyond that identifier. <strong>Restore Purchases</strong> inside the app re-checks that identifier at any time.</p>
-
-<h2 id="analytics">5. Crash Reports and Usage Analytics</h2>
-
-<ul>
-  <li><strong>Crash reports.</strong> If the app crashes, a technical crash report (stack trace, device model, OS version) is sent via Firebase Crashlytics so we can fix the cause. Crash reports <strong>do not include your file contents</strong>.</li>
-  <li><strong>Anonymous conversion events.</strong> The app records two anonymous events — "an export finished" and "a purchase completed" — with basic counters only (for example, the export format). These events <strong>contain no file contents and no identifying information</strong>, and they are not linked to you.</li>
-  <li>We do not measure page views, sessions, or engagement, and we do not build profiles.</li>
-</ul>
-
-<h2 id="sharing">6. Data Sharing</h2>
-
-<p>We do not sell or share data. The only processors are Apple (purchases, crash-report infrastructure via Firebase) and RevenueCat (anonymous receipt validation), each limited to the functions above.</p>
-
-<h2 id="retention">7. Local Data and Retention</h2>
-
-<p>Everything the app stores lives in its sandbox on your device: document copies, exports, preferences, and the recent list. Deleting the app removes all of it. There is nothing stored on our side that could be handed over, because nothing identifiable reaches us.</p>
-
-<h2 id="children">8. Children</h2>
-
-<p>The app is a general-purpose document tool, is not directed at children under 13, and collects no data from anyone — including children.</p>
-
-<h2 id="choices">9. Your Choices</h2>
-
-<ul>
-  <li>Delete documents and exports from inside the app at any time.</li>
-  <li>Remove the app to erase every trace of local data.</li>
-  <li>Manage or cancel the monthly subscription in your App Store account settings; use <strong>Restore Purchases</strong> to re-apply a purchase on any device with the same Apple ID.</li>
-</ul>
-
-<h2 id="changes">10. Changes</h2>
-
-<p>If this policy changes, the updated version will be posted on this page with a new "Last updated" date.</p>
-
-<h2 id="contact">11. Contact</h2>
-
-<p>Questions about this policy: email the developer from inside the app (Settings → Contact Support).</p>
+  <footer class="site-footer">
+    <div class="wrap">
+      <p class="legal-note">Microsoft Publisher is a trademark of Microsoft Corporation. This app is not affiliated with or endorsed by Microsoft.</p>
+      <p class="copy">
+        &copy; 2026 Lababacy &nbsp;&middot;&nbsp;
+        <a href="./">Privacy</a> &nbsp;&middot;&nbsp;
+        <a href="../terms/">Terms</a> &nbsp;&middot;&nbsp;
+        <a href="mailto:w4n9we1@gmail.com">w4n9we1@gmail.com</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

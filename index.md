@@ -17,6 +17,12 @@ Open winmail.dat (TNEF), MSG, EML, and Outlook PST archives right on your iPhone
 
 <!-- App Store URL goes live on release day -->
 
+### [Publisher File Viewer](./pubview/)
+
+Open Microsoft Publisher .pub files on iPhone and iPad — original layout preserved, decoded entirely on-device. Viewing is free; export, batch conversion and printing unlock with a one-time purchase.
+
+<!-- App Store URL goes live on release day -->
+
 ### [Database Viewer: SQLite & DBF](./databaseviewer/)
 
 Open MDB / ACCDB, SQLite, XLSX, ODS, DBF and CSV files on your Android phone or iPhone. A native C engine keeps large files fast, every file gets a health check before you open it, and nothing is ever uploaded.

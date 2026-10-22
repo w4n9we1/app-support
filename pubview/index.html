@@ -1,15 +1,406 @@
----
-title: "Publisher File Viewer — Support"
-description: "Support hub for Publisher File Viewer: open Microsoft Publisher .pub files on iPhone and iPad, export to PDF, Word and images."
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Publisher File Viewer — Open Microsoft Publisher files on iPhone and iPad</title>
+  <meta name="description" content="Publisher File Viewer opens Microsoft Publisher .pub files on iPhone and iPad — no Windows PC required. Original layout preserved. Your files never leave your device.">
+  <meta name="theme-color" content="#F7F2EA">
+  <link rel="icon" type="image/png" href="assets/icon-180.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lababacy.com/pubview/">
+  <meta property="og:title" content="Publisher File Viewer — Open Microsoft Publisher files on iPhone and iPad">
+  <meta property="og:description" content="Publisher is retired. Your .pub files aren't. A layout-faithful .pub reader for iPhone and iPad — your files never leave your device.">
+  <meta property="og:image" content="https://lababacy.com/pubview/assets/icon-1024.png">
+  <style>
+    :root {
+      --paper: #F7F2EA;
+      --paper-raised: #FBF7F0;
+      --ink: #1F1914;
+      --muted: #6B6157;
+      --gold: #E6B366;
+      --line: rgba(31, 25, 20, 0.08);
+    }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: -apple-system, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+    .wrap { max-width: 840px; margin: 0 auto; padding: 0 24px; }
+    a {
+      color: inherit;
+      text-decoration: underline;
+      text-decoration-color: rgba(31, 25, 20, 0.25);
+      text-underline-offset: 3px;
+    }
+    a:hover { text-decoration-color: var(--gold); }
 
-<h1>Publisher File Viewer</h1>
+    /* ---- Nav ---- */
+    .site-header { padding: 26px 0 0; }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px 28px;
+      flex-wrap: wrap;
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 11px;
+      font-weight: 650;
+      font-size: 17px;
+      letter-spacing: -0.01em;
+      text-decoration: none;
+    }
+    .brand img { width: 30px; height: 30px; border-radius: 7px; display: block; }
+    .nav-links { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 15.5px;
+    }
+    .nav-links a:hover { color: var(--ink); }
+    .btn {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--ink);
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 1.3;
+      padding: 12px 24px;
+      border-radius: 999px;
+      text-decoration: none;
+    }
+    .btn:hover { text-decoration: none; filter: brightness(1.04); }
+    .btn-sm { padding: 9px 18px; font-size: 15px; }
 
-<p>Open Microsoft Publisher <strong>.pub</strong> files on iPhone and iPad — every page, pixel-accurate. Free viewing forever; export, batch conversion, printing and App Lock via a single one-time unlock.</p>
+    /* ---- Hero ---- */
+    .hero { padding: 104px 0 0; }
+    .kicker {
+      margin: 0 0 22px;
+      font-size: 13.5px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    h1 {
+      margin: 0 0 26px;
+      font-size: 60px;
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+    }
+    .hl {
+      font-style: normal;
+      background: linear-gradient(transparent 68%, rgba(230, 179, 102, 0.55) 68%);
+    }
+    .lede {
+      margin: 0 0 38px;
+      max-width: 620px;
+      font-size: 20px;
+      line-height: 1.6;
+      color: var(--muted);
+    }
 
-<ul>
-  <li><a href="terms/">Terms of Use</a></li>
-  <li><a href="privacy/">Privacy Policy</a></li>
-</ul>
+    /* ---- Sections ---- */
+    section { margin-top: 112px; }
+    h2 {
+      margin: 0 0 16px;
+      font-size: 33px;
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -0.015em;
+    }
+    .story p {
+      margin: 0;
+      max-width: 660px;
+      font-size: 21px;
+      line-height: 1.6;
+      letter-spacing: -0.005em;
+    }
 
-<p>Questions or a file that will not open? Use <strong>Contact Support</strong> inside the app (Settings → Contact Support) — it pre-fills the diagnostic details for you.</p>
+    /* ---- Steps ---- */
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      margin: 44px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+    .step-no {
+      display: block;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+    .steps h3 { margin: 0 0 8px; font-size: 19px; font-weight: 650; letter-spacing: -0.01em; }
+    .steps p { margin: 0; font-size: 16.5px; color: var(--muted); }
+
+    /* ---- Features ---- */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px 36px;
+      margin: 48px 0 0;
+    }
+    .feature-card {
+      background: var(--paper-raised);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 36px 36px 32px;
+    }
+    .feature-card figure { margin: 0 auto 28px; max-width: 280px; }
+    .feature-card img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: 0 1px 3px rgba(31, 25, 20, 0.05);
+    }
+    .feature-card h3 { margin: 0 0 8px; font-size: 20px; font-weight: 650; letter-spacing: -0.01em; }
+    .feature-card p { margin: 0; font-size: 16.5px; color: var(--muted); }
+    .paid-note {
+      margin: 52px 0 0;
+      padding-top: 28px;
+      border-top: 1px solid var(--line);
+      max-width: 620px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    /* ---- Privacy ---- */
+    .privacy-list {
+      margin: 44px 0 0;
+      padding: 0;
+      list-style: none;
+      max-width: 680px;
+    }
+    .privacy-list li {
+      display: grid;
+      grid-template-columns: 56px 1fr;
+      gap: 0 18px;
+      padding: 22px 0;
+      border-top: 1px solid var(--line);
+    }
+    .privacy-list li:last-child { border-bottom: 1px solid var(--line); }
+    .privacy-no {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--muted);
+      line-height: 1.4;
+    }
+    .privacy-list h3 { margin: 0 0 4px; font-size: 18.5px; font-weight: 650; letter-spacing: -0.01em; }
+    .privacy-list p { margin: 0; font-size: 16.5px; color: var(--muted); }
+
+    /* ---- FAQ ---- */
+    .faq { max-width: 680px; }
+    .faq h3 {
+      margin: 0;
+      padding: 22px 0 6px;
+      border-top: 1px solid var(--line);
+      font-size: 18.5px;
+      font-weight: 650;
+      letter-spacing: -0.01em;
+    }
+    .faq p { margin: 0 0 22px; color: var(--muted); font-size: 16.5px; }
+
+    /* ---- Footer ---- */
+    .site-footer {
+      margin-top: 128px;
+      border-top: 1px solid var(--line);
+      padding: 40px 0 72px;
+      font-size: 15px;
+      color: var(--muted);
+    }
+    .site-footer p { margin: 0 0 8px; }
+    .site-footer .legal-note { font-size: 13.5px; max-width: 620px; }
+    .site-footer .copy { margin-top: 20px; }
+
+    /* ---- Mobile ---- */
+    @media (max-width: 720px) {
+      .hero { padding-top: 72px; }
+      h1 { font-size: 42px; }
+      .lede { font-size: 18.5px; }
+      section { margin-top: 96px; }
+      .story p { font-size: 19px; }
+      .steps { grid-template-columns: 1fr; gap: 30px; }
+      .feature-grid { grid-template-columns: 1fr; gap: 28px; }
+      .feature-card { padding: 28px 24px; }
+      .privacy-list li { grid-template-columns: 36px 1fr; }
+      .site-footer { margin-top: 104px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="index.html">
+        <img src="assets/icon-180.png" alt="Publisher File Viewer app icon" width="180" height="180">
+        <span>Publisher File Viewer</span>
+      </a>
+      <nav class="nav-links" aria-label="Main">
+        <a href="#how-it-works">How it works</a>
+        <a href="#faq">FAQ</a>
+        <a href="privacy/">Privacy</a>
+        <a class="btn btn-sm js-app-store-cta" href="#">Download on the App Store</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <p class="kicker">For Microsoft Publisher files</p>
+        <h1>Publisher is <em class="hl">retired</em>. Your .pub files aren&rsquo;t.</h1>
+        <p class="lede">Publisher File Viewer opens Microsoft Publisher .pub files on iPhone and iPad &mdash; no Windows PC required. Original layout preserved. Your files never leave your device.</p>
+        <a class="btn js-app-store-cta" href="#">Download on the App Store</a>
+      </div>
+    </section>
+
+    <section class="story">
+      <div class="wrap">
+        <p>Microsoft ended support for Publisher on October&nbsp;1,&nbsp;2026. Millions of .pub files &mdash; newsletters, flyers, brochures, school papers &mdash; are still out there. They still open. Just not in Publisher.</p>
+      </div>
+    </section>
+
+    <section id="how-it-works">
+      <div class="wrap">
+        <h2>How it works</h2>
+        <ol class="steps">
+          <li>
+            <span class="step-no">1</span>
+            <h3>Open from anywhere</h3>
+            <p>Mail, AirDrop, or anything the Files app reaches (iCloud, Google Drive, SMB).</p>
+          </li>
+          <li>
+            <span class="step-no">2</span>
+            <h3>See the real layout</h3>
+            <p>Text frames, images, tables, colors and page numbers appear where the author put them.</p>
+          </li>
+          <li>
+            <span class="step-no">3</span>
+            <h3>Take it with you</h3>
+            <p>Export to PDF, Word (.docx), RTF, plain text, or turn any page into a PNG/JPEG image.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>What it does</h2>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <figure>
+              <img src="assets/shot-library.png" alt="Your Library: a list of opened .pub documents with search and favorites" width="1290" height="2796">
+            </figure>
+            <h3>Your .pub library</h3>
+            <p>Every file you&rsquo;ve opened, ready to reopen. Search by name, sort, mark favorites.</p>
+          </article>
+          <article class="feature-card">
+            <figure>
+              <img src="assets/shot-reader.png" alt="A Publisher document rendered on iPhone with its original layout, text frames and images in place" width="1290" height="2796">
+            </figure>
+            <h3>True to the original</h3>
+            <p>A layout-faithful reader built on the same engine LibreOffice uses for Publisher files.</p>
+          </article>
+          <article class="feature-card">
+            <figure>
+              <img src="assets/shot-themes.png" alt="Reading themes: Day, Sepia and Night" width="1290" height="2796">
+            </figure>
+            <h3>Comfortable reading</h3>
+            <p>Day, Sepia and Night reading themes. Your document&rsquo;s colors stay untouched.</p>
+          </article>
+          <article class="feature-card">
+            <figure>
+              <img src="assets/shot-export.png" alt="The export screen offering PDF, Word, RTF and image output" width="1290" height="2796">
+            </figure>
+            <h3>Export everything</h3>
+            <p>PDF with selectable text, Word, RTF, images, folded booklet PDF &mdash; or convert many files in one run.</p>
+          </article>
+        </div>
+        <p class="paid-note">Export and printing unlock with a single one-time purchase. No subscription.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>Your files stay yours</h2>
+        <ul class="privacy-list">
+          <li>
+            <span class="privacy-no">1</span>
+            <div>
+              <h3>Read-only by design</h3>
+              <p>Your original files are never modified.</p>
+            </div>
+          </li>
+          <li>
+            <span class="privacy-no">2</span>
+            <div>
+              <h3>Your files never leave your device</h3>
+              <p>Everything happens on your iPhone or iPad. No account, no sign-in.</p>
+            </div>
+          </li>
+          <li>
+            <span class="privacy-no">3</span>
+            <div>
+              <h3>Crash reports never include file content</h3>
+              <p>If the app crashes, we see the technical trace, not your document.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="wrap faq">
+        <h2>FAQ</h2>
+        <h3>Does it work without a Windows PC?</h3>
+        <p>Yes. Parsing and rendering happen entirely on your device.</p>
+        <h3>Can I convert a Publisher document to PDF on my phone?</h3>
+        <p>Yes &mdash; open it and export as PDF. The text stays selectable and searchable.</p>
+        <h3>What if a file will not open?</h3>
+        <p>You get a clear explanation &mdash; password-protected, damaged or unsupported version &mdash; plus a diagnostic report. Never a blank screen, never a crash.</p>
+        <h3>Is Publisher File Viewer free?</h3>
+        <p>Viewing is free. Export and printing unlock with a single one-time purchase &mdash; no subscription.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p class="legal-note">Microsoft Publisher is a trademark of Microsoft Corporation. This app is not affiliated with or endorsed by Microsoft.</p>
+      <p class="copy">
+        &copy; 2026 Lababacy &nbsp;&middot;&nbsp;
+        <a href="privacy/">Privacy</a> &nbsp;&middot;&nbsp;
+        <a href="terms/">Terms</a> &nbsp;&middot;&nbsp;
+        <a href="mailto:w4n9we1@gmail.com">w4n9we1@gmail.com</a>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // TODO(PRODUCTION_URL): set APP_STORE_URL once the app is live on the App Store.
+    // While it is empty, the download buttons fall back to "#" and simply do nothing.
+    const APP_STORE_URL = "";
+    document.addEventListener("DOMContentLoaded", function () {
+      var buttons = document.querySelectorAll(".js-app-store-cta");
+      var target = APP_STORE_URL || "#";
+      for (var i = 0; i < buttons.length; i++) {
+        buttons[i].setAttribute("href", target);
+      }
+    });
+  </script>
+</body>
+</html>
