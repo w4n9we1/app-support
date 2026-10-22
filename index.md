@@ -19,7 +19,7 @@ Open winmail.dat (TNEF), MSG, EML, and Outlook PST archives right on your iPhone
 
 ### [Publisher File Viewer](./pubview/)
 
-Open Microsoft Publisher .pub files on iPhone and iPad — original layout preserved, decoded entirely on-device. Viewing is free; export, batch conversion and printing unlock with a one-time purchase.
+Open Microsoft Publisher .pub files on iPhone and iPad — original layout preserved, decoded entirely on-device. Viewing is free; export, batch conversion and printing unlock with a one-time lifetime purchase (an optional monthly subscription is also available).
 
 <!-- App Store URL goes live on release day -->
 
