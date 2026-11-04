@@ -6,7 +6,7 @@ redirect_from:
 
 **Product:** Database Viewer: MDB & ACCDB (AccessViewer)  
 **Effective Date:** August 19, 2026  
-**Last Updated:** September 22, 2026
+**Last Updated:** November 4, 2026
 
 This Privacy Policy explains how Database Viewer (AccessViewer, the “App”) handles information in the iOS and Android versions published by W4N9WE1.
 
@@ -20,11 +20,15 @@ The App does not require an account, and it does not upload your original databa
 
 The current Android release does not expose an AI Query entry point. The implementation is retained for possible future evaluation. If the feature is restored, this policy will be updated before it becomes available.
 
-## 3. Advertising and consent
+## 3. Advertising and analytics
 
-The free version may display banner advertising through Google AdMob and may show an occasional interstitial ad when you replace an already-open database file. Interstitial ads are rate-limited and are not required to open or browse a database. Google may process device, advertising, diagnostic, and approximate location information as described in [Google’s Privacy Policy](https://policies.google.com/privacy).
+The App does not display advertising and does not include advertising SDKs.
 
-Where required, the App uses Google’s User Messaging Platform (UMP) to request consent and provide privacy options. You can change available advertising privacy choices through the consent or privacy options UI. Pro users do not see banner or interstitial ads, and the App does not actively load new ad requests for Pro users.
+The App uses PostHog to record limited, pseudonymous usage analytics: app opens, screen views, feature-usage events (such as opening a database file or reaching a preview limit), paywall interactions, and purchase-result events. Events are linked to a random, device-scoped identifier that is not connected to your name, email, or database contents, and no file names, table names, SQL text, or database contents are ever included in analytics events. Where the App presents a paywall or records a purchase, RevenueCat may share subscription status with PostHog under the same pseudonymous identifier so that purchase and usage analytics stay consistent.
+
+PostHog also records optional, masked session replays to diagnose usability problems and crashes. Replays render screens as masked wireframes: text and images are replaced with placeholders before they leave the device, so replays do not contain readable screen content. Data handled by PostHog is stored on PostHog’s cloud in the United States. See [PostHog’s Privacy Policy](https://posthog.com/privacy).
+
+Where required by applicable law (for example, in the EEA and the UK), the App asks for your consent before enabling analytics and session replay, and you can decline without losing any App functionality. You may also opt out later by contacting us at the address below; previously collected pseudonymous analytics remain subject to PostHog’s retention practices.
 
 ## 4. AI query requests (future feature reference)
 
@@ -49,13 +53,13 @@ The App may process technical information required to operate the App, such as d
 
 The App uses Google Firebase Crashlytics to collect crash and error reports. Crash reports may include device model and manufacturer, operating-system and app versions, stack traces, and related technical identifiers, and are used to diagnose and fix crashes.
 
-The App uses Google Analytics for Firebase to record limited usage events, such as app opens and feature-usage counters, together with an app-instance identifier. These events are used to understand which features are used and to improve the App. Google processes this information as described in [Google’s Privacy Policy](https://policies.google.com/privacy).
+The App uses PostHog for product analytics as described in Section 3 (usage events, screen views, masked session replay, and purchase-result events, tied to a random device-scoped identifier). Google processes Crashlytics information as described in [Google’s Privacy Policy](https://policies.google.com/privacy), and PostHog processes analytics information as described in [PostHog’s Privacy Policy](https://posthog.com/privacy).
 
 The current Android workflow does not require a user account.
 
 ## 7. Sharing and retention
 
-We do not sell your personal information. Local files, reports, cached copies, and exports remain on your device until you delete them, clear the App’s data, or uninstall the App. Information handled by Google, RevenueCat, or the AI relay is subject to those providers’ retention practices and policies.
+We do not sell your personal information. Local files, reports, cached copies, and exports remain on your device until you delete them, clear the App’s data, or uninstall the App. Information handled by Google, PostHog, RevenueCat, or the AI relay is subject to those providers’ retention practices and policies.
 
 You control any file or report that you explicitly export or share with another app or service.
 
