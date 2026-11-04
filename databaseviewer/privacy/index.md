@@ -20,15 +20,15 @@ The App does not require an account, and it does not upload your original databa
 
 The current Android release does not expose an AI Query entry point. The implementation is retained for possible future evaluation. If the feature is restored, this policy will be updated before it becomes available.
 
-## 3. Advertising and analytics
+## 3. Advertising, analytics, and consent
 
-The App does not display advertising and does not include advertising SDKs.
+The free version may display banner advertising through Google AdMob and may show an occasional interstitial ad. Interstitial ads are rate-limited and are not required to open or browse a database. Google may process device, advertising, diagnostic, and approximate location information as described in [Google’s Privacy Policy](https://policies.google.com/privacy). Where required, the App uses Google’s User Messaging Platform (UMP) to request consent and provide advertising privacy options, and Pro users do not see ads.
 
-The App uses PostHog to record limited, pseudonymous usage analytics: app opens, screen views, feature-usage events (such as opening a database file or reaching a preview limit), paywall interactions, and purchase-result events. Events are linked to a random, device-scoped identifier that is not connected to your name, email, or database contents, and no file names, table names, SQL text, or database contents are ever included in analytics events. Where the App presents a paywall or records a purchase, RevenueCat may share subscription status with PostHog under the same pseudonymous identifier so that purchase and usage analytics stay consistent.
+The App also uses PostHog to record limited, pseudonymous usage analytics: app opens, screen views, feature-usage events (such as opening a database file or reaching a preview limit), paywall interactions, and purchase-result events. Events are linked to a random, device-scoped identifier that is not connected to your name, email, or database contents, and no file names, table names, SQL text, or database contents are ever included in analytics events. Where the App presents a paywall or records a purchase, RevenueCat may share subscription status with PostHog under the same pseudonymous identifier so that purchase and usage analytics stay consistent.
 
 PostHog also records optional, masked session replays to diagnose usability problems and crashes. Replays render screens as masked wireframes: text and images are replaced with placeholders before they leave the device, so replays do not contain readable screen content. Data handled by PostHog is stored on PostHog’s cloud in the United States. See [PostHog’s Privacy Policy](https://posthog.com/privacy).
 
-Where required by applicable law (for example, in the EEA and the UK), the App asks for your consent before enabling analytics and session replay, and you can decline without losing any App functionality. You may also opt out later by contacting us at the address below; previously collected pseudonymous analytics remain subject to PostHog’s retention practices.
+Where required by applicable law (for example, in the EEA and the UK), the App asks for your consent before enabling personalized advertising, analytics, and session replay, and you can decline without losing any App functionality. You may also opt out later through the App’s privacy-options UI or by contacting us at the address below; previously collected pseudonymous analytics remain subject to PostHog’s retention practices.
 
 ## 4. AI query requests (future feature reference)
 
