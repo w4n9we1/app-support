@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+  ============================================================================
+  FORMAT PAGE TEMPLATE (static self-contained HTML, no Jekyll needed)
+  ============================================================================
+  HOW TO USE
+  1. Copy this file, replace every {{PLACEHOLDER}}, then save it as
+     /Users/ww/code/app-support/formats/<slug>/index.html
+     (plain directory — Jekyll publishes it as-is, same model as
+     databaseviewer/index.html).
+  2. Facts source of truth: _data/product_facts.yml. Copy wording from it
+     (engine, privacy, health check, free tier, Pro). Qualitative only:
+     NEVER publish specific row/cell counts or a dollar price.
+  3. The visible FAQ list and the FAQPage JSON-LD mainEntity MUST contain
+     exactly the same questions and answers (keep 4-6 questions; 6 slots are
+     pre-wired below — delete unused slots on BOTH sides together).
+
+  MUST-EDIT CHECKLIST (every {{...}} below)
+  - {{SLUG}}            final path segment, e.g. mdb-viewer  (canonical + og:url + breadcrumb)
+  - {{TITLE}}           <title> and og:title, <= 60 chars
+  - {{DESCRIPTION}}     meta description, 120-160 chars, direct-answer style
+  - {{FORMAT_NAME}}     human format name, e.g. "MDB file"
+  - {{H1}}              on-page H1 (may differ slightly from <title>)
+  - {{ANSWER}}          first-screen direct answer, 40-60 words, fully
+                        self-contained (no "this page", no "below")
+  - {{WHAT_IS}}         1-2 paragraphs: what the format is
+  - {{STEP_n_TEXT}}     HowTo steps, 3-4 steps (mirror in HowTo JSON-LD)
+  - {{FREE_TIER}}       free-preview paragraph, copy claims.free_tier from
+                        the facts card
+  - {{FAQ_Q_n}}/        4-6 FAQ items, identical in visible HTML and JSON-LD
+    {{FAQ_A_n}}         (6 slots pre-wired; delete unused slots on BOTH sides)
+  - {{RELATED_n_TITLE}} / {{RELATED_n_URL}}
+                        2-3 internal links to real existing pages only
+                        (product page, sibling format pages, guides)
+  - og:image            keep the site-wide default, or generate a
+                        format-specific 1200x630 image in /assets_og/
+
+  DO NOT EDIT (keep verbatim — single source of truth)
+  - store URLs: App Store plain; Google Play always with the
+    referrer UTM (from facts card stores.google_play_utm)
+  - JSON-LD SoftwareApplication sameAs: canonical store URLs (no UTM)
+  - the light-style <style> block may be tuned, keep it self-contained
+  ============================================================================
+-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{TITLE}}</title>
+  <meta name="description" content="{{DESCRIPTION}}">
+  <link rel="canonical" href="https://lababacy.com/formats/{{SLUG}}/">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#ffffff">
+  <!-- Site-wide verification tokens: use the same real tokens as the layout
+       (see _layouts/default.html) once the user replaces PENDING_USER_TOKEN. -->
+  <meta name="google-site-verification" content="PENDING_USER_TOKEN" />
+  <meta name="msvalidate.01" content="PENDING_USER_TOKEN" />
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lababacy.com/formats/{{SLUG}}/">
+  <meta property="og:title" content="{{TITLE}}">
+  <meta property="og:description" content="{{DESCRIPTION}}">
+  <meta property="og:image" content="https://lababacy.com/assets_og/og-databaseviewer.png">
+  <meta property="og:site_name" content="Lababacy">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{TITLE}}">
+  <meta name="twitter:description" content="{{DESCRIPTION}}">
+  <meta name="twitter:image" content="https://lababacy.com/assets_og/og-databaseviewer.png">
+
+  <!-- JSON-LD 1/4: SoftwareApplication (entity binding page <-> app) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Database Viewer: SQLite & DBF",
+    "operatingSystem": "Android 8.0+ · iOS 17.0+",
+    "applicationCategory": "Utilities",
+    "author": { "@type": "Organization", "name": "Lababacy" },
+    "url": "https://lababacy.com/databaseviewer/",
+    "sameAs": [
+      "https://apps.apple.com/app/database-viewer-sqlite-dbf/id6811615295",
+      "https://play.google.com/store/apps/details?id=com.lababacy.accessviewer"
+    ],
+    "description": "Open MDB, ACCDB, SQLite, XLSX, DBF, CSV and more on your phone — natively, on-device, with no account and no uploads. Free to start, one-time Pro unlock."
+  }
+  </script>
+  <!-- JSON-LD 2/4: FAQPage — mainEntity MUST mirror the visible FAQ below exactly.
+       6 slots are pre-wired: fill 4-6 and delete unused slots on BOTH sides together. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "{{FAQ_Q_1}}", "acceptedAnswer": { "@type": "Answer", "text": "{{FAQ_A_1}}" } },
+      { "@type": "Question", "name": "{{FAQ_Q_2}}", "acceptedAnswer": { "@type": "Answer", "text": "{{FAQ_A_2}}" } },
+      { "@type": "Question", "name": "{{FAQ_Q_3}}", "acceptedAnswer": { "@type": "Answer", "text": "{{FAQ_A_3}}" } },
+      { "@type": "Question", "name": "{{FAQ_Q_4}}", "acceptedAnswer": { "@type": "Answer", "text": "{{FAQ_A_4}}" } },
+      { "@type": "Question", "name": "{{FAQ_Q_5}}", "acceptedAnswer": { "@type": "Answer", "text": "{{FAQ_A_5}}" } },
+      { "@type": "Question", "name": "{{FAQ_Q_6}}", "acceptedAnswer": { "@type": "Answer", "text": "{{FAQ_A_6}}" } }
+    ]
+  }
+  </script>
+  <!-- JSON-LD 3/4: HowTo — steps MUST mirror the visible numbered steps below (3-4 steps) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to open a {{FORMAT_NAME}} file on your phone",
+    "step": [
+      { "@type": "HowToStep", "position": 1, "name": "{{STEP_1_NAME}}", "text": "{{STEP_1_TEXT}}" },
+      { "@type": "HowToStep", "position": 2, "name": "{{STEP_2_NAME}}", "text": "{{STEP_2_TEXT}}" },
+      { "@type": "HowToStep", "position": 3, "name": "{{STEP_3_NAME}}", "text": "{{STEP_3_TEXT}}" },
+      { "@type": "HowToStep", "position": 4, "name": "{{STEP_4_NAME}}", "text": "{{STEP_4_TEXT}}" }
+    ]
+  }
+  </script>
+  <!-- JSON-LD 4/4: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Lababacy", "item": "https://lababacy.com/" },
+      { "@type": "ListItem", "position": 2, "name": "{{FORMAT_NAME}}", "item": "https://lababacy.com/formats/{{SLUG}}/" }
+    ]
+  }
+  </script>
+  <style>
+    body{font-family:-apple-system,"Helvetica Neue",Arial,sans-serif;line-height:1.65;color:#1d1d1f;max-width:44rem;margin:0 auto;padding:2rem 1.25rem;background:#fff}
+    h1{font-size:1.7rem;line-height:1.25}h2{font-size:1.3rem;margin-top:2rem}h3{font-size:1.05rem}
+    a{color:#0066cc}img{max-width:100%}
+    footer{margin-top:3.5rem;padding-top:1rem;border-top:1px solid #e5e5e5;color:#6e6e73;font-size:.85rem}
+    code{background:#f5f5f7;padding:.1em .35em;border-radius:4px}
+    .crumbs{color:#6e6e73;font-size:.85rem;margin-bottom:1rem}
+    .answer{font-size:1.05rem;font-weight:500;background:#f5f5f7;border-left:3px solid #0066cc;padding:.9rem 1.1rem;border-radius:8px}
+    .cta-row{display:flex;flex-wrap:wrap;gap:.8rem;margin:1.4rem 0}
+    .btn{display:inline-block;border-radius:999px;text-decoration:none;font-weight:600;padding:.6rem 1.2rem;font-size:.95rem}
+    .btn-primary{background:#0066cc;color:#fff}.btn-primary:hover{background:#0052a3}
+    .btn-ghost{border:1px solid #d2d2d7;color:#1d1d1f}.btn-ghost:hover{border-color:#86868b}
+    .steps li{margin:.6rem 0}
+    .faq details{border-top:1px solid #e5e5e7}
+    .faq details:last-of-type{border-bottom:1px solid #e5e5e7}
+    .faq summary{cursor:pointer;padding:.9rem .2rem;font-weight:600}
+    .faq details p{margin:0;padding:0 .2rem 1rem .2rem;color:#515154}
+    .related li{margin:.4rem 0}
+  </style>
+</head>
+<body>
+
+  <nav class="crumbs"><a href="/">Lababacy</a> › <span>{{FORMAT_NAME}}</span></nav>
+
+  <!-- First screen: direct answer. 40-60 words, self-contained (AI-summary friendly). -->
+  <h1>{{H1}}</h1>
+  <p class="answer">{{ANSWER}}</p>
+
+  <div class="cta-row">
+    <a class="btn btn-primary" href="https://apps.apple.com/app/database-viewer-sqlite-dbf/id6811615295" rel="noopener">Download on the App Store</a>
+    <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.lababacy.accessviewer&referrer=utm_source%3Dwebsite%26utm_medium%3Dseo" rel="noopener">Get it on Google Play</a>
+  </div>
+
+  <h2>What is a {{FORMAT_NAME}} file?</h2>
+  <p>{{WHAT_IS}}</p>
+
+  <!-- HowTo: keep 3-4 steps, identical to the HowTo JSON-LD above. -->
+  <h2>How to open a {{FORMAT_NAME}} file on your phone</h2>
+  <ol class="steps">
+    <li>{{STEP_1_TEXT}}</li>
+    <li>{{STEP_2_TEXT}}</li>
+    <li>{{STEP_3_TEXT}}</li>
+    <li>{{STEP_4_TEXT}}</li>
+  </ol>
+
+  <!-- Free preview: qualitative wording from _data/product_facts.yml claims.free_tier. No numbers. -->
+  <h2>Free preview — see your data before you pay</h2>
+  <p>{{FREE_TIER}}</p>
+
+  <!-- FAQ: keep 4-6 items, identical to the FAQPage JSON-LD above.
+       6 slots pre-wired — delete unused slots on BOTH sides together. -->
+  <h2>Frequently asked questions</h2>
+  <div class="faq">
+    <details>
+      <summary>{{FAQ_Q_1}}</summary>
+      <p>{{FAQ_A_1}}</p>
+    </details>
+    <details>
+      <summary>{{FAQ_Q_2}}</summary>
+      <p>{{FAQ_A_2}}</p>
+    </details>
+    <details>
+      <summary>{{FAQ_Q_3}}</summary>
+      <p>{{FAQ_A_3}}</p>
+    </details>
+    <details>
+      <summary>{{FAQ_Q_4}}</summary>
+      <p>{{FAQ_A_4}}</p>
+    </details>
+    <details>
+      <summary>{{FAQ_Q_5}}</summary>
+      <p>{{FAQ_A_5}}</p>
+    </details>
+    <details>
+      <summary>{{FAQ_Q_6}}</summary>
+      <p>{{FAQ_A_6}}</p>
+    </details>
+  </div>
+
+  <!-- Internal links: 2-3, real existing pages only. -->
+  <h2>Related pages</h2>
+  <ul class="related">
+    <li><a href="{{RELATED_1_URL}}">{{RELATED_1_TITLE}}</a></li>
+    <li><a href="{{RELATED_2_URL}}">{{RELATED_2_TITLE}}</a></li>
+    <li><a href="{{RELATED_3_URL}}">{{RELATED_3_TITLE}}</a></li>
+  </ul>
+
+  <h2 id="get">Get Database Viewer</h2>
+  <div class="cta-row">
+    <a class="btn btn-primary" href="https://apps.apple.com/app/database-viewer-sqlite-dbf/id6811615295" rel="noopener">Download on the App Store</a>
+    <a class="btn btn-ghost" href="https://play.google.com/store/apps/details?id=com.lababacy.accessviewer&referrer=utm_source%3Dwebsite%26utm_medium%3Dseo" rel="noopener">Get it on Google Play</a>
+  </div>
+  <p style="color:#6e6e73;font-size:.85rem">Free to start — Pro is a one-time purchase.</p>
+
+</body>
+<footer>
+  <p><a href="/">All apps</a> · <a href="/databaseviewer/">Database Viewer</a> · <a href="/support/">Support</a> · <a href="mailto:w4n9we1@gmail.com">Contact</a></p>
+  <p>© Lababacy</p>
+</footer>
+</html>

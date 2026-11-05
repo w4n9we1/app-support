@@ -1,0 +1,68 @@
+# =============================================================================
+# product_facts.yml — SINGLE SOURCE OF TRUTH for Database Viewer public facts.
+#
+# Every public page (landing page, /formats/* hub pages, /guides/* articles)
+# must render its claims from this card so AI engines never see conflicting
+# statements across pages.
+#
+# Hard rules (see docs/website_seo_geo_plan_20261105.md §3.3 / §8):
+#   - No specific row/cell/preview numbers on public pages (they drift per
+#     release). Qualitative wording only.
+#   - Price is always "one-time purchase" — never a dollar figure.
+#   - Only claim capabilities that are actually implemented.
+# =============================================================================
+
+app_name: "Database Viewer: SQLite & DBF"
+developer: "Lababacy"
+
+platforms:
+  android: "Android 8.0+"
+  ios: "iOS 17.0+"
+
+stores:
+  app_store: "https://apps.apple.com/app/database-viewer-sqlite-dbf/id6811615295"
+  google_play: "https://play.google.com/store/apps/details?id=com.lababacy.accessviewer"
+  # Google Play link with install-referrer UTM, pre-encoded for direct use in
+  # templates and page CTAs. App Store links stay plain (no parameters).
+  google_play_utm: "https://play.google.com/store/apps/details?id=com.lababacy.accessviewer&referrer=utm_source%3Dwebsite%26utm_medium%3Dseo"
+
+# Supported format families (10). Use these ids/labels consistently; do not
+# reintroduce extension-based counts like "12+".
+formats:
+  - { id: mdb,      label: "MDB",      desc: "Microsoft Access (Jet 3 & Jet 4)" }
+  - { id: accdb,    label: "ACCDB",    desc: "Microsoft Access 2007+" }
+  - { id: sqlite,   label: "SQLite",   desc: "SQLite database files" }
+  - { id: csv,      label: "CSV",      desc: "Comma-separated text data" }
+  - { id: tsv,      label: "TSV",      desc: "Tab-separated text data" }
+  - { id: xlsx,     label: "XLSX",     desc: "Excel workbooks" }
+  - { id: xlsm,     label: "XLSM",     desc: "Macro-enabled Excel workbooks" }
+  - { id: ods,      label: "ODS",      desc: "OpenDocument spreadsheets" }
+  - { id: dbf,      label: "DBF",      desc: "dBase III files" }
+  - { id: sql_dump, label: "SQL dump", desc: "SQL dumps, SQLite dialect" }
+
+# Core claims — qualitative, version-proof wording. Pages may shorten but not
+# contradict or quantify these.
+claims:
+  engine: "A native C engine keeps million-row tables and files of 1.5 GB and more scrolling smoothly on a phone."
+  privacy: "Everything runs on-device — nothing is uploaded. No account."
+  ads: "The free version is supported by ads; Pro removes them."
+  health_check: "Every file gets a health check before you open it: what it really is, whether it is readable, which encoding it uses, and where damaged regions are."
+  free_tier: >-
+    Free to start: open files in every supported format, read the health
+    report, and browse tables in full in open formats such as SQLite, CSV,
+    XLSX and ODS; Access databases (MDB and ACCDB) open with a generous free
+    preview. Sorting and SQL editing are available in the free tier.
+  pro: >-
+    Pro — a single one-time purchase — adds export, editing, file diff,
+    deep analysis and more. An optional monthly subscription is also
+    available, priced as shown in the app.
+
+# Public price wording. Deliberately NO dollar figure: store prices change
+# and public pages must not drift out of sync.
+price: "One-time purchase"
+
+links:
+  product: "https://lababacy.com/databaseviewer/"
+  privacy_policy: "https://lababacy.com/databaseviewer/privacy/"
+  support: "https://lababacy.com/databaseviewer/support/"
+  terms: "https://lababacy.com/databaseviewer/terms/"

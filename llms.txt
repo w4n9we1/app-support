@@ -1,0 +1,28 @@
+# Lababacy Apps
+
+> Practical, privacy-first apps for iPhone and Android by an independent developer. Every app works entirely on-device: your files are never uploaded, and there is no account. The flagship product is Database Viewer, which opens Microsoft Access (MDB/ACCDB), SQLite, Excel, OpenDocument, dBase and plain-text data files right on a phone — a native C engine for large files, a health check for every file, free to start with a one-time Pro upgrade.
+
+## Apps
+
+- [Database Viewer: SQLite & DBF](https://lababacy.com/databaseviewer/): Open MDB/ACCDB (Microsoft Access), SQLite, XLSX, XLSM, ODS, DBF, CSV, TSV and SQL dump files on Android and iPhone. Native C engine, health check before you open, nothing uploaded. Free tier available (ad-supported); Pro is a one-time purchase that removes ads.
+- [Access Database Viewer: MDB AI](https://lababacy.com/access_db_viewer/): Open and inspect Microsoft Access (MDB/ACCDB) databases on iPhone, on-device.
+- [Winmail Reader - DAT, MSG, EML](https://lababacy.com/winmail/): Open winmail.dat (TNEF), MSG, EML and Outlook PST archives on iPhone and iPad, decoded on-device.
+- [Publisher File Viewer](https://lababacy.com/pubview/): Open Microsoft Publisher .pub files on iPhone and iPad with the original layout preserved.
+- [Shift: Contact Export & Backup](https://lababacy.com/shift/): Export contacts to VCF, CSV, XLSX or an encrypted local backup.
+- [VoxMail - Speak to Text Email](https://lababacy.com/voxmail/): Record a voice note, transcribe it on-device, and send it as a finished email.
+- [Masked: Redact PDF & Photos](https://lababacy.com/masked/): Remove sensitive faces, text and metadata from photos and PDFs before sharing.
+- [WholeNote: Export Notes](https://lababacy.com/note2poster/): Turn Apple Notes into complete, searchable PDFs and long images.
+- [MemoSnap: Lock Screen Todo](https://lababacy.com/memosnap/): To-dos and memo wallpapers on the lock screen.
+- [NoNag: Block Open in App](https://lababacy.com/nonag/): A Safari extension that dismisses "Open in App" banners and redirect pop-ups.
+- [WallDone: Visual To-Do List](https://lababacy.com/walldone/): A calm, visual to-do list of finished tasks on your wall.
+
+## Support & Legal
+
+- [Support Center](https://lababacy.com/support/)
+- [Database Viewer Support](https://lababacy.com/databaseviewer/support/)
+- [Database Viewer Privacy Policy](https://lababacy.com/databaseviewer/privacy/)
+- [Database Viewer Terms of Use](https://lababacy.com/databaseviewer/terms/)
+
+## Formats & Guides (in progress)
+
+- Format hub pages under /formats/ (MDB, ACCDB, MDB-to-CSV, DBF, SQLite, ODS) and how-to guides under /guides/ are being published in batches; links will be added here as they go live.

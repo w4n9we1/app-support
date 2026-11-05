@@ -5,8 +5,17 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-redirect-from
+collections:
+  guides:
+    output: true
+    permalink: /guides/:name/
 defaults:
   - scope:
       path: ""
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "guides"
     values:
       layout: "default"
