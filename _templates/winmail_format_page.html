@@ -1,0 +1,138 @@
+<!--
+# =============================================================================
+# WINMAIL FORMAT PAGE TEMPLATE (static Jekyll page, not a collection item)
+#
+# HOW TO USE
+# 1. Copy to /Users/ww/code/app-support/winmail/formats/<slug>/index.html
+#    URL = https://lababacy.com/winmail/formats/<slug>/
+# 2. Replace EVERY {{PLACEHOLDER}}. An unreplaced {{...}} is valid Liquid and
+#    renders as an empty string, so grep must return nothing before deploy:
+#        grep -n "{{" winmail/formats/<slug>/index.html
+# 3. Facts: copy wording from /Users/ww/code/app-support/_data/winmail_facts.yml
+#    and /Users/ww/code/winmail/app-truth.md §2/§4/§6/§9.
+#    - Free = FIRST SCREEN teaser. Never "read every message free".
+#    - No dollar figures, no row counts, no Android, no Mac app.
+#    - Never claim OST→PST, encrypted mail, ZIP, Word/Excel conversion, account,
+#      cloud sync, or "zero data collected".
+# 4. JSON-LD must mirror the visible content exactly:
+#    - FAQPage mainEntity == visible FAQ items (4–6)
+#    - HowTo steps == visible <ol class="steps"> (3–4)
+#    - BreadcrumbList positions 1–4
+# 5. Internal links: only pages that already exist (check /winmail/formats/).
+# 6. Visible "Last updated" date and JSON-LD dateModified must match.
+# 7. After publishing: add the link to /winmail/formats/index.html, llms.txt,
+#    and the schedule status table.
+# =============================================================================
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{TITLE}}</title>
+  <meta name="description" content="{{DESCRIPTION}}">
+  <link rel="canonical" href="https://lababacy.com/winmail/formats/{{SLUG}}/">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#100E0C">
+  <meta name="google-site-verification" content="fIchiwUalnR7z8xlggamAsWspJIeeoIpsgYFJZDrxEg" />
+  <meta name="msvalidate.01" content="B5AB48CD24E7247AD3CA30E5170B5F8A" />
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://lababacy.com/winmail/formats/{{SLUG}}/">
+  <meta property="og:title" content="{{TITLE}}">
+  <meta property="og:description" content="{{DESCRIPTION}}">
+  <meta property="og:image" content="https://lababacy.com/assets_og/og-winmail.png">
+  <meta property="og:site_name" content="Lababacy">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{TITLE}}">
+  <meta name="twitter:description" content="{{DESCRIPTION}}">
+  <meta name="twitter:image" content="https://lababacy.com/assets_og/og-winmail.png">
+  <link rel="icon" type="image/png" href="/winmail/assets/favicon-64.png">
+  <link rel="apple-touch-icon" href="/winmail/assets/icon-180.png">
+  <script type="application/ld+json">{{APP_JSONLD}}</script>
+  <script type="application/ld+json">{{FAQ_JSONLD}}</script>
+  <script type="application/ld+json">{{HOWTO_JSONLD}}</script>
+  <script type="application/ld+json">{{BREADCRUMB_JSONLD}}</script>
+  <style>
+    /* Copy the <style> block from winmail/formats/winmail-dat/index.html.
+       It is the canonical stylesheet for this cluster; do not invent a new one. */
+  </style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="/winmail/">
+      <img src="/winmail/assets/icon-180.png" width="28" height="28" alt="">
+      Winmail Reader
+    </a>
+    <a class="btn btn-accent btn-sm" href="https://apps.apple.com/app/winmail-reader-dat-msg-eml/id6823454038" rel="noopener">Get the app</a>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> › <a href="/winmail/">Winmail Reader</a> › <a href="/winmail/formats/">Formats</a> › <span class="here">{{FORMAT_LABEL}}</span></nav>
+
+  <h1>{{H1}}</h1>
+
+  <p class="answer">{{ANSWER_40_60_WORDS}}</p>
+
+  <div class="cta-row">
+    <a class="btn btn-accent" href="https://apps.apple.com/app/winmail-reader-dat-msg-eml/id6823454038" rel="noopener">Download on the App Store</a>
+    <a class="btn btn-ghost" href="/winmail/formats/">All formats</a>
+  </div>
+
+  <div class="strip">
+    <p class="strip-label">{{FORMAT_LABEL}} is one of eleven formats Winmail Reader opens on-device:</p>
+    <ul class="chips">
+      <li class="on">{{FORMAT_LABEL}}</li>
+      <li>winmail.dat / TNEF</li><li>MSG</li><li>OFT</li><li>EML</li><li>MHT</li><li>XPS</li><li>OXPS</li><li>MBOX</li><li>PST</li><li>OST</li><li>OLM</li>
+    </ul>
+  </div>
+
+  {{BODY_SECTIONS}}
+  <!-- 3–5 H2 sections, each opening with a direct answer. Suggested:
+       What is a {{FORMAT_LABEL}} file? / Why did you get it? /
+       How to open it on iPhone or iPad (ol.steps) /
+       Free to look inside, Pro to take it out (two .plan cards) /
+       Online converter or on-device app? (.vs-grid) -->
+
+  <h2>Frequently asked questions</h2>
+  <div class="faq">
+    {{FAQ_VISIBLE}}
+    <!-- 4–6 <details><summary>Q</summary><p>A</p></details>, exactly mirroring FAQ_JSONLD -->
+  </div>
+
+  <h2>Related pages</h2>
+  <ul class="related">
+    <li><a href="/winmail/formats/">All formats Winmail Reader opens</a></li>
+    <li><a href="/winmail/">Winmail Reader — the on-device mail archive viewer</a></li>
+    <li><a href="/winmail/privacy/">Privacy policy — why nothing leaves your device</a></li>
+    <li><a href="/winmail/support/">Support</a></li>
+  </ul>
+
+  <h2 id="get">Get Winmail Reader</h2>
+  <div class="cta-row">
+    <a class="btn btn-accent" href="https://apps.apple.com/app/winmail-reader-dat-msg-eml/id6823454038" rel="noopener">Download on the App Store</a>
+  </div>
+  <p class="fineprint">Free to look inside — Pro is a one-time purchase (optional monthly subscription available). iPhone and iPad, iOS 17.0+.</p>
+  <p class="updated">Last updated: {{YYYY-MM-DD}}</p>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <ul class="foot-links">
+      <li><a href="/">All apps</a></li>
+      <li><a href="/winmail/">Winmail Reader</a></li>
+      <li><a href="/winmail/formats/">Formats</a></li>
+      <li><a href="/winmail/privacy/">Privacy Policy</a></li>
+      <li><a href="/winmail/support/">Support</a></li>
+      <li><a href="mailto:w4n9we1@gmail.com">Contact</a></li>
+    </ul>
+    <p class="copyright">© 2026 Lababacy</p>
+  </div>
+</footer>
+
+</body>
+</html>

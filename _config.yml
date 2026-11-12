@@ -9,6 +9,9 @@ collections:
   guides:
     output: true
     permalink: /guides/:name/
+  winmail_guides:
+    output: true
+    permalink: /winmail/guides/:name/
 defaults:
   - scope:
       path: ""
@@ -19,3 +22,8 @@ defaults:
       type: "guides"
     values:
       layout: "default"
+  - scope:
+      path: ""
+      type: "winmail_guides"
+    values:
+      layout: "winmail"

@@ -13,9 +13,9 @@ Every app works on your device. Your files stay yours.
 
 ### [Winmail Reader - DAT, MSG, EML](./winmail/)
 
-Open winmail.dat (TNEF), MSG, EML, and Outlook PST archives right on your iPhone and iPad — decoded entirely on-device, with no account and no uploads. Reading is free; Pro unlocks export to PDF and attachment extraction with a one-time lifetime purchase (an optional monthly subscription is also available).
+Open winmail.dat (TNEF), MSG, EML, MHT, XPS, MBOX, PST, OST and OLM files right on your iPhone and iPad — decoded entirely on-device, with no account and no uploads. Free to look inside: the sender, subject and first screen of any message, the attachment list, the folder tree of a mailbox archive with a preview of its first messages. Pro unlocks full reading, extraction, exports, search and resending with a one-time purchase (an optional monthly subscription is also available).
 
-<!-- App Store URL goes live on release day -->
+[Download on the App Store](https://apps.apple.com/app/winmail-reader-dat-msg-eml/id6823454038) · [Format guides](/winmail/formats/)
 
 ### [Publisher File Viewer](./pubview/)
 

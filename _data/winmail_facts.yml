@@ -1,0 +1,72 @@
+# =============================================================================
+# winmail_facts.yml — SINGLE SOURCE OF TRUTH for Winmail Reader public facts.
+#
+# Every public page (/winmail/ landing, /winmail/formats/* hub pages,
+# /winmail/guides/* articles) must take its claims from this card so AI engines
+# never see conflicting statements across pages.
+#
+# Hard rules (app-truth.md §4/§6/§9):
+#   - Free tier = FIRST SCREEN teaser. Never write "read every message free",
+#     "full archive free", "search free" or "extract attachments free".
+#   - No row counts, no "5 messages", no dollar figures anywhere.
+#   - iOS / iPadOS only. There is no Android app and no Mac app.
+#   - Privacy wording: "files never leave your device", "no account",
+#     "no uploads", "100% on-device". Never "zero data collected".
+#   - Never claim OST→PST, encrypted-mail decryption, ZIP extraction,
+#     Word/Excel conversion, cloud sync or an account system.
+# =============================================================================
+
+app_name: "Winmail Reader - DAT, MSG, EML"
+short_name: "Winmail Reader"
+developer: "Lababacy"
+
+platforms:
+  ios: "iOS 17.0+ / iPadOS 17.0+"
+  android: ""   # intentionally empty — no Android app
+
+stores:
+  app_store: "https://apps.apple.com/app/winmail-reader-dat-msg-eml/id6823454038"
+  google_play: ""
+
+# Supported formats (11). Keep this wording consistent across every page.
+formats:
+  - { id: winmail_dat, label: "winmail.dat / TNEF", desc: "Outlook's TNEF wrapper — message, attachments and invites in one file" }
+  - { id: msg,        label: "MSG",                desc: "A single message saved from Outlook on Windows" }
+  - { id: oft,        label: "OFT",                desc: "An Outlook message template" }
+  - { id: eml,        label: "EML / EMLX",         desc: "The standard single-message file exported by most mail apps" }
+  - { id: mht,        label: "MHT / MHTML",        desc: "A saved web page or exported email thread" }
+  - { id: xps,        label: "XPS / OXPS",         desc: "Windows XML Paper Specification documents" }
+  - { id: mbox,       label: "MBOX",               desc: "Mailbox export, including Google Takeout" }
+  - { id: pst,        label: "PST",                desc: "Outlook data file on Windows" }
+  - { id: ost,        label: "OST",                desc: "Outlook offline store — read-only browsing" }
+  - { id: olm,        label: "OLM",                desc: "Outlook for Mac archive" }
+
+# Core claims — qualitative, version-proof wording.
+claims:
+  engine: "A purpose-built decoder reads every format entirely on your iPhone or iPad."
+  privacy: "Everything runs on-device — your files never leave your device. No account, no uploads."
+  health_check: "Every file gets a check-up first: what it really is, how confident the detection is, and what to do if it is damaged."
+  free_tier: >-
+    Free to look inside: open every supported format, see the sender, subject and
+    first screen of any message, the attachment list, the folder tree of a mailbox
+    archive with a preview of its first messages, the first page of an XPS document,
+    the recent-files list and the file check-up.
+  pro: >-
+    Pro — a single one-time purchase — unlocks full reading of messages and XPS
+    documents, attachment previews and extraction, full mailbox browsing across
+    every folder, PDF and format exports, full-text search and resending.
+    An optional monthly subscription is also available, priced as shown in the app.
+
+# Public price wording. Deliberately NO dollar figure.
+price: "One-time purchase"
+
+links:
+  product: "https://lababacy.com/winmail/"
+  formats: "https://lababacy.com/winmail/formats/"
+  guides: "https://lababacy.com/winmail/guides/"
+  privacy_policy: "https://lababacy.com/winmail/privacy/"
+  support: "https://lababacy.com/winmail/support/"
+  terms: "https://lababacy.com/winmail/terms/"
+  support_email: "w4n9we1@gmail.com"
+
+og_image: "https://lababacy.com/assets_og/og-winmail.png"

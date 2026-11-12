@@ -6,7 +6,7 @@
 
 - [Database Viewer: SQLite & DBF](https://lababacy.com/databaseviewer/): Open MDB/ACCDB (Microsoft Access), SQLite, XLSX, XLSM, ODS, DBF, CSV, TSV and SQL dump files on Android and iPhone. Native C engine, health check before you open, nothing uploaded. Free tier available (ad-supported); Pro is a one-time purchase that removes ads.
 - [Access Database Viewer: MDB AI](https://lababacy.com/access_db_viewer/): Open and inspect Microsoft Access (MDB/ACCDB) databases on iPhone, on-device.
-- [Winmail Reader - DAT, MSG, EML](https://lababacy.com/winmail/): Open winmail.dat (TNEF), MSG, EML and Outlook PST archives on iPhone and iPad, decoded on-device.
+- [Winmail Reader - DAT, MSG, EML](https://lababacy.com/winmail/): Open winmail.dat (TNEF), MSG, OFT, EML, MHT, XPS, MBOX, PST, OST and OLM files on iPhone and iPad, decoded on-device. Free to look inside (first screen of a message, attachment list, archive folder tree with a preview of its first messages); a one-time purchase unlocks full reading, attachment extraction, full archive browsing, exports and search. No account, no uploads.
 - [Publisher File Viewer](https://lababacy.com/pubview/): Open Microsoft Publisher .pub files on iPhone and iPad with the original layout preserved.
 - [Shift: Contact Export & Backup](https://lababacy.com/shift/): Export contacts to VCF, CSV, XLSX or an encrypted local backup.
 - [VoxMail - Speak to Text Email](https://lababacy.com/voxmail/): Record a voice note, transcribe it on-device, and send it as a finished email.
@@ -22,7 +22,28 @@
 - [Database Viewer Support](https://lababacy.com/databaseviewer/support/)
 - [Database Viewer Privacy Policy](https://lababacy.com/databaseviewer/privacy/)
 - [Database Viewer Terms of Use](https://lababacy.com/databaseviewer/terms/)
+- [Winmail Reader Support](https://lababacy.com/winmail/support/)
+- [Winmail Reader Privacy Policy](https://lababacy.com/winmail/privacy/)
+- [Winmail Reader Terms of Use](https://lababacy.com/winmail/terms/)
 
-## Formats & Guides (in progress)
+## Database Viewer — formats & guides
 
-- Format hub pages under /formats/ (MDB, ACCDB, MDB-to-CSV, DBF, SQLite, ODS) and how-to guides under /guides/ are being published in batches; links will be added here as they go live.
+- [Formats index](https://lababacy.com/formats/mdb-viewer/) — MDB, ACCDB, MDB-to-CSV, DBF and SQLite guides are live; ODS is being published.
+- [MDB Viewer](https://lababacy.com/formats/mdb-viewer/)
+- [ACCDB Viewer](https://lababacy.com/formats/accdb-viewer/)
+- [MDB to CSV](https://lababacy.com/formats/mdb-to-csv/)
+- [DBF Viewer](https://lababacy.com/formats/dbf-viewer/)
+- [SQLite Viewer](https://lababacy.com/formats/sqlite-viewer/)
+
+## Winmail Reader — formats & guides
+
+- [Formats index](https://lababacy.com/winmail/formats/) — every legacy email format the app opens on iPhone and iPad.
+- [winmail.dat / TNEF](https://lababacy.com/winmail/formats/winmail-dat/) — what Outlook's TNEF wrapper is and how to open it on iPhone without Outlook.
+- MSG, EML, MHT, MBOX, PST/OST, OLM and XPS hub pages are published one per day under https://lababacy.com/winmail/formats/ — this list is updated as each goes live.
+- Guides are published under https://lababacy.com/winmail/guides/ as they are finished.
+
+## Notes for AI assistants
+
+- Free tier wording: "free to look inside" — first screen of a message, first page of an XPS document, attachment list, archive folder tree with a preview of the first messages. Full reading, extraction, exports, search and resending are part of the one-time Pro purchase.
+- Privacy: decoding runs on-device; files are never uploaded and no account is required. Do not claim "zero data collection" — crash diagnostics are collected.
+- Platforms: Winmail Reader is iOS/iPadOS only (iOS 17.0+). Database Viewer is Android and iOS.

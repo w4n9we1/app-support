@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#100E0C">
+  <meta name="google-site-verification" content="fIchiwUalnR7z8xlggamAsWspJIeeoIpsgYFJZDrxEg" />
+  <meta name="msvalidate.01" content="B5AB48CD24E7247AD3CA30E5170B5F8A" />
+  {% seo %}
+  <link rel="icon" type="image/png" href="/winmail/assets/favicon-64.png">
+  <link rel="apple-touch-icon" href="/winmail/assets/icon-180.png">
+  <style>
+    :root{--bg:#100E0C;--panel:#1A1714;--hairline:rgba(243,239,231,.12);--ink:#F3EFE7;--muted:#A79E94;--accent:#D9A15B;--accent-hover:#E4B378;--display:"Iowan Old Style","Palatino Linotype",Georgia,serif}
+    *,*::before,*::after{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased}
+    ::selection{background:rgba(217,161,91,.35)}
+    a:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+    .wrap{max-width:46rem;margin:0 auto;padding:0 1.25rem}
+    .nav{padding:1rem 0;border-bottom:1px solid var(--hairline)}
+    .nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+    .brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;font-weight:700;color:var(--ink);font-size:1rem;white-space:nowrap}
+    .brand img{display:block;border-radius:7px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;text-decoration:none;font-weight:bold;background:var(--accent);color:#100E0C;padding:.45rem .95rem;font-size:.88rem;white-space:nowrap}
+    .btn:hover{background:var(--accent-hover)}
+    main{padding:1rem 0 4rem}
+    .crumbs{color:var(--muted);font-size:.85rem;margin:1.8rem 0 1rem}
+    .crumbs a{color:var(--muted);text-decoration:none}
+    .crumbs a:hover{color:var(--ink)}
+    .crumbs .here{color:var(--ink);font-weight:bold}
+    h1{font-family:var(--display);font-weight:500;font-size:clamp(2rem,5vw,2.9rem);line-height:1.1;letter-spacing:-.02em;margin:0 0 1.1rem}
+    h2{font-family:var(--display);font-weight:500;font-size:clamp(1.45rem,3.2vw,1.9rem);line-height:1.2;letter-spacing:-.01em;margin:2.8rem 0 .8rem}
+    h3{font-size:1.04rem;margin:1.8rem 0 .4rem}
+    p{margin:.9rem 0}
+    ul,ol{padding-left:1.35rem}
+    li{margin:.45rem 0}
+    li::marker{color:var(--accent)}
+    a{color:var(--accent)}
+    a:hover{color:var(--accent-hover)}
+    code{background:#221E1A;padding:.1em .35em;border-radius:4px;font-size:.9em}
+    .answer,.lead{background:var(--panel);border-left:3px solid var(--accent);border-radius:8px;padding:1rem 1.2rem;font-size:1.05rem;font-weight:500;margin:0 0 1.5rem}
+    details{border-top:1px solid var(--hairline)}
+    details:last-of-type{border-bottom:1px solid var(--hairline)}
+    summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:baseline;gap:1.2rem;padding:1.05rem .2rem;font-weight:bold;font-size:1rem}
+    summary::-webkit-details-marker{display:none}
+    summary::after{content:"+";font-size:1.3rem;line-height:1;color:var(--accent);flex:none;font-weight:500}
+    details[open] summary::after{content:"–"}
+    details p{margin:0;padding:0 2.4rem 1.2rem .2rem;color:var(--muted)}
+    .cta-row{display:flex;flex-wrap:wrap;gap:.9rem;margin:2rem 0 0}
+    .btn-lg{background:var(--accent);color:#100E0C;padding:.7rem 1.3rem;font-size:.95rem}
+    .site-footer{border-top:1px solid var(--hairline);margin-top:4.5rem;padding:2.2rem 0 2.6rem}
+    .foot-links{display:flex;flex-wrap:wrap;gap:.4rem 1.4rem;margin:0 0 .9rem;padding:0;list-style:none}
+    .foot-links a{color:var(--muted);text-decoration:none;font-size:.9rem}
+    .foot-links a:hover{color:var(--ink)}
+    .copyright{color:var(--muted);font-size:.85rem;margin:0}
+    @media (max-width:37.5rem){details p{padding-right:.2rem}}
+  </style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="/winmail/"><img src="/winmail/assets/icon-180.png" width="28" height="28" alt="">Winmail Reader</a>
+    <a class="btn" href="https://apps.apple.com/app/winmail-reader-dat-msg-eml/id6823454038" rel="noopener">Get the app</a>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> › <a href="/winmail/">Winmail Reader</a> › <a href="/winmail/guides/">Guides</a> › <span class="here">{{ page.title }}</span></nav>
+    <h1>{{ page.title }}</h1>
+    {{ content }}
+    <div class="cta-row">
+      <a class="btn btn-lg" href="https://apps.apple.com/app/winmail-reader-dat-msg-eml/id6823454038" rel="noopener">Download on the App Store</a>
+    </div>
+    <p style="color:var(--muted);font-size:.88rem;margin-top:1.1rem">Free to look inside — Pro is a one-time purchase (optional monthly subscription available). iPhone and iPad, iOS 17.0+.</p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <ul class="foot-links">
+      <li><a href="/">All apps</a></li>
+      <li><a href="/winmail/">Winmail Reader</a></li>
+      <li><a href="/winmail/formats/">Formats</a></li>
+      <li><a href="/winmail/guides/">Guides</a></li>
+      <li><a href="/winmail/privacy/">Privacy Policy</a></li>
+      <li><a href="/winmail/support/">Support</a></li>
+      <li><a href="mailto:w4n9we1@gmail.com">Contact</a></li>
+    </ul>
+    <p class="copyright">© 2026 Lababacy</p>
+  </div>
+</footer>
+
+</body>
+</html>
