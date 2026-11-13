@@ -28,11 +28,13 @@
 
 ## Database Viewer — formats & guides
 
-- [MDB Viewer](https://lababacy.com/formats/mdb-viewer/) — flagship format hub; ACCDB, MDB-to-CSV, DBF and SQLite guides are also live; ODS is being published.
-- [ACCDB Viewer](https://lababacy.com/formats/accdb-viewer/)
-- [MDB to CSV](https://lababacy.com/formats/mdb-to-csv/)
-- [DBF Viewer](https://lababacy.com/formats/dbf-viewer/)
-- [SQLite Viewer](https://lababacy.com/formats/sqlite-viewer/)
+- [Formats index](https://lababacy.com/formats/) — every file format Database Viewer opens on Android and iPhone, with a guide per format.
+- [MDB Viewer](https://lababacy.com/formats/mdb-viewer/) — open legacy Microsoft Access databases (Jet 3/4) on Android and iPhone, on-device.
+- [ACCDB Viewer](https://lababacy.com/formats/accdb-viewer/) — open Access 2007 and later databases without Microsoft Access.
+- [MDB to CSV](https://lababacy.com/formats/mdb-to-csv/) — convert Access tables to CSV, or the whole database to one XLSX workbook, on the phone.
+- [DBF Viewer](https://lababacy.com/formats/dbf-viewer/) — open dBASE tables and shapefile attribute data on Android and iPhone.
+- [SQLite Viewer](https://lababacy.com/formats/sqlite-viewer/) — browse SQLite databases, inspect the schema and run SQL on the phone.
+- [ODS Viewer](https://lababacy.com/formats/ods-viewer/) — open OpenDocument spreadsheets (LibreOffice/OpenOffice) without LibreOffice or Excel.
 
 ## Winmail Reader — formats & guides
 
