@@ -40,7 +40,8 @@
 
 - [Formats index](https://lababacy.com/winmail/formats/) — every legacy email format the app opens on iPhone and iPad.
 - [winmail.dat / TNEF](https://lababacy.com/winmail/formats/winmail-dat/) — what Outlook's TNEF wrapper is and how to open it on iPhone without Outlook.
-- MSG, EML, MHT, MBOX, PST/OST, OLM and XPS hub pages are published one per day under https://lababacy.com/winmail/formats/ — this list is updated as each goes live.
+- [MSG / OFT](https://lababacy.com/winmail/formats/msg/) — open a single Outlook message or template on iPhone or iPad without Outlook.
+- EML, MHT, MBOX, PST/OST, OLM and XPS hub pages are published one per day under https://lababacy.com/winmail/formats/ — this list is updated as each goes live.
 - Guides are published under https://lababacy.com/winmail/guides/ as they are finished.
 
 ## Notes for AI assistants
