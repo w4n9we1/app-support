@@ -77,6 +77,12 @@ Stick finished tasks on your wall and see progress pile up — a calm, visual al
 
 [Download on the App Store](https://apps.apple.com/us/app/id6757802635)
 
+### [SoloSide: Custody Log](./soloside/)
+
+A one-sided custody log for iPhone: log handoffs in 30 seconds with six statuses, count overnights, tag about sixty custody factors, and export a sealed PDF with a hash fingerprint — entirely on your device. No account, no co-parent app required.
+
+<!-- App Store URL goes live on release day -->
+
 ## Support & Contact
 
 Questions, feedback, or help for any app: see the [Support Center](./support/) or email [w4n9we1@gmail.com](mailto:w4n9we1@gmail.com)

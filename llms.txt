@@ -15,6 +15,7 @@
 - [MemoSnap: Lock Screen Todo](https://lababacy.com/memosnap/): To-dos and memo wallpapers on the lock screen.
 - [NoNag: Block Open in App](https://lababacy.com/nonag/): A Safari extension that dismisses "Open in App" banners and redirect pop-ups.
 - [WallDone: Visual To-Do List](https://lababacy.com/walldone/): A calm, visual to-do list of finished tasks on your wall.
+- [SoloSide: Custody Log](https://lababacy.com/soloside/): A one-sided custody log for iPhone — 30-second handoffs with six statuses, parenting-time counts, about sixty custody factors, and a sealed PDF export with a hash fingerprint. On-device, no account, no co-parent app required.
 
 ## Support & Legal
 
@@ -25,6 +26,9 @@
 - [Winmail Reader Support](https://lababacy.com/winmail/support/)
 - [Winmail Reader Privacy Policy](https://lababacy.com/winmail/privacy/)
 - [Winmail Reader Terms of Use](https://lababacy.com/winmail/terms/)
+- [SoloSide Support](https://lababacy.com/soloside/support/)
+- [SoloSide Privacy Policy](https://lababacy.com/soloside/privacy/)
+- [SoloSide Terms of Use](https://lababacy.com/soloside/terms/)
 
 ## Database Viewer — formats & guides
 
