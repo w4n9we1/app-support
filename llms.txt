@@ -4,7 +4,7 @@
 
 ## Apps
 
-- [Database Viewer: SQLite & DBF](https://lababacy.com/databaseviewer/): Open MDB/ACCDB (Microsoft Access), SQLite, XLSX, XLSM, ODS, DBF, CSV, TSV and SQL dump files on Android and iPhone. Native C engine, health check before you open, nothing uploaded. Free tier available (ad-supported); Pro is a one-time purchase that removes ads.
+- [Database Viewer: SQLite & DBF](https://lababacy.com/databaseviewer/): Open MDB/ACCDB (Microsoft Access), SQLite, XLSX, XLSM, ODS, DBF, CSV, TSV and SQL dump files on Android and iPhone. Native C engine, health check before you open, nothing uploaded. Free to start with a generous free preview; Pro is a one-time purchase.
 - [Access Database Viewer: MDB AI](https://lababacy.com/access_db_viewer/): Open and inspect Microsoft Access (MDB/ACCDB) databases on iPhone, on-device.
 - [Winmail Reader - DAT, MSG, EML](https://lababacy.com/winmail/): Open winmail.dat (TNEF), MSG, OFT, EML, MHT, XPS, MBOX, PST, OST and OLM files on iPhone and iPad, decoded on-device. Free to look inside (first screen of a message, attachment list, archive folder tree with a preview of its first messages); a one-time purchase unlocks full reading, attachment extraction, full archive browsing, exports and search. No account, no uploads.
 - [Publisher File Viewer](https://lababacy.com/pubview/): Open Microsoft Publisher .pub files on iPhone and iPad with the original layout preserved.

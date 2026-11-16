@@ -45,7 +45,7 @@ formats:
 claims:
   engine: "A native C engine keeps million-row tables and files of 1.5 GB and more scrolling smoothly on a phone."
   privacy: "Everything runs on-device — nothing is uploaded. No account."
-  ads: "The free version is supported by ads; Pro removes them."
+  free: "Free to start with a generous free preview — Pro is a one-time purchase."
   health_check: "Every file gets a health check before you open it: what it really is, whether it is readable, which encoding it uses, and where damaged regions are."
   free_tier: >-
     Free to start: open files in every supported format, read the health
