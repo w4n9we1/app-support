@@ -81,6 +81,8 @@ Stick finished tasks on your wall and see progress pile up — a calm, visual al
 
 A one-sided custody log for iPhone: log handoffs in 30 seconds with six statuses, count overnights, tag about sixty custody factors, and export a sealed PDF with a hash fingerprint — entirely on your device. No account, no co-parent app required.
 
+Pro adds an attorney export package: a read-only folder of records, attachments and a hash list. Anyone can check it in a browser — [verify a SoloSide export package](./soloside/verify/) — and no file is ever uploaded.
+
 <!-- App Store URL goes live on release day -->
 
 ## Support & Contact

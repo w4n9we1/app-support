@@ -1,0 +1,524 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Verify a SoloSide export package — no upload, no app</title>
+<meta name="description" content="Check a SoloSide custody export package in this browser: every SHA-256 is recomputed locally with Web Crypto. Nothing is uploaded, no account, no app.">
+<meta name="robots" content="index,follow">
+<link rel="icon" href="data:,">
+<style>
+:root{
+  --bg:#FFFFFF;--panel:#F2F2F7;--panel2:#EBEBF0;--line:#E5E5EA;--ink:#1C1C1E;--ink2:#5F5F63;--ink3:#6E6E73;
+  --ok:#248A3D;--warn:#B25000;--err:#C7382F;
+  --serif:"New York","Iowan Old Style",Georgia,serif;
+  --mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-font-smoothing:antialiased}
+body{background:var(--bg);color:var(--ink);font:16px/1.55 -apple-system,BlinkMacSystemFont,"SF Pro Text","PingFang SC",sans-serif;
+  padding:28px 20px 64px;max-width:760px;margin:0 auto}
+a{color:var(--ink)}
+.brand{font-size:11px;font-weight:750;letter-spacing:.18em;color:var(--ink3);text-transform:uppercase}
+h1{font-family:var(--serif);font-size:34px;font-weight:400;letter-spacing:-.025em;line-height:1.12;margin-top:14px}
+.lede{font-size:15px;color:var(--ink2);margin-top:12px;max-width:46em}
+.localfirst{margin-top:16px;background:var(--panel);border-radius:16px;padding:14px 16px;font-size:13.5px;color:var(--ink2);line-height:1.5}
+.localfirst b{color:var(--ink)}
+.banner{margin-top:18px;border:1px solid var(--line);border-radius:16px;padding:14px 16px;font-size:13.5px}
+.banner .cap{font-size:10px;letter-spacing:.14em;font-weight:700;color:var(--ink3);text-transform:uppercase}
+.banner .row{display:flex;justify-content:space-between;gap:12px;margin-top:8px;align-items:baseline}
+.banner .mono{font-family:var(--mono);font-size:13px;word-break:break-all}
+.drop{margin-top:22px;border:1.5px dashed var(--line);border-radius:20px;padding:30px 20px;text-align:center;background:#fff;
+  transition:border-color .15s ease,background .15s ease}
+.drop.over{border-color:var(--ink);background:var(--panel)}
+.drop h2{font-size:17px;font-weight:650;letter-spacing:-.01em}
+.drop p{font-size:13px;color:var(--ink3);margin-top:6px}
+.actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+button{font:inherit;border:0;cursor:pointer;border-radius:999px;padding:12px 20px;font-weight:650;font-size:15px;line-height:1}
+button.primary{background:var(--ink);color:#fff}
+button.ghosty{background:var(--panel2);color:var(--ink)}
+button:disabled{opacity:.45;cursor:default}
+input[type=password],input[type=text]{font:inherit;width:100%;padding:12px 14px;border-radius:14px;border:1px solid var(--line);
+  background:var(--panel);color:var(--ink);margin-top:8px}
+.verdict{margin-top:22px;border-radius:20px;padding:20px;border:1px solid var(--line);display:none}
+.verdict.show{display:block}
+.verdict .head{display:flex;align-items:center;gap:10px;font-size:21px;font-weight:650;letter-spacing:-.01em}
+.verdict .head .dot{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:15px;flex:none}
+.verdict.ok .head .dot{background:var(--ok)}
+.verdict.bad .head .dot{background:var(--err)}
+.verdict.wait .head .dot{background:var(--warn)}
+.verdict .why{font-size:14px;color:var(--ink2);margin-top:10px}
+.mono{font-family:var(--mono);font-size:12.5px;word-break:break-all}
+.items{margin-top:16px;border-top:1px solid var(--line)}
+.item{padding:11px 0;border-bottom:1px solid var(--panel2)}
+.item-top{display:flex;justify-content:space-between;gap:12px;align-items:baseline}
+.item-name{font-family:var(--mono);font-size:12.5px;word-break:break-all}
+.item-state{font-size:11.5px;font-weight:700;white-space:nowrap;letter-spacing:.02em}
+.item-hash{font-family:var(--mono);font-size:11.5px;color:var(--ink3);word-break:break-all;margin-top:4px;line-height:1.5}
+.grouplabel{margin-top:18px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3);font-weight:700}
+.ok-text{color:var(--ok)}
+.bad-text{color:var(--err)}
+.muted{color:var(--ink3)}
+details{margin-top:16px;border-top:1px solid var(--line);padding-top:12px}
+summary{cursor:pointer;font-size:13px;font-weight:650;color:var(--ink2)}
+pre{margin-top:12px;background:var(--panel);border-radius:14px;padding:14px;font-family:var(--mono);font-size:12px;
+  line-height:1.6;overflow-x:auto;white-space:pre-wrap;word-break:break-all}
+footer{margin-top:40px;border-top:1px solid var(--line);padding-top:18px;font-size:12.5px;color:var(--ink3);line-height:1.6}
+footer a{color:var(--ink2)}
+.hidden{display:none!important}
+</style>
+</head>
+<body>
+<div class="brand">SoloSide</div>
+<h1>Verify a custody export package</h1>
+<p class="lede">Drop a SoloSide export package here and this page recomputes every SHA-256 in it — the files, the package hash, and every record fingerprint in the hash list.</p>
+
+<div class="localfirst">
+  <b>Nothing is uploaded.</b> No server, no account, no app. Every hash is computed by your own browser (Web Crypto), and the files never leave this tab. You can keep this page open in airplane mode and it still works.
+</div>
+
+<div class="banner" id="prefill" style="display:none">
+  <div class="cap">Package you were asked to check</div>
+  <div class="row"><span class="muted">Export ID</span><span class="mono" id="prefill-id">—</span></div>
+  <div class="row"><span class="muted">Expected manifest SHA-256</span><span class="mono" id="prefill-h">—</span></div>
+  <div class="row"><span class="muted">Manifest you loaded</span><span class="mono" id="prefill-match">—</span></div>
+</div>
+
+<div class="drop" id="drop">
+  <h2>Drop the package folder</h2>
+  <p>or choose <span class="mono">manifest.json</span> plus <span class="mono">hashes.txt</span> — the whole folder gives the full check</p>
+  <div class="actions">
+    <button class="primary" id="pick-folder">Choose folder…</button>
+    <button class="ghosty" id="pick-files">Choose files…</button>
+  </div>
+  <input type="file" id="folder-input" webkitdirectory directory multiple class="hidden">
+  <input type="file" id="files-input" multiple class="hidden">
+</div>
+
+<div id="password-wrap" class="hidden" style="margin-top:20px">
+  <div class="banner">
+    <div class="cap">Password protected</div>
+    <div class="why" style="font-size:13.5px;color:var(--ink2);margin-top:8px">
+      Every file except <span class="mono">manifest.json</span> is encrypted (AES-256-GCM). The files were checked as delivered; enter the password to check the records too.
+    </div>
+    <input type="password" id="password" placeholder="Password from the sender" autocomplete="off">
+    <div class="actions" style="justify-content:flex-start;margin-top:12px">
+      <button class="primary" id="unlock">Check the records</button>
+    </div>
+  </div>
+</div>
+
+<div id="drop-note" class="muted" style="margin-top:12px;font-size:12.5px"></div>
+
+<div class="verdict" id="verdict">
+  <div class="head"><span class="dot" id="verdict-dot">•</span><span id="verdict-title">—</span></div>
+  <div class="why" id="verdict-why"></div>
+  <div id="verdict-body"></div>
+</div>
+
+<footer>
+  <details>
+    <summary>What is checked, exactly</summary>
+    <pre id="method">1. manifest.json — its own SHA-256 is compared with the value printed on the PDF's seal page or in the QR code (?h=…).
+2. Every file listed in manifest.json — SHA-256 of the bytes you dropped, compared with the value in the manifest.
+3. packageHash — one number over the whole file list: SHA-256 of every line "&lt;file sha256&gt;  &lt;file path&gt;" sorted by path.
+4. hashes.txt — one line per record: "&lt;sha256&gt;  &lt;record id&gt;  &lt;date UTC&gt;". Each line must match the record's fingerprint in records.json.
+5. Every record — the fingerprint is recomputed from the record's own fields and the fingerprint before it, so a single changed character in a date, note, place, status, factor or attachment hash breaks it.</pre>
+  </details>
+  <p style="margin-top:14px">A package is a record, not legal advice. Whether it is admitted is decided by a judge under the rules where you live.</p>
+  <p style="margin-top:8px"><a href="/soloside/">SoloSide — custody log for iPhone</a> · <a href="/soloside/support/">Support</a> · <a href="/soloside/privacy/">Privacy</a></p>
+</footer>
+
+<script>
+(() => {
+  'use strict';
+  const $ = (id) => document.getElementById(id);
+  const enc = new TextEncoder();
+  const log = [];
+  let state = { files: new Map(), root: '', manifest: null, manifestHash: '', manifestBytes: null };
+
+  // ---------- hashing ----------
+  async function sha256Hex(buffer) {
+    const digest = await crypto.subtle.digest('SHA-256', buffer);
+    return [...new Uint8Array(digest)].map((b) => b.toString(16).padStart(2, '0')).join('');
+  }
+  async function sha256HexText(text) { return sha256Hex(enc.encode(text)); }
+
+  // ---------- Swift-compatible canonical encoding ----------
+  // Swift writes the canonical payload with JSONSerialization(.sortedKeys), which escapes "/" as "\/".
+  function sstr(value) { return JSON.stringify(String(value)).replace(/\//g, '\\/'); }
+  function sarr(values) { return '[' + values.map(sstr).join(',') + ']'; }
+  function canonicalPayload(entry) {
+    const parts = [];
+    parts.push('"attachments":' + sarr((entry.attachments || []).map((a) => a.sha256).sort()));
+    parts.push('"childId":' + sstr(entry.childId));
+    parts.push('"endedAt":' + sstr(entry.endedAt || ''));
+    parts.push('"factors":' + sarr((entry.factors || []).slice().sort()));
+    parts.push('"id":' + sstr(entry.id));
+    if (entry.lateMinutes !== null && entry.lateMinutes !== undefined) parts.push('"lateMinutes":' + Number(entry.lateMinutes));
+    parts.push('"note":' + sstr(entry.note || ''));
+    parts.push('"place":' + sstr(entry.place || ''));
+    if (entry.rescheduledTo) parts.push('"rescheduledTo":' + sstr(entry.rescheduledTo));
+    parts.push('"startedAt":' + sstr(entry.startedAt));
+    parts.push('"status":' + sstr(entry.status));
+    return '{' + parts.join(',') + '}';
+  }
+  async function fingerprintOf(entry) {
+    const material = (entry.prevFingerprint || '') + canonicalPayload(entry);
+    return sha256HexText(material);
+  }
+
+  // ---------- files in / out ----------
+  function pickCommonRoot(paths) {
+    // The receiver usually drops the folder, so paths start with "package/" or "SoloSide-EXP…/".
+    const manifestPath = paths.find((p) => p.endsWith('manifest.json'));
+    if (!manifestPath) return '';
+    const index = manifestPath.lastIndexOf('manifest.json');
+    return manifestPath.slice(0, index);
+  }
+  function normalize(fileList) {
+    const entries = [...fileList].map((file) => ({ path: (file.webkitRelativePath || file.name).replace(/^\.\//, ''), file }));
+    const root = pickCommonRoot(entries.map((e) => e.path));
+    const files = new Map();
+    for (const entry of entries) {
+      const relative = entry.path.startsWith(root) ? entry.path.slice(root.length) : entry.path;
+      files.set(relative, entry.file);
+    }
+    return { files, root };
+  }
+
+  async function readJSONFile(file) { return JSON.parse(new TextDecoder().decode(await file.arrayBuffer())); }
+
+  // ---------- AES-GCM (only for password protected packages) ----------
+  async function pbkdf2Key(password, salt, iterations) {
+    const baseKey = await crypto.subtle.importKey('raw', enc.encode(password), 'PBKDF2', false, ['deriveKey']);
+    return crypto.subtle.deriveKey(
+      { name: 'PBKDF2', salt, iterations, hash: 'SHA-256' },
+      baseKey,
+      { name: 'AES-GCM', length: 256 },
+      false,
+      ['decrypt']
+    );
+  }
+  async function decryptFile(bytes, key) {
+    const iv = bytes.slice(0, 12);
+    const data = bytes.slice(12);
+    return new Uint8Array(await crypto.subtle.decrypt({ name: 'AES-GCM', iv }, key, data));
+  }
+  async function sha256HexBytes(bytes) { return sha256Hex(bytes); }
+  function base64ToBytes(base64) {
+    const binary = atob(base64);
+    const bytes = new Uint8Array(binary.length);
+    for (let i = 0; i < binary.length; i += 1) bytes[i] = binary.charCodeAt(i);
+    return bytes;
+  }
+
+  // ---------- the check ----------
+  function setVerdict(kind, title, why, bodyHTML) {
+    const box = $('verdict');
+    box.className = 'verdict show ' + kind;
+    $('verdict-dot').textContent = kind === 'ok' ? '✓' : (kind === 'bad' ? '✗' : '!');
+    $('verdict-title').textContent = title;
+    $('verdict-why').innerHTML = why || '';
+    $('verdict-body').innerHTML = bodyHTML || '';
+  }
+
+  async function run(passphrase) {
+    const manifestFile = state.files.get('manifest.json');
+    if (!manifestFile) {
+      setVerdict('bad', 'No manifest.json found', 'Drop the <span class="mono">package</span> folder, or pick <span class="mono">manifest.json</span> together with the other files.');
+      return;
+    }
+    const manifestBytes = new Uint8Array(await manifestFile.arrayBuffer());
+    let manifest;
+    try {
+      manifest = JSON.parse(new TextDecoder().decode(manifestBytes));
+    } catch (error) {
+      setVerdict('bad', 'manifest.json cannot be read', 'The file is not valid JSON. It may have been damaged in transit.');
+      return;
+    }
+    state.manifest = manifest;
+    state.manifestBytes = manifestBytes;
+    state.manifestHash = await sha256HexBytes(manifestBytes);
+    showPrefillMatch();
+
+    if (typeof manifest.version === 'number' && manifest.version > 1) {
+      setVerdict('wait', 'This package is newer than this page',
+        'The package uses format ' + manifest.version + '; update the page (or the app) and try again. Nothing was changed.');
+      return;
+    }
+
+    // 1) per-file hashes
+    const fileRows = [];
+    let filesChecked = 0;
+    let firstBadFile = null;
+    const missing = [];
+    for (const path of Object.keys(manifest.files).sort()) {
+      const file = state.files.get(path);
+      const expected = String(manifest.files[path]).toLowerCase();
+      if (!file) {
+        missing.push(path);
+        fileRows.push([path, expected, 'not provided', 'muted']);
+        continue;
+      }
+      const actual = await sha256HexBytes(new Uint8Array(await file.arrayBuffer()));
+      const ok = actual === expected;
+      filesChecked += 1;
+      if (!ok && !firstBadFile) firstBadFile = path;
+      fileRows.push([path, expected, ok ? actual : actual + ' (mismatch)', ok ? 'ok-text' : 'bad-text']);
+    }
+
+    // 2) packageHash
+    const material = Object.keys(manifest.files).sort()
+      .map((path) => String(manifest.files[path]).toLowerCase() + '  ' + path + '\n').join('');
+    const packageHash = await sha256HexText(material);
+    const packageHashOk = packageHash === String(manifest.packageHash).toLowerCase();
+
+    const summaryRows = [
+      ['manifest.json SHA-256', state.manifestHash, ''],
+      ['packageHash (recomputed)', packageHash, packageHashOk ? 'ok-text' : 'bad-text'],
+      ['packageHash (in manifest)', String(manifest.packageHash), ''],
+    ];
+
+    if (firstBadFile) {
+      setVerdict('bad', 'Not verified', 'The first file that does not match its recorded hash is <span class="mono">' + escapeHTML(firstBadFile) + '</span>.',
+        tableHTML(fileRows, summaryRows) + missingNote(missing, true));
+      return;
+    }
+    if (!packageHashOk) {
+      setVerdict('bad', 'Not verified', 'Every file matches, but the package hash does not — the file list itself was changed.', tableHTML(fileRows, summaryRows));
+      return;
+    }
+
+    // 3) encrypted? files are checked as delivered; records need the password
+    if (manifest.encrypted) {
+      if (!passphrase) {
+        $('password-wrap').classList.remove('hidden');
+        setVerdict('wait', 'Files verified · password needed',
+          'All ' + filesChecked + ' files match manifest.json. Enter the password from the sender to check the ' + manifest.entryCount + ' records.',
+          tableHTML(fileRows, summaryRows));
+        return;
+      }
+      const kdf = manifest.kdf || {};
+      const salt = base64ToBytes(kdf.saltBase64 || '');
+      let key;
+      try {
+        key = await pbkdf2Key(passphrase, salt, Number(kdf.iterations || 210000));
+      } catch (error) {
+        setVerdict('bad', 'Cannot derive a key', 'This browser refused PBKDF2 (' + escapeHTML(String(error)) + ').');
+        return;
+      }
+      const recordsName = manifest.recordsFile || 'records.json.enc';
+      const hashesName = (manifest.hashList && manifest.hashList.file) || 'hashes.txt.enc';
+      const recordsFile = state.files.get(recordsName);
+      const hashesFile = state.files.get(hashesName);
+      if (!recordsFile || !hashesFile) {
+        setVerdict('wait', 'Files verified · records missing',
+          'Add <span class="mono">' + escapeHTML(recordsName) + '</span> and <span class="mono">' + escapeHTML(hashesName) + '</span> to check the records.',
+          tableHTML(fileRows, summaryRows));
+        return;
+      }
+      let recordsBytes, hashesBytes;
+      try {
+        recordsBytes = await decryptFile(new Uint8Array(await recordsFile.arrayBuffer()), key);
+        hashesBytes = await decryptFile(new Uint8Array(await hashesFile.arrayBuffer()), key);
+      } catch (error) {
+        setVerdict('bad', 'The password does not work', 'AES-GCM authentication failed, so the password is wrong or the file was changed after it was sealed.', tableHTML(fileRows, summaryRows));
+        return;
+      }
+      const plainChecks = [];
+      let plainOk = true;
+      for (const name of Object.keys(manifest.plainFiles || {})) {
+        if (name === 'records.json') plainChecks.push(['records.json (decrypted)', await sha256HexBytes(recordsBytes), '']);
+        if (name === 'hashes.txt') plainChecks.push(['hashes.txt (decrypted)', await sha256HexBytes(hashesBytes), '']);
+      }
+      for (const row of plainChecks) {
+        const expected = String(manifest.plainFiles[row[0].replace(' (decrypted)', '')]).toLowerCase();
+        row[2] = row[1] === expected ? 'ok-text' : 'bad-text';
+        if (row[1] !== expected) plainOk = false;
+      }
+      if (!plainOk) {
+        setVerdict('bad', 'Not verified', 'The decrypted files do not match their recorded plaintext hashes.', tableHTML(fileRows, summaryRows.concat(plainChecks)));
+        return;
+      }
+      return checkRecords(manifest, recordsBytes, hashesBytes, tableHTML(fileRows, summaryRows.concat(plainChecks)));
+    }
+
+    const recordsFile = state.files.get(manifest.recordsFile || 'records.json');
+    const hashesFile = state.files.get((manifest.hashList && manifest.hashList.file) || 'hashes.txt');
+    if (!recordsFile || !hashesFile) {
+      const need = [!recordsFile ? (manifest.recordsFile || 'records.json') : null, !hashesFile ? ((manifest.hashList && manifest.hashList.file) || 'hashes.txt') : null].filter(Boolean);
+      setVerdict('wait', 'Files verified · records not provided',
+        'All ' + filesChecked + ' provided files match manifest.json. Add <span class="mono">' + need.map(escapeHTML).join('</span> and <span class="mono">') + '</span> (or drop the whole folder) to check the ' + manifest.entryCount + ' records.',
+        tableHTML(fileRows, summaryRows));
+      return;
+    }
+    return checkRecords(
+      manifest,
+      new Uint8Array(await recordsFile.arrayBuffer()),
+      new Uint8Array(await hashesFile.arrayBuffer()),
+      tableHTML(fileRows, summaryRows)
+    );
+  }
+
+  async function checkRecords(manifest, recordsBytes, hashesBytes, filesHTML) {
+    let records;
+    try {
+      records = JSON.parse(new TextDecoder().decode(recordsBytes));
+    } catch (error) {
+      setVerdict('bad', 'Not verified', 'records.json cannot be read.', filesHTML);
+      return;
+    }
+    const hashText = new TextDecoder().decode(hashesBytes);
+    const lines = hashText.split('\n').filter((line) => line.length > 0);
+    const sealed = new Map();
+    for (const line of lines) {
+      const parts = line.split(' ');
+      const fields = [];
+      for (const part of parts) if (part !== '') fields.push(part);
+      if (fields.length !== 3 || fields[0].length !== 64 || !/^[0-9a-f]{64}$/i.test(fields[0])) {
+        setVerdict('bad', 'Not verified', 'hashes.txt has a line that is not "&lt;sha256&gt;  &lt;record id&gt;  &lt;date&gt;".', filesHTML);
+        return;
+      }
+      sealed.set(fields[1].toLowerCase(), { hash: fields[0].toLowerCase(), date: fields[2] });
+    }
+
+    const entryRows = [];
+    let verified = 0;
+    let firstBad = null;
+    const entries = records.entries || [];
+    for (const entry of entries) {
+      const id = String(entry.id).toLowerCase();
+      const line = sealed.get(id);
+      const recomputed = await fingerprintOf(entry);
+      let problem = '';
+      if (!line) problem = 'not in hashes.txt';
+      else if (line.hash !== String(entry.fingerprint).toLowerCase()) problem = 'hash list does not match the record';
+      else if (line.date !== entry.startedAt) problem = 'date does not match';
+      else if (recomputed !== line.hash) problem = 'fingerprint does not recompute from the fields';
+      if (problem && !firstBad) firstBad = { ref: entry.ref, id, problem };
+      if (!problem) verified += 1;
+      entryRows.push([entry.ref + ' · ' + (entry.startedAt || ''), String(entry.fingerprint).slice(0, 16) + '…', problem || 'ok', problem ? 'bad-text' : 'ok-text']);
+    }
+
+    const countOk = lines.length === manifest.entryCount && lines.length === entries.length;
+    const summaryRows = [
+      ['records', String(entries.length) + ' in records.json · ' + String(lines.length) + ' in hashes.txt · ' + String(manifest.entryCount) + ' declared', countOk ? 'ok-text' : 'bad-text'],
+    ];
+
+    if (firstBad) {
+      setVerdict('bad', 'Not verified',
+        'Record <span class="mono">' + escapeHTML(String(firstBad.ref)) + '</span> does not verify: ' + escapeHTML(firstBad.problem) + '.',
+        filesHTML + tableHTML(entryRows.slice(0, 40), summaryRows));
+      return;
+    }
+    if (!countOk) {
+      setVerdict('bad', 'Not verified', 'The number of records does not match the declared count.', filesHTML + tableHTML(entryRows.slice(0, 40), summaryRows));
+      return;
+    }
+
+    const headline = 'All ' + verified + ' entries verified';
+    setVerdict('ok', headline,
+      verified + ' record fingerprints recomputed, ' + String(manifest.files ? Object.keys(manifest.files).length : 0) +
+      ' files and the package hash match <span class="mono">manifest.json</span>' + (manifest.encrypted ? ' (decrypted with the password)' : '') + '.',
+      filesHTML + tableHTML(entryRows.slice(0, 40), summaryRows));
+  }
+
+  // ---------- rendering ----------
+  function escapeHTML(value) {
+    return String(value).replace(/[&<>"']/g, (ch) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch]));
+  }
+  function itemHTML(name, value, stateText, stateClass) {
+    const state = stateText === '' ? '' : '<span class="item-state ' + (stateClass || 'muted') + '">' + escapeHTML(stateText) + '</span>';
+    return '<div class="item"><div class="item-top"><span class="item-name">' + escapeHTML(name) + '</span>' + state +
+      '</div>' + (value ? '<div class="item-hash">' + escapeHTML(value) + '</div>' : '') + '</div>';
+  }
+  function tableHTML(rows, summaryRows) {
+    const summary = (summaryRows || []).map((row) =>
+      itemHTML(row[0], row[1], row[2] === 'ok-text' ? 'ok' : row[2] === 'bad-text' ? 'mismatch' : '', row[2])).join('');
+    const body = rows.map((row) => itemHTML(row[0], row[1], row[2], row[3])).join('');
+    return '<div class="grouplabel">Hashes</div><div class="items">' + summary + '</div>' +
+      (body ? '<div class="grouplabel">' + (rows.length && String(rows[0][0]).startsWith('E-') ? 'Records (first 40)' : 'Files') + '</div><div class="items">' + body + '</div>' : '');
+  }
+  function missingNote(missing, isFailure) {
+    if (!missing.length) return '';
+    return '<p class="muted" style="margin-top:10px;font-size:12.5px">' +
+      (isFailure ? 'Missing: ' : 'Not provided: ') + escapeHTML(missing.join(', ')) + '</p>';
+  }
+
+  function showPrefillMatch() {
+    const match = $('prefill-match');
+    if (!$('prefill-h').dataset.value) { return; }
+    const expected = $('prefill-h').dataset.value.toLowerCase();
+    match.innerHTML = state.manifestHash === expected
+      ? '<span class="ok-text">matches the printed value</span>'
+      : '<span class="bad-text">does NOT match the printed value</span>';
+  }
+
+  // ---------- inputs ----------
+  async function accept(fileList) {
+    const normalized = normalize(fileList);
+    state.files = normalized.files;
+    state.root = normalized.root;
+    $('password-wrap').classList.add('hidden');
+    await run(null);
+  }
+
+  $('pick-folder').addEventListener('click', () => $('folder-input').click());
+  $('pick-files').addEventListener('click', () => $('files-input').click());
+  $('folder-input').addEventListener('change', (event) => { if (event.target.files.length) accept(event.target.files); });
+  $('files-input').addEventListener('change', (event) => { if (event.target.files.length) accept(event.target.files); });
+  $('unlock').addEventListener('click', () => run($('password').value));
+
+  const drop = $('drop');
+  ['dragenter', 'dragover'].forEach((name) => drop.addEventListener(name, (event) => {
+    event.preventDefault();
+    drop.classList.add('over');
+  }));
+  ['dragleave', 'drop'].forEach((name) => drop.addEventListener(name, (event) => {
+    event.preventDefault();
+    if (name === 'drop') collectDrop(event.dataTransfer);
+    drop.classList.remove('over');
+  }));
+
+  async function collectDrop(dataTransfer) {
+    const items = dataTransfer.items ? [...dataTransfer.items] : [];
+    const files = [];
+    const walk = async (entry, prefix) => {
+      if (!entry) return;
+      if (entry.isFile) {
+        const file = await new Promise((resolve, reject) => entry.file(resolve, reject));
+        Object.defineProperty(file, 'webkitRelativePath', { value: prefix + file.name });
+        files.push(file);
+        return;
+      }
+      if (entry.isDirectory) {
+        const reader = entry.createReader();
+        const children = await new Promise((resolve) => reader.readEntries(resolve, () => resolve([])));
+        for (const child of children) await walk(child, prefix + entry.name + '/');
+      }
+    };
+    if (items.length && items[0].webkitGetAsEntry) {
+      for (const item of items) await walk(item.webkitGetAsEntry(), '');
+    }
+    if (!files.length && dataTransfer.files.length) {
+      for (const file of dataTransfer.files) files.push(file);
+    }
+    if (files.length) accept(files);
+  }
+
+  // ---------- ?id=&h= prefill ----------
+  const params = new URLSearchParams(location.search);
+  const prefId = params.get('id');
+  const prefHash = params.get('h');
+  if (prefId || prefHash) {
+    $('prefill').style.display = 'block';
+    if (prefId) $('prefill-id').textContent = prefId;
+    if (prefHash) {
+      $('prefill-h').textContent = prefHash.toLowerCase();
+      $('prefill-h').dataset.value = prefHash;
+    }
+  }
+})();
+</script>
+</body>
+</html>

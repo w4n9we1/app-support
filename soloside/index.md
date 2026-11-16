@@ -36,7 +36,7 @@ Schedule templates included: 50/50, 2-2-3, 2-2-5-5, week on week off, and 3-3-4-
 
 One tap builds a court-ready PDF: cover, summary, integrity page, timeline, photos, expenses, custody factors, verification page and appendix. Each entry lists its timestamp and fingerprint. Exports are generated offline — no internet, no server, no submission queue.
 
-Pro adds an attorney export package: a read-only bundle with an export ID and a hash list that anyone can verify in a browser, with no app and no account. You can revoke an export ID at any time; copies already delivered cannot be recalled, and the app says so plainly.
+Pro adds an attorney export package: a read-only bundle with an export ID and a hash list that anyone can verify in a browser — [lababacy.com/soloside/verify](verify/) — with no app and no account. You can revoke an export ID at any time; copies already delivered cannot be recalled, and the app says so plainly.
 
 The PDF also comes in xlsx and calendar (.ics) form, and every record can be re-exported after an amendment.
 

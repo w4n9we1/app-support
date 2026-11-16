@@ -26,6 +26,7 @@
 - [Winmail Reader Support](https://lababacy.com/winmail/support/)
 - [Winmail Reader Privacy Policy](https://lababacy.com/winmail/privacy/)
 - [Winmail Reader Terms of Use](https://lababacy.com/winmail/terms/)
+- [SoloSide export package verifier](https://lababacy.com/soloside/verify/): check an attorney export package from SoloSide in the browser — every SHA-256 (files, package hash, per-record fingerprints) is recomputed locally with Web Crypto; nothing is uploaded, no app, no account, works offline.
 - [SoloSide Support](https://lababacy.com/soloside/support/)
 - [SoloSide Privacy Policy](https://lababacy.com/soloside/privacy/)
 - [SoloSide Terms of Use](https://lababacy.com/soloside/terms/)
