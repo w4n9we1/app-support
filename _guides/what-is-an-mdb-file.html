@@ -1,0 +1,257 @@
+---
+layout: null
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>What Is an MDB File? The Access Database Format Explained</title>
+  <meta name="description" content="An MDB file is a Microsoft Access database: one file holding tables, queries, indexes and relationships. What it is, where it comes from, how to open one.">
+  <link rel="canonical" href="https://lababacy.com/guides/what-is-an-mdb-file/">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#101010">
+  <meta name="google-site-verification" content="fIchiwUalnR7z8xlggamAsWspJIeeoIpsgYFJZDrxEg" />
+  <meta name="msvalidate.01" content="B5AB48CD24E7247AD3CA30E5170B5F8A" />
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://lababacy.com/guides/what-is-an-mdb-file/">
+  <meta property="og:title" content="What Is an MDB File? The Access Database Format Explained">
+  <meta property="og:description" content="An MDB file is a Microsoft Access database: one file holding tables, queries, indexes and relationships. What it is, where it comes from, how to open one.">
+  <meta property="og:image" content="https://lababacy.com/assets_og/og-databaseviewer.png">
+  <meta property="og:site_name" content="Lababacy">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="What Is an MDB File? The Access Database Format Explained">
+  <meta name="twitter:description" content="An MDB file is a Microsoft Access database: one file holding tables, queries, indexes and relationships. What it is, where it comes from, how to open one.">
+  <meta name="twitter:image" content="https://lababacy.com/assets_og/og-databaseviewer.png">
+  <link rel="icon" type="image/png" href="/databaseviewer/assets/icon-512.png">
+  <link rel="apple-touch-icon" href="/databaseviewer/assets/icon-512.png">
+
+  <!-- JSON-LD 1/4: BlogPosting (this guide article). -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "What Is an MDB File? The Access Database Format Explained",
+    "description": "An MDB file is a Microsoft Access database: one file holding tables, queries, indexes and relationships. What it is, where it comes from, how to open one.",
+    "image": "https://lababacy.com/assets_og/og-databaseviewer.png",
+    "author": { "@type": "Organization", "name": "Lababacy" },
+    "publisher": { "@type": "Organization", "name": "Lababacy" },
+    "datePublished": "2026-11-17",
+    "dateModified": "2026-11-17",
+    "mainEntityOfPage": "https://lababacy.com/guides/what-is-an-mdb-file/",
+    "url": "https://lababacy.com/guides/what-is-an-mdb-file/"
+  }
+  </script>
+  <!-- JSON-LD 2/4: SoftwareApplication (entity binding page <-> app), same block as the format pages.
+       offers carries "one-time purchase" wording only — never a dollar figure. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Database Viewer: SQLite & DBF",
+    "operatingSystem": "Android, iOS",
+    "applicationCategory": "Utilities",
+    "author": { "@type": "Organization", "name": "Lababacy" },
+    "url": "https://lababacy.com/databaseviewer/",
+    "sameAs": [
+      "https://apps.apple.com/app/database-viewer-sqlite-dbf/id6811615295",
+      "https://play.google.com/store/apps/details?id=com.lababacy.accessviewer"
+    ],
+    "description": "Open MDB, ACCDB, SQLite, XLSX, DBF, CSV and more on your phone — natively, on-device, with no account and no uploads. Free to start, one-time Pro unlock.",
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock",
+      "description": "Free to start with a generous free preview. Pro is a single one-time purchase."
+    }
+  }
+  </script>
+  <!-- JSON-LD 3/4: FAQPage — mainEntity mirrors the visible FAQ below exactly (6 items). -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What does MDB stand for?", "acceptedAnswer": { "@type": "Answer", "text": "MDB is a historical abbreviation for Microsoft Database. The three-letter extension follows the naming tradition dBASE started in the early days of database software, and in practice an .mdb file is a Microsoft Access database from the Jet era." } },
+      { "@type": "Question", "name": "Is MDB the same as ACCDB?", "acceptedAnswer": { "@type": "Answer", "text": "No. They are two generations of the same format: MDB is the older Jet-based format, the Access default from 97 through 2003, while ACCDB has been the default since Access 2007 and runs on the newer ACE engine. Both remain Access databases, and Database Viewer opens both." } },
+      { "@type": "Question", "name": "Are MDB files still used?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Legacy business software, desktop databases that were never upgraded and years of archives keep MDB files in circulation, so they still arrive by email, download and shared drives — often long after the last copy of Access was uninstalled." } },
+      { "@type": "Question", "name": "Can I open an MDB file without Microsoft Access?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Database Viewer opens MDB files on Android and iPhone with its own native engine. No Microsoft Access, no account, and nothing is uploaded: install the app, pick the file, and read your tables on the spot." } },
+      { "@type": "Question", "name": "Is it safe to open an MDB file on my phone?", "acceptedAnswer": { "@type": "Answer", "text": "With Database Viewer, yes. The file is read entirely on the phone: nothing is uploaded, no account is needed, and the original stays read-only from open to close. The built-in health check only diagnoses it — what it is, whether it reads cleanly, where any damaged regions sit — and never modifies the file." } },
+      { "@type": "Question", "name": "Can I convert an MDB file to CSV?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Database Viewer exports Access tables to CSV or XLSX. Export is part of Pro, a single one-time purchase; browsing and sorting work in the free tier." } }
+    ]
+  }
+  </script>
+  <!-- JSON-LD 4/4: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://lababacy.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://lababacy.com/guides/" },
+      { "@type": "ListItem", "position": 3, "name": "What Is an MDB File?", "item": "https://lababacy.com/guides/what-is-an-mdb-file/" }
+    ]
+  }
+  </script>
+
+  <style>
+    :root{--bg:#101010;--panel:#1b1b1d;--panel-2:#232326;--hairline:rgba(244,244,248,.10);--ink:#F2F1F4;--muted:#A6A3AE;--accent:#AA98FF;--accent-hover:#BCAEFF}
+    *,*::before,*::after{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+    ::selection{background:rgba(170,152,255,.32)}
+    a:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+    .wrap{max-width:46rem;margin:0 auto;padding:0 1.25rem}
+    .nav{padding:1rem 0;border-bottom:1px solid var(--hairline)}
+    .nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+    .brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;font-weight:700;letter-spacing:-.01em;color:var(--ink);font-size:1rem;white-space:nowrap}
+    .brand img{display:block;border-radius:7px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;text-decoration:none;font-weight:bold;white-space:nowrap;transition:filter .15s,border-color .15s}
+    .btn-accent{background:var(--accent);color:#101010;padding:.7rem 1.3rem;font-size:.95rem}
+    .btn-accent:hover{background:var(--accent-hover)}
+    .btn-ghost{border:1px solid var(--hairline);color:var(--ink);padding:.7rem 1.3rem;font-size:.95rem}
+    .btn-ghost:hover{border-color:rgba(244,244,248,.32)}
+    .btn-sm{padding:.45rem .95rem;font-size:.88rem}
+    .crumbs{color:var(--muted);font-size:.85rem;margin:1.8rem 0 1rem}
+    .crumbs a{color:var(--muted);text-decoration:none}
+    .crumbs a:hover{color:var(--ink)}
+    .crumbs .here{color:var(--ink);font-weight:bold}
+    h1{font-weight:700;font-size:clamp(2rem,5vw,2.8rem);line-height:1.1;letter-spacing:-.025em;margin:0 0 1.1rem}
+    .answer{background:var(--panel);border-left:3px solid var(--accent);border-radius:8px;padding:1rem 1.2rem;font-size:1.05rem;font-weight:500;margin:0 0 1.5rem}
+    .cta-row{display:flex;flex-wrap:wrap;gap:.9rem;margin:0 0 1.5rem}
+    .strip{margin:2.6rem 0 0;background:var(--panel);border:1px solid var(--hairline);border-radius:12px;padding:1.2rem 1.3rem}
+    .strip-label{margin:0 0 .8rem;color:var(--muted);font-size:.88rem}
+    .chips{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.5rem}
+    .chips li{background:var(--panel-2);border:1px solid var(--hairline);border-radius:999px;padding:.32rem .8rem;font-size:.82rem;color:var(--muted)}
+    .chips li.on{border-color:var(--accent);color:var(--ink)}
+    h2{font-weight:700;font-size:clamp(1.45rem,3.4vw,1.9rem);line-height:1.18;letter-spacing:-.02em;margin:3.2rem 0 .9rem}
+    p{margin:.9rem 0}
+    p a{color:var(--accent);text-decoration:none;font-weight:550}
+    p a:hover{color:var(--accent-hover)}
+    .vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem;margin:1.3rem 0 0}
+    .vs-card{background:var(--panel);border:1px solid var(--hairline);border-radius:16px;padding:1.35rem 1.4rem}
+    .vs-card h3{margin:0 0 .55rem;font-size:1.02rem;font-weight:700;letter-spacing:-.01em}
+    .vs-card p{margin:0;color:var(--muted);font-size:.94rem;line-height:1.66}
+    .vs-card.good{border-color:rgba(170,152,255,.45)}
+    @media (max-width:640px){.vs-grid{grid-template-columns:1fr}}
+    .faq{margin-top:1.3rem}
+    .faq details{border-top:1px solid var(--hairline)}
+    .faq details:last-of-type{border-bottom:1px solid var(--hairline)}
+    .faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:baseline;gap:1.2rem;padding:1.05rem .2rem;font-weight:bold;font-size:1rem}
+    .faq summary::-webkit-details-marker{display:none}
+    .faq summary::after{content:"+";font-size:1.3rem;line-height:1;color:var(--accent);flex:none;font-weight:500}
+    .faq details[open] summary::after{content:"–"}
+    .faq details p{margin:0;padding:0 2.4rem 1.2rem .2rem;color:var(--muted);max-width:44rem}
+    @media (max-width:37.5rem){.faq details p{padding-right:.2rem}}
+    .related{margin:1.1rem 0 0;padding:0;list-style:none}
+    .related li{margin:.5rem 0}
+    .related a{color:var(--accent);text-decoration:none;font-weight:550}
+    .related a:hover{color:var(--accent-hover)}
+    .note{color:var(--muted);font-size:.88rem}
+    .fineprint{color:var(--muted);font-size:.88rem;margin:1.1rem 0 0}
+    .site-footer{border-top:1px solid var(--hairline);margin-top:4.5rem;padding:2.2rem 0 2.6rem}
+    .foot-links{display:flex;flex-wrap:wrap;gap:.4rem 1.4rem;margin:0 0 .9rem;padding:0;list-style:none}
+    .foot-links a{color:var(--muted);text-decoration:none;font-size:.9rem}
+    .foot-links a:hover{color:var(--ink)}
+    .copyright{color:var(--muted);font-size:.85rem;margin:0}
+  </style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="/databaseviewer/">
+      <img src="/databaseviewer/assets/icon-512.png" width="28" height="28" alt="">
+      Database Viewer
+    </a>
+    <a class="btn btn-accent btn-sm" href="#get">Get the app</a>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> › <span>Guides</span> › <span class="here">What Is an MDB File?</span></nav>
+
+  <h1>What Is an MDB File?</h1>
+
+  <p class="answer">An MDB file is a Microsoft Access database: a single file that holds all the tables, plus saved queries, indexes and relationships. It was the default Access format from Access 97 through Access 2003, built on the Jet engine, and was superseded by .accdb from Access 2007. MDB files still open today, even on a phone without Microsoft Access.</p>
+
+  <div class="cta-row">
+    <a class="btn btn-accent" href="https://apps.apple.com/app/database-viewer-sqlite-dbf/id6811615295" rel="noopener">Download on the App Store</a>
+    <a class="btn btn-accent" href="https://play.google.com/store/apps/details?id=com.lababacy.accessviewer&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dseo" rel="noopener">Get it on Google Play</a>
+  </div>
+
+  <div class="strip">
+    <p class="strip-label">Database Viewer opens MDB along with these nine other formats, all on-device:</p>
+    <ul class="chips">
+      <li class="on">MDB</li>
+      <li>ACCDB</li>
+      <li>SQLite</li>
+      <li>CSV</li>
+      <li>TSV</li>
+      <li>XLSX</li>
+      <li>XLSM</li>
+      <li>ODS</li>
+      <li>DBF</li>
+      <li>SQL dump</li>
+    </ul>
+  </div>
+
+  <h2>What is an MDB file?</h2>
+  <p>An MDB file is the container Microsoft Access used for its databases through the 2003 edition. Everything a database needs lives in that one file: the tables with their columns and rows, the saved queries, the indexes that keep lookups fast, and the relationships that tie one table to another. Copy the file to another machine and the database travels with it — nothing else has to come along.</p>
+  <p>Under the hood the format belongs to the Microsoft Jet database engine: Jet 3 arrived with Access 97 and Jet 4 with Access 2000 through 2003, which is why MDB documentation usually names those two versions. The file is organized into fixed-size pages, and each record sits in a fixed-length slot on a page — a tidily mechanical design from a time when disk space was budgeted byte by byte. None of that matters for reading the data, but it explains why the format asks for a dedicated engine rather than a text editor.</p>
+
+  <h2>What does MDB stand for?</h2>
+  <p>The extension is a historical abbreviation for Microsoft Database. It follows the naming habit dBASE set in the early days of database software, when data files got terse three-letter extensions — .dbf for dBASE tables — and Access carried the pattern forward with .mdb, then .accdb a generation later. Read &ldquo;.mdb&rdquo; on a file as shorthand for a Microsoft database, which in practice means an Access database.</p>
+
+  <h2>Where MDB files come from</h2>
+  <p>Few MDB files are young. Most come from legacy business software built on Access in the 1990s and 2000s that still runs: inventory lists, membership records, order tracking. Others were simply never upgraded — a database saved in the older format stayed in it when Access moved on. And a large share are archives: years of exports, backups and hand-me-down files that outlive both the software and the colleagues who made them. That is why an MDB file can still surface in a download folder, an email attachment or a shared drive long after the last copy of Access was uninstalled.</p>
+
+  <h2>MDB vs ACCDB</h2>
+  <p>MDB and ACCDB are the same product in two generations. MDB is the Jet-era format and held the default slot from Access 97 through Access 2003; ACCDB took over as the default with Access 2007 and runs on the newer ACE engine, adding field types MDB does not carry, such as attachments and multi-value fields. Neither generation is dead: both remain everyday formats, and Database Viewer reads both on the same on-device engine — the <a href="/formats/mdb-viewer/">MDB viewer guide</a> and the <a href="/formats/accdb-viewer/">ACCDB viewer guide</a> cover each in detail.</p>
+
+  <h2>How to open an MDB file today</h2>
+  <p>Microsoft Access remains the familiar route on a Windows PC, but it is no longer the only one. For simply reading the data, a phone is often the fastest path: Database Viewer opens MDB files directly on Android and iPhone with its own native engine — no Microsoft software, no account, and nothing uploaded. Before anything is shown, a health check reports what the file actually is, whether it reads cleanly, which character encoding it uses and where damaged regions sit, and advises next steps rather than touching the file. The step-by-step walkthrough is in the guide to <a href="/guides/open-mdb-file-without-microsoft-access/">opening an MDB file without Microsoft Access</a>; the <a href="/databaseviewer/">Database Viewer</a> page covers the app itself.</p>
+
+  <h2>Frequently asked questions</h2>
+  <div class="faq">
+    <details><summary>What does MDB stand for?</summary><p>MDB is a historical abbreviation for Microsoft Database. The three-letter extension follows the naming tradition dBASE started in the early days of database software, and in practice an .mdb file is a Microsoft Access database from the Jet era.</p></details>
+    <details><summary>Is MDB the same as ACCDB?</summary><p>No. They are two generations of the same format: MDB is the older Jet-based format, the Access default from 97 through 2003, while ACCDB has been the default since Access 2007 and runs on the newer ACE engine. Both remain Access databases, and Database Viewer opens both.</p></details>
+    <details><summary>Are MDB files still used?</summary><p>Yes. Legacy business software, desktop databases that were never upgraded and years of archives keep MDB files in circulation, so they still arrive by email, download and shared drives — often long after the last copy of Access was uninstalled.</p></details>
+    <details><summary>Can I open an MDB file without Microsoft Access?</summary><p>Yes. Database Viewer opens MDB files on Android and iPhone with its own native engine. No Microsoft Access, no account, and nothing is uploaded: install the app, pick the file, and read your tables on the spot.</p></details>
+    <details><summary>Is it safe to open an MDB file on my phone?</summary><p>With Database Viewer, yes. The file is read entirely on the phone: nothing is uploaded, no account is needed, and the original stays read-only from open to close. The built-in health check only diagnoses it — what it is, whether it reads cleanly, where any damaged regions sit — and never modifies the file.</p></details>
+    <details><summary>Can I convert an MDB file to CSV?</summary><p>Yes. Database Viewer exports Access tables to CSV or XLSX. Export is part of Pro, a single one-time purchase; browsing and sorting work in the free tier.</p></details>
+  </div>
+
+  <h2>Related pages</h2>
+  <ul class="related">
+    <li><a href="/formats/mdb-viewer/">MDB viewer — the full format guide for Jet databases</a></li>
+    <li><a href="/formats/accdb-viewer/">ACCDB viewer — the guide to the Access 2007+ format</a></li>
+    <li><a href="/guides/open-mdb-file-without-microsoft-access/">How to open an MDB file without Microsoft Access — step by step</a></li>
+    <li><a href="/databaseviewer/">Database Viewer — open MDB, ACCDB, SQLite and more on your phone</a></li>
+  </ul>
+
+  <h2 id="get">Get Database Viewer</h2>
+  <div class="cta-row">
+    <a class="btn btn-accent" href="https://apps.apple.com/app/database-viewer-sqlite-dbf/id6811615295" rel="noopener">Download on the App Store</a>
+    <a class="btn btn-ghost" href="https://play.google.com/store/apps/details?id=com.lababacy.accessviewer&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dseo" rel="noopener">Get it on Google Play</a>
+  </div>
+  <p class="fineprint">Free to start with a generous free preview — Pro is a one-time purchase.</p>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <ul class="foot-links">
+      <li><a href="/">All apps</a></li>
+      <li><a href="/databaseviewer/">Database Viewer</a></li>
+      <li><a href="/databaseviewer/privacy/">Privacy Policy</a></li>
+      <li><a href="/databaseviewer/support/">Support</a></li>
+      <li><a href="mailto:w4n9we1@gmail.com">Contact</a></li>
+    </ul>
+    <p class="copyright">© 2026 Lababacy</p>
+  </div>
+</footer>
+
+</body>
+</html>
