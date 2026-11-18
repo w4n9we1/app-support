@@ -1,0 +1,291 @@
+---
+layout: null
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MDB vs ACCDB: What's the Difference?</title>
+  <meta name="description" content="MDB is the Jet-era Access format (97–2003); ACCDB is the Access 2007+ ACE format, adding attachments and stronger encryption. Both open on a phone.">
+  <link rel="canonical" href="https://lababacy.com/guides/mdb-vs-accdb/">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#101010">
+  <meta name="google-site-verification" content="fIchiwUalnR7z8xlggamAsWspJIeeoIpsgYFJZDrxEg" />
+  <meta name="msvalidate.01" content="B5AB48CD24E7247AD3CA30E5170B5F8A" />
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://lababacy.com/guides/mdb-vs-accdb/">
+  <meta property="og:title" content="MDB vs ACCDB: What's the Difference?">
+  <meta property="og:description" content="MDB is the Jet-era Access format (97–2003); ACCDB is the Access 2007+ ACE format, adding attachments and stronger encryption. Both open on a phone.">
+  <meta property="og:image" content="https://lababacy.com/assets_og/og-databaseviewer.png">
+  <meta property="og:site_name" content="Lababacy">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="MDB vs ACCDB: What's the Difference?">
+  <meta name="twitter:description" content="MDB is the Jet-era Access format (97–2003); ACCDB is the Access 2007+ ACE format, adding attachments and stronger encryption. Both open on a phone.">
+  <meta name="twitter:image" content="https://lababacy.com/assets_og/og-databaseviewer.png">
+  <link rel="icon" type="image/png" href="/databaseviewer/assets/icon-512.png">
+  <link rel="apple-touch-icon" href="/databaseviewer/assets/icon-512.png">
+
+  <!-- JSON-LD 1/4: BlogPosting (this guide article). -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "MDB vs ACCDB: What's the Difference?",
+    "description": "MDB is the Jet-era Access format (97–2003); ACCDB is the Access 2007+ ACE format, adding attachments and stronger encryption. Both open on a phone.",
+    "image": "https://lababacy.com/assets_og/og-databaseviewer.png",
+    "author": { "@type": "Organization", "name": "Lababacy" },
+    "publisher": { "@type": "Organization", "name": "Lababacy" },
+    "datePublished": "2026-11-18",
+    "dateModified": "2026-11-18",
+    "mainEntityOfPage": "https://lababacy.com/guides/mdb-vs-accdb/",
+    "url": "https://lababacy.com/guides/mdb-vs-accdb/"
+  }
+  </script>
+  <!-- JSON-LD 2/4: SoftwareApplication (entity binding page <-> app), same block as the format pages.
+       offers carries "one-time purchase" wording only — never a dollar figure. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Database Viewer: SQLite & DBF",
+    "operatingSystem": "Android, iOS",
+    "applicationCategory": "Utilities",
+    "author": { "@type": "Organization", "name": "Lababacy" },
+    "url": "https://lababacy.com/databaseviewer/",
+    "sameAs": [
+      "https://apps.apple.com/app/database-viewer-sqlite-dbf/id6811615295",
+      "https://play.google.com/store/apps/details?id=com.lababacy.accessviewer"
+    ],
+    "description": "Open MDB, ACCDB, SQLite, XLSX, DBF, CSV and more on your phone — natively, on-device, with no account and no uploads. Free to start, one-time Pro unlock.",
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock",
+      "description": "Free to start with a generous free preview. Pro is a single one-time purchase."
+    }
+  }
+  </script>
+  <!-- JSON-LD 3/4: FAQPage — mainEntity mirrors the visible FAQ below exactly (6 items). -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Which is better, MDB or ACCDB?", "acceptedAnswer": { "@type": "Answer", "text": "Neither is universally better — it depends on where the database has to run. For a new database you design today, ACCDB is the format current Access saves by default, and it carries the newer field types and encryption. When a database must keep working with Access 2003 or older software that only understands Jet, staying with MDB preserves that compatibility. For simply reading the data, both behave the same in Database Viewer." } },
+      { "@type": "Question", "name": "Can Access 2003 open ACCDB files?", "acceptedAnswer": { "@type": "Answer", "text": "No. ACCDB was introduced with Access 2007, and Access 2003 plus every earlier version cannot read it. The direction reverses from Access 2007 on: those versions open both ACCDB and MDB files. If someone is tied to an old copy of Access, keep the data in MDB format until their software is upgraded." } },
+      { "@type": "Question", "name": "Are MDB and ACCDB files the same size limit?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — both formats stop at 2 GB for a single database file. Because the ceiling belongs to the format itself, converting an MDB to ACCDB buys no extra room; a database outgrowing 2 GB has to be split or moved to a server-based backend, whichever extension it carries." } },
+      { "@type": "Question", "name": "Can I convert MDB to ACCDB?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Access 2007 and later include a Save As path that writes an existing MDB database as an ACCDB copy. Treat it as a one-way upgrade: after converting — particularly once attachment or multi-value fields come into use — older versions of Access will not open the file, so keep the original MDB while any older software still needs it." } },
+      { "@type": "Question", "name": "Can I open both on my phone?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Database Viewer reads MDB and ACCDB alike on Android and iPhone, parsing each file with its native engine — no conversion, no Microsoft software, and everything stays on the device. The health check names the format it found before any table appears." } },
+      { "@type": "Question", "name": "Is the app free?", "acceptedAnswer": { "@type": "Answer", "text": "Free to start: opening MDB or ACCDB files, reading the health report and browsing tables all work without paying. Pro adds export, editing and deeper analysis for a single one-time purchase." } }
+    ]
+  }
+  </script>
+  <!-- JSON-LD 4/4: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://lababacy.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://lababacy.com/guides/" },
+      { "@type": "ListItem", "position": 3, "name": "MDB vs ACCDB", "item": "https://lababacy.com/guides/mdb-vs-accdb/" }
+    ]
+  }
+  </script>
+
+  <style>
+    :root{--bg:#101010;--panel:#1b1b1d;--panel-2:#232326;--hairline:rgba(244,244,248,.10);--ink:#F2F1F4;--muted:#A6A3AE;--accent:#AA98FF;--accent-hover:#BCAEFF}
+    *,*::before,*::after{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+    ::selection{background:rgba(170,152,255,.32)}
+    a:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+    .wrap{max-width:46rem;margin:0 auto;padding:0 1.25rem}
+    .nav{padding:1rem 0;border-bottom:1px solid var(--hairline)}
+    .nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+    .brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;font-weight:700;letter-spacing:-.01em;color:var(--ink);font-size:1rem;white-space:nowrap}
+    .brand img{display:block;border-radius:7px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;text-decoration:none;font-weight:bold;white-space:nowrap;transition:filter .15s,border-color .15s}
+    .btn-accent{background:var(--accent);color:#101010;padding:.7rem 1.3rem;font-size:.95rem}
+    .btn-accent:hover{background:var(--accent-hover)}
+    .btn-ghost{border:1px solid var(--hairline);color:var(--ink);padding:.7rem 1.3rem;font-size:.95rem}
+    .btn-ghost:hover{border-color:rgba(244,244,248,.32)}
+    .btn-sm{padding:.45rem .95rem;font-size:.88rem}
+    .crumbs{color:var(--muted);font-size:.85rem;margin:1.8rem 0 1rem}
+    .crumbs a{color:var(--muted);text-decoration:none}
+    .crumbs a:hover{color:var(--ink)}
+    .crumbs .here{color:var(--ink);font-weight:bold}
+    h1{font-weight:700;font-size:clamp(2rem,5vw,2.8rem);line-height:1.1;letter-spacing:-.025em;margin:0 0 1.1rem}
+    .answer{background:var(--panel);border-left:3px solid var(--accent);border-radius:8px;padding:1rem 1.2rem;font-size:1.05rem;font-weight:500;margin:0 0 1.5rem}
+    .cta-row{display:flex;flex-wrap:wrap;gap:.9rem;margin:0 0 1.5rem}
+    .strip{margin:2.6rem 0 0;background:var(--panel);border:1px solid var(--hairline);border-radius:12px;padding:1.2rem 1.3rem}
+    .strip-label{margin:0 0 .8rem;color:var(--muted);font-size:.88rem}
+    .chips{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.5rem}
+    .chips li{background:var(--panel-2);border:1px solid var(--hairline);border-radius:999px;padding:.32rem .8rem;font-size:.82rem;color:var(--muted)}
+    .chips li.on{border-color:var(--accent);color:var(--ink)}
+    h2{font-weight:700;font-size:clamp(1.45rem,3.4vw,1.9rem);line-height:1.18;letter-spacing:-.02em;margin:3.2rem 0 .9rem}
+    p{margin:.9rem 0}
+    p a{color:var(--accent);text-decoration:none;font-weight:550}
+    p a:hover{color:var(--accent-hover)}
+    .table-scroll{overflow-x:auto;margin:1.3rem 0 0}
+    .cmp{width:100%;border-collapse:collapse;font-size:.92rem;min-width:34rem}
+    .cmp th,.cmp td{border:1px solid var(--hairline);padding:.6rem .8rem;text-align:left;vertical-align:top;line-height:1.55}
+    .cmp thead th{background:var(--panel-2);color:var(--ink);font-weight:700}
+    .cmp tbody th{background:var(--panel);color:var(--ink);font-weight:600;width:9.5rem}
+    .cmp td{color:var(--muted);background:var(--panel)}
+    .vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem;margin:1.3rem 0 0}
+    .vs-card{background:var(--panel);border:1px solid var(--hairline);border-radius:16px;padding:1.35rem 1.4rem}
+    .vs-card h3{margin:0 0 .55rem;font-size:1.02rem;font-weight:700;letter-spacing:-.01em}
+    .vs-card p{margin:0;color:var(--muted);font-size:.94rem;line-height:1.66}
+    .vs-card.good{border-color:rgba(170,152,255,.45)}
+    @media (max-width:640px){.vs-grid{grid-template-columns:1fr}}
+    .faq{margin-top:1.3rem}
+    .faq details{border-top:1px solid var(--hairline)}
+    .faq details:last-of-type{border-bottom:1px solid var(--hairline)}
+    .faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:baseline;gap:1.2rem;padding:1.05rem .2rem;font-weight:bold;font-size:1rem}
+    .faq summary::-webkit-details-marker{display:none}
+    .faq summary::after{content:"+";font-size:1.3rem;line-height:1;color:var(--accent);flex:none;font-weight:500}
+    .faq details[open] summary::after{content:"–"}
+    .faq details p{margin:0;padding:0 2.4rem 1.2rem .2rem;color:var(--muted);max-width:44rem}
+    @media (max-width:37.5rem){.faq details p{padding-right:.2rem}}
+    .related{margin:1.1rem 0 0;padding:0;list-style:none}
+    .related li{margin:.5rem 0}
+    .related a{color:var(--accent);text-decoration:none;font-weight:550}
+    .related a:hover{color:var(--accent-hover)}
+    .note{color:var(--muted);font-size:.88rem}
+    .fineprint{color:var(--muted);font-size:.88rem;margin:1.1rem 0 0}
+    .site-footer{border-top:1px solid var(--hairline);margin-top:4.5rem;padding:2.2rem 0 2.6rem}
+    .foot-links{display:flex;flex-wrap:wrap;gap:.4rem 1.4rem;margin:0 0 .9rem;padding:0;list-style:none}
+    .foot-links a{color:var(--muted);text-decoration:none;font-size:.9rem}
+    .foot-links a:hover{color:var(--ink)}
+    .copyright{color:var(--muted);font-size:.85rem;margin:0}
+  </style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="/databaseviewer/">
+      <img src="/databaseviewer/assets/icon-512.png" width="28" height="28" alt="">
+      Database Viewer
+    </a>
+    <a class="btn btn-accent btn-sm" href="#get">Get the app</a>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> › <span>Guides</span> › <span class="here">MDB vs ACCDB</span></nav>
+
+  <h1>MDB vs ACCDB: What's the Difference?</h1>
+
+  <p class="answer">MDB and ACCDB are two generations of the Microsoft Access database format: MDB is the Jet-engine default from Access 97 up to Access 2003, while ACCDB has served as the standard default from Access 2007 onward on the ACE engine, adding attachments, multi-value fields and stronger database encryption. Both open on a phone, no Microsoft Access needed.</p>
+
+  <div class="cta-row">
+    <a class="btn btn-accent" href="https://apps.apple.com/app/database-viewer-sqlite-dbf/id6811615295" rel="noopener">Download on the App Store</a>
+    <a class="btn btn-accent" href="https://play.google.com/store/apps/details?id=com.lababacy.accessviewer&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dseo" rel="noopener">Get it on Google Play</a>
+  </div>
+
+  <div class="strip">
+    <p class="strip-label">Database Viewer reads MDB and ACCDB alongside eight other formats — every file on-device:</p>
+    <ul class="chips">
+      <li class="on">MDB</li>
+      <li class="on">ACCDB</li>
+      <li>SQLite</li>
+      <li>CSV</li>
+      <li>TSV</li>
+      <li>XLSX</li>
+      <li>XLSM</li>
+      <li>ODS</li>
+      <li>DBF</li>
+      <li>SQL dump</li>
+    </ul>
+  </div>
+
+  <h2>MDB vs ACCDB at a glance</h2>
+  <p>The difference between MDB and ACCDB comes down to two engine generations. Six rows settle the comparison: where each extension came from, what sits underneath, what ACCDB gained, how security differs, who can open what, and the ceiling both share.</p>
+  <div class="table-scroll">
+    <table class="cmp">
+      <thead>
+        <tr><th scope="col">Feature</th><th scope="col">MDB (.mdb)</th><th scope="col">ACCDB (.accdb)</th></tr>
+      </thead>
+      <tbody>
+        <tr><th scope="row">Default format in</th><td>Access 97 up to Access 2003</td><td>Access 2007 and every edition since</td></tr>
+        <tr><th scope="row">Underlying engine</th><td>Microsoft Jet — Jet 3.5 in Access 97, Jet 4.0 in Access 2000 to 2003</td><td>Microsoft ACE, introduced with Access 2007</td></tr>
+        <tr><th scope="row">Extra field types</th><td>None of the newer kinds — no attachment or multi-value storage</td><td>Attachment and multi-value fields; calculated fields since Access 2010</td></tr>
+        <tr><th scope="row">Encryption</th><td>Legacy Jet database password protection</td><td>Stronger database encryption across the file</td></tr>
+        <tr><th scope="row">Compatibility</th><td>Opens in Access 97 and later; Access 2007+ can still create MDB files</td><td>Needs Access 2007 or newer; Access 2003 and earlier cannot open it</td></tr>
+        <tr><th scope="row">File size limit</th><td>2 GB per database file</td><td>2 GB per database file</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>What is the MDB format?</h2>
+  <p>An MDB file is an Access database from the Jet generation — one file carrying the tables together with their saved queries, indexes and relationships. Access 97 shipped it on Jet 3.5, and Access 2000 to 2003 kept it on Jet 4.0, which is why documentation speaks of those two Jet versions. The format still turns up wherever legacy systems and archives live; the <a href="/formats/mdb-viewer/">MDB viewer guide</a> covers the format itself, and <a href="/guides/what-is-an-mdb-file/">what is an MDB file</a> explains it from the ground up.</p>
+
+  <h2>What is the ACCDB format?</h2>
+  <p>ACCDB is the generation Access 2007 made the new default, carried by the ACE engine that took Jet's place inside Access. What it adds shows up in daily work: attachment fields that store files inside a record, multi-value fields that keep a list of choices in one cell, calculated fields from Access 2010 onward, stronger database encryption, and tighter integration with SharePoint and Outlook. The <a href="/formats/accdb-viewer/">ACCDB viewer guide</a> walks through the format in detail.</p>
+
+  <h2>Which one do you have?</h2>
+  <p>Nine times out of ten the file extension settles it on sight: <strong>.mdb</strong> belongs to the older Jet generation, <strong>.accdb</strong> to databases created or re-saved from Access 2007 onward. That is all the identification most files ever need. The exception is a file that lost or swapped its extension in transit — and for that, Database Viewer runs a health check on every open: it inspects the bytes rather than the filename, reports what the database really is, and flags whether it reads cleanly before any table appears.</p>
+  <div class="vs-grid">
+    <div class="vs-card">
+      <h3>.mdb — the Jet generation</h3>
+      <p>Points to Access 97 up to Access 2003, or to older business software that never moved off that engine. Opens in Database Viewer like any other file.</p>
+    </div>
+    <div class="vs-card good">
+      <h3>.accdb — the ACE generation</h3>
+      <p>Points to Access 2007 or a later edition, or to a database upgraded with Save As. Opens in Database Viewer exactly the same way.</p>
+    </div>
+  </div>
+
+  <h2>Can you open both without Microsoft Access?</h2>
+  <p>One app covers both generations. Database Viewer reads MDB and ACCDB natively on Android and iPhone — the native C engine parses each file wholly on the phone, with nothing uploaded and no account needed. The health check runs first, then the tables open in a generous free preview; a decades-old MDB and a current ACCDB open back to back in the same app. No Microsoft software, no conversion stop — the <a href="/databaseviewer/">Database Viewer page</a> has the full format list.</p>
+
+  <h2>Can you convert MDB to ACCDB?</h2>
+  <p>Yes, in one direction. From Access 2007 onward, open the MDB and choose Save As to write an ACCDB copy — tables, queries, forms and relationships come across. Treat the move as one-way: once the file is ACCDB, and especially once attachment or multi-value fields are in use, Access 2003 and older can no longer open it. If anyone on the team still runs an old version, keep the original MDB until every machine has moved. Converting also lifts no limits — both formats share the same 2 GB ceiling per database.</p>
+
+  <h2>Frequently asked questions</h2>
+  <div class="faq">
+    <details><summary>Which is better, MDB or ACCDB?</summary><p>Neither is universally better — it depends on where the database has to run. For a new database you design today, ACCDB is the format current Access saves by default, and it carries the newer field types and encryption. When a database must keep working with Access 2003 or older software that only understands Jet, staying with MDB preserves that compatibility. For simply reading the data, both behave the same in Database Viewer.</p></details>
+    <details><summary>Can Access 2003 open ACCDB files?</summary><p>No. ACCDB was introduced with Access 2007, and Access 2003 plus every earlier version cannot read it. The direction reverses from Access 2007 on: those versions open both ACCDB and MDB files. If someone is tied to an old copy of Access, keep the data in MDB format until their software is upgraded.</p></details>
+    <details><summary>Are MDB and ACCDB files the same size limit?</summary><p>Yes — both formats stop at 2 GB for a single database file. Because the ceiling belongs to the format itself, converting an MDB to ACCDB buys no extra room; a database outgrowing 2 GB has to be split or moved to a server-based backend, whichever extension it carries.</p></details>
+    <details><summary>Can I convert MDB to ACCDB?</summary><p>Yes. Access 2007 and later include a Save As path that writes an existing MDB database as an ACCDB copy. Treat it as a one-way upgrade: after converting — particularly once attachment or multi-value fields come into use — older versions of Access will not open the file, so keep the original MDB while any older software still needs it.</p></details>
+    <details><summary>Can I open both on my phone?</summary><p>Yes. Database Viewer reads MDB and ACCDB alike on Android and iPhone, parsing each file with its native engine — no conversion, no Microsoft software, and everything stays on the device. The health check names the format it found before any table appears.</p></details>
+    <details><summary>Is the app free?</summary><p>Free to start: opening MDB or ACCDB files, reading the health report and browsing tables all work without paying. Pro adds export, editing and deeper analysis for a single one-time purchase.</p></details>
+  </div>
+
+  <h2>Related pages</h2>
+  <ul class="related">
+    <li><a href="/formats/mdb-viewer/">MDB viewer — reading Jet-era Access files on a phone</a></li>
+    <li><a href="/formats/accdb-viewer/">ACCDB viewer — reading Access 2007+ databases on a phone</a></li>
+    <li><a href="/guides/what-is-an-mdb-file/">What is an MDB file? — the format explained from the ground up</a></li>
+    <li><a href="/guides/open-mdb-file-without-microsoft-access/">Opening an MDB file without Microsoft Access — the step-by-step walkthrough</a></li>
+    <li><a href="/databaseviewer/">Database Viewer — every supported format and how it opens</a></li>
+  </ul>
+
+  <h2 id="get">Get Database Viewer</h2>
+  <div class="cta-row">
+    <a class="btn btn-accent" href="https://apps.apple.com/app/database-viewer-sqlite-dbf/id6811615295" rel="noopener">Download on the App Store</a>
+    <a class="btn btn-ghost" href="https://play.google.com/store/apps/details?id=com.lababacy.accessviewer&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dseo" rel="noopener">Get it on Google Play</a>
+  </div>
+  <p class="fineprint">Free to start with a generous free preview — Pro is a one-time purchase.</p>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <ul class="foot-links">
+      <li><a href="/">All apps</a></li>
+      <li><a href="/databaseviewer/">Database Viewer</a></li>
+      <li><a href="/databaseviewer/privacy/">Privacy Policy</a></li>
+      <li><a href="/databaseviewer/support/">Support</a></li>
+      <li><a href="mailto:w4n9we1@gmail.com">Contact</a></li>
+    </ul>
+    <p class="copyright">© 2026 Lababacy</p>
+  </div>
+</footer>
+
+</body>
+</html>
