@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PST Viewer for iPhone — Open a PST or OST File Without Outlook</title>
+  <meta name="description" content="Open Outlook PST and OST files on iPhone or iPad. Winmail Reader shows the folder tree and messages, decoded on your device, read-only, nothing uploaded.">
+  <link rel="canonical" href="https://lababacy.com/winmail/formats/pst/">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#100E0C">
+  <meta name="google-site-verification" content="fIchiwUalnR7z8xlggamAsWspJIeeoIpsgYFJZDrxEg" />
+  <meta name="msvalidate.01" content="B5AB48CD24E7247AD3CA30E5170B5F8A" />
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://lababacy.com/winmail/formats/pst/">
+  <meta property="og:title" content="PST Viewer for iPhone — Open a PST or OST File Without Outlook">
+  <meta property="og:description" content="Open Outlook PST and OST files on iPhone or iPad. Winmail Reader shows the folder tree and messages, decoded on your device, read-only, nothing uploaded.">
+  <meta property="og:image" content="https://lababacy.com/assets_og/og-winmail.png">
+  <meta property="og:site_name" content="Lababacy">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PST Viewer for iPhone — Open a PST or OST File Without Outlook">
+  <meta name="twitter:description" content="Open Outlook PST and OST files on iPhone or iPad. Winmail Reader shows the folder tree and messages, decoded on your device, read-only, nothing uploaded.">
+  <meta name="twitter:image" content="https://lababacy.com/assets_og/og-winmail.png">
+  <link rel="icon" type="image/png" href="/winmail/assets/favicon-64.png">
+  <link rel="apple-touch-icon" href="/winmail/assets/icon-180.png">
+
+  <!-- JSON-LD 1/4: SoftwareApplication (entity binding page <-> app). -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Winmail Reader - DAT, MSG, EML",
+    "operatingSystem": "iOS 17.0+, iPadOS 17.0+",
+    "applicationCategory": "Utilities",
+    "author": { "@type": "Organization", "name": "Lababacy" },
+    "url": "https://lababacy.com/winmail/",
+    "sameAs": ["https://apps.apple.com/app/winmail-reader-dat-msg-eml/id6823454038"],
+    "description": "Open PST and OST Outlook data files, MBOX archives, EML, winmail.dat (TNEF), MSG, OFT, MHT, XPS and OLM files on iPhone and iPad — decoded entirely on-device, read-only. Free to look inside; a one-time purchase unlocks full reading, extraction and export.",
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock",
+      "description": "Free to look inside. Pro is a single one-time purchase; an optional monthly subscription is also available."
+    }
+  }
+  </script>
+  <!-- JSON-LD 2/4: FAQPage — mirrors the visible FAQ exactly (6 items). -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What is a PST file?", "acceptedAnswer": { "@type": "Answer", "text": "A PST file is Outlook's data file on Windows: a single binary container holding folders, messages, calendar items, contacts and attachments. It is not a text format, so you cannot read it in a text editor. Internally it is built in layers, and the file starts with a !BDN signature that identifies it as a PST or OST container." } },
+      { "@type": "Question", "name": "Can I open a PST file on iPhone or iPad without Outlook?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Winmail Reader decodes the PST container itself on the device, so no Outlook installation, no Exchange server and no account is involved. You can open the file from Files, from the share sheet, or from another app's Open in menu, and the app reads it as a copy without modifying the original." } },
+      { "@type": "Question", "name": "What is the difference between PST and OST?", "acceptedAnswer": { "@type": "Answer", "text": "Both are Outlook data containers with the same internal structure. A PST is a data file you can save, copy and archive; an OST is the offline cache Outlook keeps while connected to an Exchange or IMAP mailbox, and it is tied to that account. Winmail Reader opens both the same way and treats them as read-only." } },
+      { "@type": "Question", "name": "Does Winmail Reader convert a PST or OST file to something else?", "acceptedAnswer": { "@type": "Answer", "text": "It does not rewrite archives: there is no PST writer in the app, so PST and OST files are opened read-only for browsing. What you can do as part of Pro is export individual messages out of the archive to PDF, EML, HTML, TXT or RTF, and extract their attachments." } },
+      { "@type": "Question", "name": "Is Winmail Reader free?", "acceptedAnswer": { "@type": "Answer", "text": "Free to look inside: open every supported format and see the sender, subject and first screen of any message, the attachment list, the folder tree of a mailbox archive with a preview of its first messages, and the first page of an XPS document. Full reading, attachment extraction, full archive browsing, exports, search and resending are part of Pro — a single one-time purchase. An optional monthly subscription is also available, priced as shown in the app." } },
+      { "@type": "Question", "name": "How large a PST file can it open?", "acceptedAnswer": { "@type": "Answer", "text": "Archives of several gigabytes are handled: the app indexes the container and reads messages on demand instead of loading the whole file into memory, and a long scan can be cancelled. Damaged containers are the more common obstacle than size — the file check-up will tell you what the file really is and whether it looks incomplete, but it does not repair broken archives." } }
+    ]
+  }
+  </script>
+  <!-- JSON-LD 3/4: HowTo — mirrors the visible steps below. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to open a PST file on iPhone or iPad",
+    "step": [
+      { "@type": "HowToStep", "position": 1, "name": "Install Winmail Reader", "text": "Install Winmail Reader from the App Store (iOS 17.0+ / iPadOS 17.0+). It is free to look inside." },
+      { "@type": "HowToStep", "position": 2, "name": "Get the PST or OST file onto the device", "text": "Get the PST or OST file onto the device. Copy it into Files from a computer, a USB drive or iCloud Drive — usually the whole archive file, without unzipping anything." },
+      { "@type": "HowToStep", "position": 3, "name": "Open it with Winmail Reader", "text": "Open it with Winmail Reader. Tap the file in Files, or pick the app in the share sheet or in another app's Open in menu. The file check-up names what the container really is and how confident the detection is." },
+      { "@type": "HowToStep", "position": 4, "name": "Look at the folder tree, then unlock full browsing", "text": "Look at the folder tree, then unlock full browsing. The free tier shows the root folder area with a preview of the first messages; Pro unlocks every folder, opening any message in full, attachment preview and extraction, PDF, EML, HTML, TXT and RTF export, and search across the archive." }
+    ]
+  }
+  </script>
+  <!-- JSON-LD 4/4: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://lababacy.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Winmail Reader", "item": "https://lababacy.com/winmail/" },
+      { "@type": "ListItem", "position": 3, "name": "Formats", "item": "https://lababacy.com/winmail/formats/" },
+      { "@type": "ListItem", "position": 4, "name": "PST / OST", "item": "https://lababacy.com/winmail/formats/pst/" }
+    ]
+  }
+  </script>
+
+  <style>
+    :root{--bg:#100E0C;--panel:#1A1714;--panel-2:#221E1A;--hairline:rgba(243,239,231,.12);--ink:#F3EFE7;--muted:#A79E94;--accent:#D9A15B;--accent-hover:#E4B378;--display:"Iowan Old Style","Palatino Linotype",Georgia,serif}
+    *,*::before,*::after{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+    ::selection{background:rgba(217,161,91,.35)}
+    a:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+    .wrap{max-width:46rem;margin:0 auto;padding:0 1.25rem}
+    .nav{padding:1rem 0;border-bottom:1px solid var(--hairline)}
+    .nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+    .brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;font-weight:700;letter-spacing:-.01em;color:var(--ink);font-size:1rem;white-space:nowrap}
+    .brand img{display:block;border-radius:7px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;text-decoration:none;font-weight:bold;white-space:nowrap;transition:filter .15s,border-color .15s}
+    .btn-accent{background:var(--accent);color:#100E0C;padding:.7rem 1.3rem;font-size:.95rem}
+    .btn-accent:hover{background:var(--accent-hover)}
+    .btn-ghost{border:1px solid var(--hairline);color:var(--ink);padding:.7rem 1.3rem;font-size:.95rem}
+    .btn-ghost:hover{border-color:rgba(243,239,231,.32)}
+    .btn-sm{padding:.45rem .95rem;font-size:.88rem}
+    .crumbs{color:var(--muted);font-size:.85rem;margin:1.8rem 0 1rem}
+    .crumbs a{color:var(--muted);text-decoration:none}
+    .crumbs a:hover{color:var(--ink)}
+    .crumbs .here{color:var(--ink);font-weight:bold}
+    h1{font-family:var(--display);font-weight:500;font-size:clamp(2.1rem,5.4vw,3.1rem);line-height:1.08;letter-spacing:-.02em;margin:0 0 1.1rem}
+    .answer{background:var(--panel);border-left:3px solid var(--accent);border-radius:8px;padding:1rem 1.2rem;font-size:1.05rem;font-weight:500;margin:0 0 1.5rem}
+    .cta-row{display:flex;flex-wrap:wrap;gap:.9rem;margin:0 0 1.5rem}
+    .strip{margin:2.6rem 0 0;background:var(--panel);border:1px solid var(--hairline);border-radius:12px;padding:1.2rem 1.3rem}
+    .strip-label{margin:0 0 .8rem;color:var(--muted);font-size:.88rem}
+    .chips{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.5rem}
+    .chips li{background:var(--panel-2);border:1px solid var(--hairline);border-radius:999px;padding:.32rem .8rem;font-size:.82rem;color:var(--muted)}
+    .chips li.on{border-color:var(--accent);color:var(--ink)}
+    h2{font-family:var(--display);font-weight:500;font-size:clamp(1.55rem,3.6vw,2.1rem);line-height:1.18;letter-spacing:-.01em;margin:3.2rem 0 .9rem}
+    h3{font-size:1.02rem;margin:1.8rem 0 .4rem}
+    p{margin:.9rem 0}
+    .steps{margin:1.1rem 0 0;padding-left:1.35rem}
+    .steps li{margin:.85rem 0;padding-left:.35rem}
+    .steps li::marker{color:var(--accent);font-weight:700}
+    .vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem;margin:1.3rem 0 0}
+    .vs-card{background:var(--panel);border:1px solid var(--hairline);border-radius:16px;padding:1.35rem 1.4rem}
+    .vs-card h3{margin:0 0 .55rem;font-size:1.02rem;font-weight:700}
+    .vs-card p{margin:0;color:var(--muted);font-size:.94rem;line-height:1.66}
+    .vs-card.good{border-color:rgba(217,161,91,.5)}
+    @media (max-width:640px){.vs-grid{grid-template-columns:1fr}}
+    .plans{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.3rem 0 0}
+    .plan{background:var(--panel);border:1px solid var(--hairline);border-radius:14px;padding:1.3rem 1.35rem}
+    .plan.pro{border-color:rgba(217,161,91,.45)}
+    .plan h3{margin:0 0 .7rem;font-family:var(--display);font-weight:550;font-size:1.2rem}
+    .plan ul{list-style:none;margin:0;padding:0}
+    .plan li{padding:.4rem 0 .4rem 1.5rem;position:relative;font-size:.92rem;color:var(--muted)}
+    .plan li::before{content:"✓";position:absolute;left:0;color:var(--accent);font-weight:700}
+    @media (max-width:640px){.plans{grid-template-columns:1fr}}
+    .faq{margin-top:1.3rem}
+    .faq details{border-top:1px solid var(--hairline)}
+    .faq details:last-of-type{border-bottom:1px solid var(--hairline)}
+    .faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:baseline;gap:1.2rem;padding:1.05rem .2rem;font-weight:bold;font-size:1rem}
+    .faq summary::-webkit-details-marker{display:none}
+    .faq summary::after{content:"+";font-size:1.3rem;line-height:1;color:var(--accent);flex:none;font-weight:500}
+    .faq details[open] summary::after{content:"–"}
+    .faq details p{margin:0;padding:0 2.4rem 1.2rem .2rem;color:var(--muted);max-width:44rem}
+    @media (max-width:37.5rem){.faq details p{padding-right:.2rem}}
+    .related{margin:1.1rem 0 0;padding:0;list-style:none}
+    .related li{margin:.5rem 0}
+    .related a{color:var(--accent);text-decoration:none;font-weight:550}
+    .related a:hover{color:var(--accent-hover)}
+    .note,.fineprint{color:var(--muted);font-size:.88rem}
+    .fineprint{margin:1.1rem 0 0}
+    .updated{color:var(--muted);font-size:.8rem;margin:2.4rem 0 0}
+    .site-footer{border-top:1px solid var(--hairline);margin-top:4.5rem;padding:2.2rem 0 2.6rem}
+    .foot-links{display:flex;flex-wrap:wrap;gap:.4rem 1.4rem;margin:0 0 .9rem;padding:0;list-style:none}
+    .foot-links a{color:var(--muted);text-decoration:none;font-size:.9rem}
+    .foot-links a:hover{color:var(--ink)}
+    .copyright{color:var(--muted);font-size:.85rem;margin:0}
+  
+  </style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="/winmail/">
+      <img src="/winmail/assets/icon-180.png" width="28" height="28" alt="">
+      Winmail Reader
+    </a>
+    <a class="btn btn-accent btn-sm" href="https://apps.apple.com/app/winmail-reader-dat-msg-eml/id6823454038" rel="noopener">Get the app</a>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> › <a href="/winmail/">Winmail Reader</a> › <a href="/winmail/formats/">Formats</a> › <span class="here">PST / OST</span></nav>
+
+  <h1>Open PST and OST files on iPhone</h1>
+
+  <p class="answer">A PST file is Outlook's data file on Windows: folders, messages and attachments in one binary container. On iPhone or iPad you can open a PST or OST file with Winmail Reader — the folder tree and messages are decoded on your device, read-only, and nothing is uploaded.</p>
+
+  <div class="cta-row">
+    <a class="btn btn-accent" href="https://apps.apple.com/app/winmail-reader-dat-msg-eml/id6823454038" rel="noopener">Download on the App Store</a>
+    <a class="btn btn-ghost" href="/winmail/formats/">All formats</a>
+  </div>
+
+  <div class="strip">
+    <p class="strip-label">PST / OST is one of eleven formats Winmail Reader opens on-device:</p>
+    <ul class="chips">
+      <li class="on">PST / OST</li>
+      <li>winmail.dat / TNEF</li>
+      <li>MSG</li>
+      <li>OFT</li>
+      <li>EML</li>
+      <li>MHT</li>
+      <li>XPS</li>
+      <li>OXPS</li>
+      <li>MBOX</li>
+      <li>OLM</li>
+    </ul>
+  </div>
+
+  <h2>What is a PST file?</h2>
+  <p>A PST file is <strong>Outlook's own database for mail on Windows</strong>. Mailboxes, folders, messages, calendar entries, contacts and their attachments all live inside one container with its own internal indexing — which is why a PST does not open in a text editor and why mail clients other than Outlook usually refuse it.</p>
+  <p>The container is built in layers: a low-level database holds the pages, and a higher-level layer describes the folder and message tables inside it. The file starts with a <code>!BDN</code> signature that identifies it as a PST or OST container, and Winmail Reader's decoder reads those layers directly rather than trying to import the file into a mail account.</p>
+
+  <h2>PST, OST and where the file comes from</h2>
+  <p>The two extensions hold the same kind of container. A <strong>PST</strong> is a data file: people archive an old mailbox into one, copy it to a drive, or export a colleague's mail for a handover. An <strong>OST</strong> is the offline cache Outlook keeps for an Exchange or IMAP account, so it is tied to that account and lives in the local Outlook data folder.</p>
+  <p>That difference matters most when something goes wrong: an OST can be left behind by a mailbox that was closed, and a PST is often the only surviving copy of an old archive. In both cases a reader that opens the container itself is enough to see what is inside — and because the file is opened as a copy, it is never modified while you read it.</p>
+
+  <h2>How to open a PST file on iPhone or iPad</h2>
+  <ol class="steps">
+    <li><strong>Install Winmail Reader</strong> from the App Store (iOS 17.0+ / iPadOS 17.0+). It is free to look inside.</li>
+    <li><strong>Get the PST or OST file onto the device.</strong> Copy it into Files from a computer, a USB drive or iCloud Drive — usually the whole archive file, without unzipping anything.</li>
+    <li><strong>Open it with Winmail Reader.</strong> Tap the file in Files, or pick the app in the share sheet or in another app's Open in menu. The file check-up names what the container really is and how confident the detection is.</li>
+    <li><strong>Look at the folder tree, then unlock full browsing.</strong> The free tier shows the root folder area with a preview of the first messages; Pro unlocks every folder, opening any message in full, attachment preview and extraction, PDF, EML, HTML, TXT and RTF export, and search across the archive.</li>
+  </ol>
+
+  <h2>Free to look inside, Pro to take it out</h2>
+  <p>The free tier follows one rule: you can see what an archive holds before paying for anything.</p>
+  <div class="plans">
+    <div class="plan">
+      <h3>Free</h3>
+      <ul>
+        <li>Open PST, OST and all eleven formats</li>
+        <li>Folder tree of the archive with a preview of its first messages</li>
+        <li>Sender, subject and first screen of any message</li>
+        <li>File check-up and recent-files list</li>
+      </ul>
+    </div>
+    <div class="plan pro">
+      <h3>Pro — one-time purchase</h3>
+      <ul>
+        <li>Full browsing across every folder in the archive</li>
+        <li>Full message and XPS reading</li>
+        <li>Attachment preview and extraction</li>
+        <li>PDF, EML, HTML, TXT and RTF export</li>
+        <li>Search inside mail and across mailboxes</li>
+        <li>Resend, calendar and contact actions</li>
+      </ul>
+    </div>
+  </div>
+  <p class="note">An optional monthly subscription is also available, priced as shown in the app.</p>
+
+  <h2>Online converter or on-device app?</h2>
+  <p>A PST is usually the largest private file a person owns in email form: years of correspondence in one container, often including invoices and contracts. An online PST viewer has to receive that whole container before it can show a single folder name.</p>
+  <div class="vs-grid">
+    <div class="vs-card">
+      <h3>Online converter</h3>
+      <p>The archive leaves your device before you see anything. Processing happens on a third-party server, and its retention policy is not something you control.</p>
+    </div>
+    <div class="vs-card good">
+      <h3>Winmail Reader — on-device</h3>
+      <p>Decoding runs on your iPhone or iPad. Nothing is uploaded, no account is required, and the original file is opened read-only. Decoded copies stay in the app's sandbox until you delete them.</p>
+    </div>
+  </div>
+
+  <h2>Frequently asked questions</h2>
+  <div class="faq">
+    <details><summary>What is a PST file?</summary><p>A PST file is Outlook's data file on Windows: a single binary container holding folders, messages, calendar items, contacts and attachments. It is not a text format, so you cannot read it in a text editor. Internally it is built in layers, and the file starts with a !BDN signature that identifies it as a PST or OST container.</p></details>
+    <details><summary>Can I open a PST file on iPhone or iPad without Outlook?</summary><p>Yes. Winmail Reader decodes the PST container itself on the device, so no Outlook installation, no Exchange server and no account is involved. You can open the file from Files, from the share sheet, or from another app's Open in menu, and the app reads it as a copy without modifying the original.</p></details>
+    <details><summary>What is the difference between PST and OST?</summary><p>Both are Outlook data containers with the same internal structure. A PST is a data file you can save, copy and archive; an OST is the offline cache Outlook keeps while connected to an Exchange or IMAP mailbox, and it is tied to that account. Winmail Reader opens both the same way and treats them as read-only.</p></details>
+    <details><summary>Does Winmail Reader convert a PST or OST file to something else?</summary><p>It does not rewrite archives: there is no PST writer in the app, so PST and OST files are opened read-only for browsing. What you can do as part of Pro is export individual messages out of the archive to PDF, EML, HTML, TXT or RTF, and extract their attachments.</p></details>
+    <details><summary>Is Winmail Reader free?</summary><p>Free to look inside: open every supported format and see the sender, subject and first screen of any message, the attachment list, the folder tree of a mailbox archive with a preview of its first messages, and the first page of an XPS document. Full reading, attachment extraction, full archive browsing, exports, search and resending are part of Pro — a single one-time purchase. An optional monthly subscription is also available, priced as shown in the app.</p></details>
+    <details><summary>How large a PST file can it open?</summary><p>Archives of several gigabytes are handled: the app indexes the container and reads messages on demand instead of loading the whole file into memory, and a long scan can be cancelled. Damaged containers are the more common obstacle than size — the file check-up will tell you what the file really is and whether it looks incomplete, but it does not repair broken archives.</p></details>
+  </div>
+
+  <h2>Related pages</h2>
+  <ul class="related">
+    <li><a href="/winmail/formats/mbox/">MBOX — open a whole-mailbox export on iPhone</a></li>
+    <li><a href="/winmail/formats/msg/">MSG / OFT — open a single Outlook message on iPhone</a></li>
+    <li><a href="/winmail/formats/winmail-dat/">winmail.dat / TNEF — open Outlook's wrapper on iPhone</a></li>
+    <li><a href="/winmail/formats/eml/">EML / EMLX — open a single standard message file on iPhone</a></li>
+    <li><a href="/winmail/formats/">All formats Winmail Reader opens</a></li>
+    <li><a href="/winmail/">Winmail Reader — the on-device mail archive viewer</a></li>
+    <li><a href="/winmail/privacy/">Privacy policy — why nothing leaves your device</a></li>
+    <li><a href="/winmail/support/">Support</a></li>
+  </ul>
+
+  <h2 id="get">Get Winmail Reader</h2>
+  <div class="cta-row">
+    <a class="btn btn-accent" href="https://apps.apple.com/app/winmail-reader-dat-msg-eml/id6823454038" rel="noopener">Download on the App Store</a>
+  </div>
+  <p class="fineprint">Free to look inside — Pro is a one-time purchase (optional monthly subscription available). iPhone and iPad, iOS 17.0+.</p>
+  <p class="updated">Last updated: 2026-11-19</p>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <ul class="foot-links">
+      <li><a href="/">All apps</a></li>
+      <li><a href="/winmail/">Winmail Reader</a></li>
+      <li><a href="/winmail/formats/">Formats</a></li>
+      <li><a href="/winmail/privacy/">Privacy Policy</a></li>
+      <li><a href="/winmail/support/">Support</a></li>
+      <li><a href="mailto:w4n9we1@gmail.com">Contact</a></li>
+    </ul>
+    <p class="copyright">© 2026 Lababacy</p>
+  </div>
+</footer>
+
+</body>
+</html>
