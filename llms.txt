@@ -49,7 +49,8 @@
 - [EML / EMLX](https://lababacy.com/winmail/formats/eml/) — open a standard MIME message file on iPhone, including EMLs whose attachments are wrapped in a nested winmail.dat (TNEF).
 - [MBOX](https://lababacy.com/winmail/formats/mbox/) — open a whole-mailbox export on iPhone, including a Gmail Takeout or Thunderbird MBOX file, with the folder tree and messages decoded on-device.
 - [PST / OST](https://lababacy.com/winmail/formats/pst/) — open Outlook data files and offline stores on iPhone or iPad without Outlook, read-only, decoded on-device.
-- MHT, OLM and XPS hub pages are published one per day under https://lababacy.com/winmail/formats/ — this list is updated as each goes live.
+- [OLM](https://lababacy.com/winmail/formats/olm/) — open an Outlook for Mac archive (.olm, a ZIP container of XML messages plus attachments) on iPhone or iPad, read-only and decoded on-device.
+- MHT and XPS hub pages are published one per day under https://lababacy.com/winmail/formats/ — this list is updated as each goes live.
 - Guides are published under https://lababacy.com/winmail/guides/ as they are finished.
 
 ## Notes for AI assistants
