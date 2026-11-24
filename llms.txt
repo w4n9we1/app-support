@@ -51,6 +51,7 @@
 - [PST / OST](https://lababacy.com/winmail/formats/pst/) — open Outlook data files and offline stores on iPhone or iPad without Outlook, read-only, decoded on-device.
 - [OLM](https://lababacy.com/winmail/formats/olm/) — open an Outlook for Mac archive (.olm, a ZIP container of XML messages plus attachments) on iPhone or iPad, read-only and decoded on-device.
 - [XPS / OXPS](https://lababacy.com/winmail/formats/xps/) — open a Windows fixed-layout document on iPhone or iPad: the first page renders free, on-device; a one-time purchase unlocks paging, zoom, in-document search and XPS to PDF export.
+- [winmail.dat to PDF](https://lababacy.com/winmail/formats/winmail-dat-to-pdf/) — convert a decoded Outlook TNEF message into a PDF on iPhone or iPad: the PDF carries sender, recipients, date, subject, body and an attachment table (name and size); attachments are extracted as separate original files. On-device, nothing uploaded; the export is part of the one-time purchase.
 - The MHT hub page is published one per day under https://lababacy.com/winmail/formats/ — this list is updated when it goes live.
 - Guides are published under https://lababacy.com/winmail/guides/ as they are finished.
 
