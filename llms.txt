@@ -41,6 +41,20 @@
 - [SQLite Viewer](https://lababacy.com/formats/sqlite-viewer/) — browse SQLite databases, inspect the schema and run SQL on the phone.
 - [ODS Viewer](https://lababacy.com/formats/ods-viewer/) — open OpenDocument spreadsheets (LibreOffice/OpenOffice) without LibreOffice or Excel.
 
+## Database Viewer — guides
+
+- [Guides index](https://lababacy.com/guides/) — every guide for Database Viewer in one place: opening Access files on a phone, saved queries, exports, conversions and diagnostics, all on-device.
+- [What is an MDB file?](https://lababacy.com/guides/what-is-an-mdb-file/) — the Microsoft Access database format explained: one file holding tables, queries, indexes and relationships.
+- [How to open an MDB file without Microsoft Access](https://lababacy.com/guides/open-mdb-file-without-microsoft-access/) — read an MDB file on Android or iPhone, on-device, with no Microsoft software involved.
+- [MDB vs ACCDB](https://lababacy.com/guides/mdb-vs-accdb/) — the two Access format generations compared: Jet-era MDB against the ACCDB format from Access 2007 onward.
+- [How to open an Access database on Android](https://lababacy.com/guides/open-access-database-android/) — MDB and ACCDB files on an Android phone, health check first, free to start.
+- [How to open an Access database on iPhone & iPad](https://lababacy.com/guides/open-access-database-iphone-ipad/) — MDB and ACCDB files on iPhone or iPad without Microsoft Access, on-device.
+- [View Access queries & relationships](https://lababacy.com/guides/view-access-queries-and-relationships/) — browse every saved query in an Access database with its SQL rebuilt for reading, and see table relationships drawn as a foreign-key diagram.
+- [Export Access data to CSV or Excel](https://lababacy.com/guides/export-access-data-csv-excel/) — one table as CSV or the whole database as an XLSX workbook, written on the phone with the original file untouched.
+- [Convert MDB to SQLite](https://lababacy.com/guides/convert-mdb-to-sqlite/) — all tables of an Access database land in one .sqlite file, converted on-device with cancellable progress.
+- [MDB file won't open?](https://lababacy.com/guides/mdb-file-wont-open/) — common causes of a file that refuses to load, and the free on-device health check that diagnoses it.
+- [Microsoft Access alternatives on mobile](https://lababacy.com/guides/microsoft-access-alternatives-mobile/) — remote desktop, online converters and on-device viewers compared, with a five-point checklist.
+
 ## Winmail Reader — formats & guides
 
 - [Formats index](https://lababacy.com/winmail/formats/) — every legacy email format the app opens on iPhone and iPad.

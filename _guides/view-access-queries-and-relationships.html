@@ -1,0 +1,275 @@
+---
+layout: null
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>View Access Queries &amp; Relationships on Your Phone</title>
+  <meta name="description" content="Saved Access queries and table relationships open on a phone — browse every query in an MDB or ACCDB file plus its relationship diagram, all on-device.">
+  <link rel="canonical" href="https://lababacy.com/guides/view-access-queries-and-relationships/">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#101010">
+  <meta name="google-site-verification" content="fIchiwUalnR7z8xlggamAsWspJIeeoIpsgYFJZDrxEg" />
+  <meta name="msvalidate.01" content="B5AB48CD24E7247AD3CA30E5170B5F8A" />
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://lababacy.com/guides/view-access-queries-and-relationships/">
+  <meta property="og:title" content="View Access Queries &amp; Relationships on Your Phone">
+  <meta property="og:description" content="Saved Access queries and table relationships open on a phone — browse every query in an MDB or ACCDB file plus its relationship diagram, all on-device.">
+  <meta property="og:image" content="https://lababacy.com/assets_og/og-databaseviewer.png">
+  <meta property="og:site_name" content="Lababacy">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="View Access Queries &amp; Relationships on Your Phone">
+  <meta name="twitter:description" content="Saved Access queries and table relationships open on a phone — browse every query in an MDB or ACCDB file plus its relationship diagram, all on-device.">
+  <meta name="twitter:image" content="https://lababacy.com/assets_og/og-databaseviewer.png">
+  <link rel="icon" type="image/png" href="/databaseviewer/assets/icon-512.png">
+  <link rel="apple-touch-icon" href="/databaseviewer/assets/icon-512.png">
+
+  <!-- JSON-LD 1/5: BlogPosting (this guide article). -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "View Access Queries & Relationships on Your Phone",
+    "description": "Saved Access queries and table relationships open on a phone — browse every query in an MDB or ACCDB file plus its relationship diagram, all on-device.",
+    "image": "https://lababacy.com/assets_og/og-databaseviewer.png",
+    "author": { "@type": "Organization", "name": "Lababacy" },
+    "publisher": { "@type": "Organization", "name": "Lababacy" },
+    "datePublished": "2026-11-27",
+    "dateModified": "2026-11-27",
+    "mainEntityOfPage": "https://lababacy.com/guides/view-access-queries-and-relationships/",
+    "url": "https://lababacy.com/guides/view-access-queries-and-relationships/"
+  }
+  </script>
+  <!-- JSON-LD 2/5: SoftwareApplication (entity binding page <-> app), same block as the format pages.
+       offers carries "one-time purchase" wording only — never a dollar figure. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Database Viewer: SQLite & DBF",
+    "operatingSystem": "Android, iOS",
+    "applicationCategory": "Utilities",
+    "author": { "@type": "Organization", "name": "Lababacy" },
+    "url": "https://lababacy.com/databaseviewer/",
+    "sameAs": [
+      "https://apps.apple.com/app/database-viewer-sqlite-dbf/id6811615295",
+      "https://play.google.com/store/apps/details?id=com.lababacy.accessviewer"
+    ],
+    "description": "Open MDB, ACCDB, SQLite, XLSX, DBF, CSV and more on your phone — natively, on-device, with no account and no uploads. Free to start, one-time Pro unlock.",
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock",
+      "description": "Free to start with a generous free preview. Pro is a single one-time purchase."
+    }
+  }
+  </script>
+  <!-- JSON-LD 3/5: FAQPage — mainEntity mirrors the visible FAQ below exactly (6 items). -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Can I view Access queries on my phone?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Open an MDB or ACCDB file in Database Viewer on Android or iPhone and every query saved inside it is listed by name. Tapping a query shows its definition and the SQL rebuilt from it for reading — on-device, with no Microsoft Access involved." } },
+      { "@type": "Question", "name": "What is a saved query?", "acceptedAnswer": { "@type": "Answer", "text": "A question about the data that Access stores inside the database file itself — for instance, which orders shipped late or which customers bought most. The definition, written in SQL (the language Access queries use), travels inside the file, so anything that reads the format can display it. Database Viewer shows the stored definition and rebuilds the SQL for reading." } },
+      { "@type": "Question", "name": "Can I see table relationships?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Database Viewer draws the database's relationships as a diagram: every table appears as a box, and a line joins two boxes wherever a foreign key connects them. Access databases use the relationships saved in the file; SQLite databases are read through their declared foreign keys, so the same diagram works there too." } },
+      { "@type": "Question", "name": "Do I need Microsoft Access?", "acceptedAnswer": { "@type": "Answer", "text": "No. The app carries its own native engine and reads MDB and ACCDB files directly on the phone — queries and relationships come straight out of the file. No copy of Access, no Windows machine and no converter website takes part." } },
+      { "@type": "Question", "name": "Is the app free?", "acceptedAnswer": { "@type": "Answer", "text": "Free to start with a generous free preview — Pro is a one-time purchase. Opening a database, browsing its tables, reading its saved queries and its relationship diagram all work without paying. Pro — a single one-time purchase — adds export, editing and deeper analysis." } },
+      { "@type": "Question", "name": "Is my database uploaded?", "acceptedAnswer": { "@type": "Answer", "text": "Never. Everything runs on the phone: the file is parsed by the app's own engine on-device, nothing is sent to a server, and no account exists. The original file opens read-only and is never modified." } }
+    ]
+  }
+  </script>
+  <!-- JSON-LD 4/5: HowTo — steps mirror the visible numbered steps below. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to view Access queries and relationships on a phone",
+    "step": [
+      { "@type": "HowToStep", "position": 1, "name": "Open your database", "text": "Open your database — tap Open file and pick your .mdb or .accdb. The health check inspects the file first and reports what it found before any table appears." },
+      { "@type": "HowToStep", "position": 2, "name": "Find the saved queries", "text": "Find the saved queries — open the table structure screen and switch to the Objects tab, where every query saved in the database is listed by name." },
+      { "@type": "HowToStep", "position": 3, "name": "Read a query and its SQL", "text": "Read a query and its SQL — tap a query to see its definition and the SQL rebuilt from it for reading; the query stays read-only on screen." },
+      { "@type": "HowToStep", "position": 4, "name": "See the relationships diagram", "text": "See the relationships diagram — switch to the relationships view and the tables lay out as a diagram, with a line joining each pair of tables a foreign key connects." }
+    ]
+  }
+  </script>
+  <!-- JSON-LD 5/5: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://lababacy.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://lababacy.com/guides/" },
+      { "@type": "ListItem", "position": 3, "name": "Access Queries & Relationships", "item": "https://lababacy.com/guides/view-access-queries-and-relationships/" }
+    ]
+  }
+  </script>
+
+  <style>
+    :root{--bg:#101010;--panel:#1b1b1d;--panel-2:#232326;--hairline:rgba(244,244,248,.10);--ink:#F2F1F4;--muted:#A6A3AE;--accent:#AA98FF;--accent-hover:#BCAEFF}
+    *,*::before,*::after{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+    ::selection{background:rgba(170,152,255,.32)}
+    a:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+    .wrap{max-width:46rem;margin:0 auto;padding:0 1.25rem}
+    .nav{padding:1rem 0;border-bottom:1px solid var(--hairline)}
+    .nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+    .brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;font-weight:700;letter-spacing:-.01em;color:var(--ink);font-size:1rem;white-space:nowrap}
+    .brand img{display:block;border-radius:7px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;text-decoration:none;font-weight:bold;white-space:nowrap;transition:filter .15s,border-color .15s}
+    .btn-accent{background:var(--accent);color:#101010;padding:.7rem 1.3rem;font-size:.95rem}
+    .btn-accent:hover{background:var(--accent-hover)}
+    .btn-ghost{border:1px solid var(--hairline);color:var(--ink);padding:.7rem 1.3rem;font-size:.95rem}
+    .btn-ghost:hover{border-color:rgba(244,244,248,.32)}
+    .btn-sm{padding:.45rem .95rem;font-size:.88rem}
+    .crumbs{color:var(--muted);font-size:.85rem;margin:1.8rem 0 1rem}
+    .crumbs a{color:var(--muted);text-decoration:none}
+    .crumbs a:hover{color:var(--ink)}
+    .crumbs .here{color:var(--ink);font-weight:bold}
+    h1{font-weight:700;font-size:clamp(2rem,5vw,2.8rem);line-height:1.1;letter-spacing:-.025em;margin:0 0 1.1rem}
+    .answer{background:var(--panel);border-left:3px solid var(--accent);border-radius:8px;padding:1rem 1.2rem;font-size:1.05rem;font-weight:500;margin:0 0 1.5rem}
+    .cta-row{display:flex;flex-wrap:wrap;gap:.9rem;margin:0 0 1.5rem}
+    .strip{margin:2.6rem 0 0;background:var(--panel);border:1px solid var(--hairline);border-radius:12px;padding:1.2rem 1.3rem}
+    .strip-label{margin:0 0 .8rem;color:var(--muted);font-size:.88rem}
+    .chips{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.5rem}
+    .chips li{background:var(--panel-2);border:1px solid var(--hairline);border-radius:999px;padding:.32rem .8rem;font-size:.82rem;color:var(--muted)}
+    .chips li.on{border-color:var(--accent);color:var(--ink)}
+    h2{font-weight:700;font-size:clamp(1.45rem,3.4vw,1.9rem);line-height:1.18;letter-spacing:-.02em;margin:3.2rem 0 .9rem}
+    p{margin:.9rem 0}
+    p a{color:var(--accent);text-decoration:none;font-weight:550}
+    p a:hover{color:var(--accent-hover)}
+    .steps{margin:1.1rem 0 0;padding-left:1.35rem}
+    .steps li{margin:.85rem 0;padding-left:.35rem}
+    .steps li::marker{color:var(--accent);font-weight:700}
+    .faq{margin-top:1.3rem}
+    .faq details{border-top:1px solid var(--hairline)}
+    .faq details:last-of-type{border-bottom:1px solid var(--hairline)}
+    .faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:baseline;gap:1.2rem;padding:1.05rem .2rem;font-weight:bold;font-size:1rem}
+    .faq summary::-webkit-details-marker{display:none}
+    .faq summary::after{content:"+";font-size:1.3rem;line-height:1;color:var(--accent);flex:none;font-weight:500}
+    .faq details[open] summary::after{content:"–"}
+    .faq details p{margin:0;padding:0 2.4rem 1.2rem .2rem;color:var(--muted);max-width:44rem}
+    @media (max-width:37.5rem){.faq details p{padding-right:.2rem}}
+    .related{margin:1.1rem 0 0;padding:0;list-style:none}
+    .related li{margin:.5rem 0}
+    .related a{color:var(--accent);text-decoration:none;font-weight:550}
+    .related a:hover{color:var(--accent-hover)}
+    .note{color:var(--muted);font-size:.88rem}
+    .fineprint{color:var(--muted);font-size:.88rem;margin:1.1rem 0 0}
+    .site-footer{border-top:1px solid var(--hairline);margin-top:4.5rem;padding:2.2rem 0 2.6rem}
+    .foot-links{display:flex;flex-wrap:wrap;gap:.4rem 1.4rem;margin:0 0 .9rem;padding:0;list-style:none}
+    .foot-links a{color:var(--muted);text-decoration:none;font-size:.9rem}
+    .foot-links a:hover{color:var(--ink)}
+    .copyright{color:var(--muted);font-size:.85rem;margin:0}
+  </style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="/databaseviewer/">
+      <img src="/databaseviewer/assets/icon-512.png" width="28" height="28" alt="">
+      Database Viewer
+    </a>
+    <a class="btn btn-accent btn-sm" href="#get">Get the app</a>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> › <a href="/guides/">Guides</a> › <span class="here">Access Queries &amp; Relationships</span></nav>
+
+  <h1>View Access Queries &amp; Relationships on Your Phone</h1>
+
+  <p class="answer">The queries saved inside an Access database and the relationships between its tables don't stay on the desktop. Open an MDB or ACCDB file on your phone and Database Viewer lists every saved query — with the SQL behind it rebuilt for reading — and draws the foreign-key relationships as a diagram. Everything runs on-device; the original file stays read-only.</p>
+
+  <div class="cta-row">
+    <a class="btn btn-accent" href="https://apps.apple.com/app/database-viewer-sqlite-dbf/id6811615295" rel="noopener">Download on the App Store</a>
+    <a class="btn btn-accent" href="https://play.google.com/store/apps/details?id=com.lababacy.accessviewer&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dseo" rel="noopener">Get it on Google Play</a>
+  </div>
+
+  <div class="strip">
+    <p class="strip-label">MDB and ACCDB are two of ten formats Database Viewer opens on-device:</p>
+    <ul class="chips">
+      <li class="on">MDB</li>
+      <li class="on">ACCDB</li>
+      <li>SQLite</li>
+      <li>CSV</li>
+      <li>TSV</li>
+      <li>XLSX</li>
+      <li>XLSM</li>
+      <li>ODS</li>
+      <li>DBF</li>
+      <li>SQL dump</li>
+    </ul>
+  </div>
+
+  <h2>What saved queries are</h2>
+  <p>Access keeps a query's definition inside the database file itself — not in a separate document. When someone designs a query on the desktop, Access writes that definition into the file, right next to the tables it draws from. That is why a database can carry years of saved questions — customer lists, monthly totals, lookups across tables — and the definitions still travel with the file wherever it is copied. A query can read from plain tables or from other saved queries, and some databases stack them several layers deep. The <a href="/guides/what-is-an-mdb-file/">MDB format guide</a> covers where queries sit alongside tables, indexes and relationships.</p>
+
+  <h2>View saved queries on your phone</h2>
+  <p>Database Viewer lists the saved queries of an MDB or ACCDB file right on the phone. In the table structure screen, the Objects tab shows every query by name alongside the database's other objects — the <a href="/formats/mdb-viewer/">MDB viewer guide</a> describes the format itself, while this page stays with what is saved inside it. Tapping a query opens a read-only view: the definition is laid out in its parts, and the SQL behind it is rebuilt for reading. Queries that draw on other saved queries are expanded, so the whole chain is visible on one screen.</p>
+  <p>The rebuilt SQL is there for reading, not for running — the point is to see what each question asks, not to execute it. Nothing in this flow touches the original file.</p>
+  <p>Four steps take you from file to diagram:</p>
+  <ol class="steps">
+    <li><strong>Open your database</strong> — tap Open file and pick your .mdb or .accdb. The health check inspects the file first and reports what it found before any table appears.</li>
+    <li><strong>Find the saved queries</strong> — open the table structure screen and switch to the Objects tab, where every query saved in the database is listed by name.</li>
+    <li><strong>Read a query and its SQL</strong> — tap a query to see its definition and the SQL rebuilt from it for reading; the query stays read-only on screen.</li>
+    <li><strong>See the relationships diagram</strong> — switch to the relationships view and the tables lay out as a diagram, with a line joining each pair of tables a foreign key connects.</li>
+  </ol>
+
+  <h2>See relationships as a diagram</h2>
+  <p>Tables in a well-built database point at each other: an order carries the customer it belongs to, an order line carries the order it belongs to. Database Viewer turns those foreign keys into a picture — every table laid out as a box, a line drawn wherever one table references another — so the structure of the database reads at a glance. For Access files the diagram follows the relationships saved inside the database; for SQLite files it is drawn from the declared foreign keys, so the same view works across both — the <a href="/formats/sqlite-viewer/">SQLite viewer guide</a> covers that format separately.</p>
+
+  <h2>What you need</h2>
+  <p>The database file itself — MDB or ACCDB for saved queries and relationships, or a SQLite file for the foreign-key diagram — and Database Viewer on an Android phone or an iPhone.</p>
+
+  <h2>Frequently asked questions</h2>
+  <div class="faq">
+    <details><summary>Can I view Access queries on my phone?</summary><p>Yes. Open an MDB or ACCDB file in Database Viewer on Android or iPhone and every query saved inside it is listed by name. Tapping a query shows its definition and the SQL rebuilt from it for reading — on-device, with no Microsoft Access involved.</p></details>
+    <details><summary>What is a saved query?</summary><p>A question about the data that Access stores inside the database file itself — for instance, which orders shipped late or which customers bought most. The definition, written in SQL (the language Access queries use), travels inside the file, so anything that reads the format can display it. Database Viewer shows the stored definition and rebuilds the SQL for reading.</p></details>
+    <details><summary>Can I see table relationships?</summary><p>Yes. Database Viewer draws the database's relationships as a diagram: every table appears as a box, and a line joins two boxes wherever a foreign key connects them. Access databases use the relationships saved in the file; SQLite databases are read through their declared foreign keys, so the same diagram works there too.</p></details>
+    <details><summary>Do I need Microsoft Access?</summary><p>No. The app carries its own native engine and reads MDB and ACCDB files directly on the phone — queries and relationships come straight out of the file. No copy of Access, no Windows machine and no converter website takes part.</p></details>
+    <details><summary>Is the app free?</summary><p>Free to start with a generous free preview — Pro is a one-time purchase. Opening a database, browsing its tables, reading its saved queries and its relationship diagram all work without paying. Pro — a single one-time purchase — adds export, editing and deeper analysis.</p></details>
+    <details><summary>Is my database uploaded?</summary><p>Never. Everything runs on the phone: the file is parsed by the app's own engine on-device, nothing is sent to a server, and no account exists. The original file opens read-only and is never modified.</p></details>
+  </div>
+
+  <h2>Related pages</h2>
+  <ul class="related">
+    <li><a href="/formats/mdb-viewer/">MDB viewer — reading Jet-era Access files on a phone</a></li>
+    <li><a href="/guides/what-is-an-mdb-file/">What is an MDB file? — the format explained from the ground up</a></li>
+    <li><a href="/guides/mdb-vs-accdb/">MDB vs ACCDB — the two Access generations compared</a></li>
+    <li><a href="/guides/open-access-database-iphone-ipad/">Opening an Access database on iPhone &amp; iPad — the walkthrough this builds on</a></li>
+    <li><a href="/guides/open-access-database-android/">Opening an Access database on Android — the same walkthrough on Android</a></li>
+    <li><a href="/guides/">All guides — working with database files on your phone</a></li>
+    <li><a href="/databaseviewer/">Database Viewer — every supported format and how it opens</a></li>
+  </ul>
+
+  <h2 id="get">Get Database Viewer</h2>
+  <div class="cta-row">
+    <a class="btn btn-accent" href="https://apps.apple.com/app/database-viewer-sqlite-dbf/id6811615295" rel="noopener">Download on the App Store</a>
+    <a class="btn btn-ghost" href="https://play.google.com/store/apps/details?id=com.lababacy.accessviewer&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dseo" rel="noopener">Get it on Google Play</a>
+  </div>
+  <p class="fineprint">Free to start with a generous free preview — Pro is a one-time purchase.</p>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <ul class="foot-links">
+      <li><a href="/">All apps</a></li>
+      <li><a href="/databaseviewer/">Database Viewer</a></li>
+      <li><a href="/databaseviewer/privacy/">Privacy Policy</a></li>
+      <li><a href="/databaseviewer/support/">Support</a></li>
+      <li><a href="mailto:w4n9we1@gmail.com">Contact</a></li>
+    </ul>
+    <p class="copyright">© 2026 Lababacy</p>
+  </div>
+</footer>
+
+</body>
+</html>

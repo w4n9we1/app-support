@@ -1,0 +1,253 @@
+---
+layout: null
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Guides: Database Files on Your Phone — Access, SQLite, DBF</title>
+  <meta name="description" content="All guides for Database Viewer: open Access files without Access, read saved queries, export to CSV or Excel, convert to SQLite — everything on-device.">
+  <link rel="canonical" href="https://lababacy.com/guides/">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#101010">
+  <meta name="google-site-verification" content="fIchiwUalnR7z8xlggamAsWspJIeeoIpsgYFJZDrxEg" />
+  <meta name="msvalidate.01" content="B5AB48CD24E7247AD3CA30E5170B5F8A" />
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lababacy.com/guides/">
+  <meta property="og:title" content="Guides: Database Files on Your Phone — Access, SQLite, DBF">
+  <meta property="og:description" content="All guides for Database Viewer: open Access files without Access, read saved queries, export to CSV or Excel, convert to SQLite — everything on-device.">
+  <meta property="og:image" content="https://lababacy.com/assets_og/og-databaseviewer.png">
+  <meta property="og:site_name" content="Lababacy">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Guides: Database Files on Your Phone — Access, SQLite, DBF">
+  <meta name="twitter:description" content="All guides for Database Viewer: open Access files without Access, read saved queries, export to CSV or Excel, convert to SQLite — everything on-device.">
+  <meta name="twitter:image" content="https://lababacy.com/assets_og/og-databaseviewer.png">
+  <link rel="icon" type="image/png" href="/databaseviewer/assets/icon-512.png">
+  <link rel="apple-touch-icon" href="/databaseviewer/assets/icon-512.png">
+
+  <!-- JSON-LD 1/3: SoftwareApplication (entity binding page <-> app).
+       Kept identical to the format pages so every page describes the same entity.
+       offers carries "one-time purchase" wording only — never a dollar figure. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Database Viewer: SQLite & DBF",
+    "operatingSystem": "Android, iOS",
+    "applicationCategory": "Utilities",
+    "author": { "@type": "Organization", "name": "Lababacy" },
+    "url": "https://lababacy.com/databaseviewer/",
+    "sameAs": [
+      "https://apps.apple.com/app/database-viewer-sqlite-dbf/id6811615295",
+      "https://play.google.com/store/apps/details?id=com.lababacy.accessviewer"
+    ],
+    "description": "Open MDB, ACCDB, SQLite, XLSX, DBF, CSV and more on your phone — natively, on-device, with no account and no uploads. Free to start, one-time Pro unlock.",
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock",
+      "description": "Free to start with a generous free preview. Pro is a single one-time purchase."
+    }
+  }
+  </script>
+  <!-- JSON-LD 2/3: FAQPage — mainEntity mirrors the visible FAQ below exactly (3 items). -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Are these guides free to read?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — every guide on this page is free to read, no account needed. Database Viewer itself is free to start with a generous free preview; Pro is a one-time purchase." } },
+      { "@type": "Question", "name": "Which formats does the app support?", "acceptedAnswer": { "@type": "Answer", "text": "Database Viewer opens ten formats on Android and iPhone: MDB and ACCDB (Microsoft Access), SQLite, DBF (dBase), ODS (OpenDocument spreadsheets), XLSX and XLSM (Excel workbooks), and CSV, TSV and SQL dump as plain-text data. The formats index links a guide for each." } },
+      { "@type": "Question", "name": "Is my data uploaded?", "acceptedAnswer": { "@type": "Answer", "text": "No. Every file is read on the phone itself: nothing is sent to a server, no account is required, and the original file opens read-only." } }
+    ]
+  }
+  </script>
+  <!-- JSON-LD 3/3: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://lababacy.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://lababacy.com/guides/" }
+    ]
+  }
+  </script>
+
+  <style>
+    :root{--bg:#101010;--panel:#1b1b1d;--panel-2:#232326;--hairline:rgba(244,244,248,.10);--ink:#F2F1F4;--muted:#A6A3AE;--accent:#AA98FF;--accent-hover:#BCAEFF}
+    *,*::before,*::after{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+    ::selection{background:rgba(170,152,255,.32)}
+    a:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+    .wrap{max-width:46rem;margin:0 auto;padding:0 1.25rem}
+    .nav{padding:1rem 0;border-bottom:1px solid var(--hairline)}
+    .nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+    .brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;font-weight:700;letter-spacing:-.01em;color:var(--ink);font-size:1rem;white-space:nowrap}
+    .brand img{display:block;border-radius:7px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;text-decoration:none;font-weight:bold;white-space:nowrap;transition:filter .15s,border-color .15s}
+    .btn-accent{background:var(--accent);color:#101010;padding:.7rem 1.3rem;font-size:.95rem}
+    .btn-accent:hover{background:var(--accent-hover)}
+    .btn-ghost{border:1px solid var(--hairline);color:var(--ink);padding:.7rem 1.3rem;font-size:.95rem}
+    .btn-ghost:hover{border-color:rgba(244,244,248,.32)}
+    .btn-sm{padding:.45rem .95rem;font-size:.88rem}
+    .crumbs{color:var(--muted);font-size:.85rem;margin:1.8rem 0 1rem}
+    .crumbs a{color:var(--muted);text-decoration:none}
+    .crumbs a:hover{color:var(--ink)}
+    .crumbs .here{color:var(--ink);font-weight:bold}
+    h1{font-weight:700;font-size:clamp(2rem,5vw,2.8rem);line-height:1.1;letter-spacing:-.025em;margin:0 0 1.1rem}
+    .answer{background:var(--panel);border-left:3px solid var(--accent);border-radius:8px;padding:1rem 1.2rem;font-size:1.05rem;font-weight:500;margin:0 0 1.5rem}
+    .cta-row{display:flex;flex-wrap:wrap;gap:.9rem;margin:0 0 1.5rem}
+    .strip{margin:2.6rem 0 0;background:var(--panel);border:1px solid var(--hairline);border-radius:12px;padding:1.2rem 1.3rem}
+    .strip-label{margin:0 0 .8rem;color:var(--muted);font-size:.88rem}
+    .chips{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.5rem}
+    .chips li{background:var(--panel-2);border:1px solid var(--hairline);border-radius:999px;padding:.32rem .8rem;font-size:.82rem;color:var(--muted)}
+    .chips li.on{border-color:var(--accent);color:var(--ink)}
+    h2{font-weight:700;font-size:clamp(1.45rem,3.4vw,1.9rem);line-height:1.18;letter-spacing:-.02em;margin:3.2rem 0 .9rem}
+    p{margin:.9rem 0}
+    p a{color:var(--accent);text-decoration:none;font-weight:550}
+    p a:hover{color:var(--accent-hover)}
+    .vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem;margin:1.3rem 0 0}
+    .vs-card{background:var(--panel);border:1px solid var(--hairline);border-radius:16px;padding:1.35rem 1.4rem}
+    .vs-card h3{margin:0 0 .55rem;font-size:1.02rem;font-weight:700;letter-spacing:-.01em}
+    .vs-card h3 a{color:var(--accent);text-decoration:none}
+    .vs-card h3 a:hover{color:var(--accent-hover)}
+    .vs-card p{margin:0;color:var(--muted);font-size:.94rem;line-height:1.66}
+    @media (max-width:640px){.vs-grid{grid-template-columns:1fr}}
+    .faq{margin-top:1.3rem}
+    .faq details{border-top:1px solid var(--hairline)}
+    .faq details:last-of-type{border-bottom:1px solid var(--hairline)}
+    .faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:baseline;gap:1.2rem;padding:1.05rem .2rem;font-weight:bold;font-size:1rem}
+    .faq summary::-webkit-details-marker{display:none}
+    .faq summary::after{content:"+";font-size:1.3rem;line-height:1;color:var(--accent);flex:none;font-weight:500}
+    .faq details[open] summary::after{content:"–"}
+    .faq details p{margin:0;padding:0 2.4rem 1.2rem .2rem;color:var(--muted);max-width:44rem}
+    @media (max-width:37.5rem){.faq details p{padding-right:.2rem}}
+    .note{color:var(--muted);font-size:.88rem}
+    .fineprint{color:var(--muted);font-size:.88rem;margin:1.1rem 0 0}
+    .site-footer{border-top:1px solid var(--hairline);margin-top:4.5rem;padding:2.2rem 0 2.6rem}
+    .foot-links{display:flex;flex-wrap:wrap;gap:.4rem 1.4rem;margin:0 0 .9rem;padding:0;list-style:none}
+    .foot-links a{color:var(--muted);text-decoration:none;font-size:.9rem}
+    .foot-links a:hover{color:var(--ink)}
+    .copyright{color:var(--muted);font-size:.85rem;margin:0}
+  </style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="/databaseviewer/">
+      <img src="/databaseviewer/assets/icon-512.png" width="28" height="28" alt="">
+      Database Viewer
+    </a>
+    <a class="btn btn-accent btn-sm" href="#get">Get the app</a>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> › <span class="here">Guides</span></nav>
+
+  <h1>Guides: working with database files on your phone</h1>
+
+  <p class="answer">Ten guides for working with database files on your phone — opening Microsoft Access databases without Access, reading saved queries and relationships, exporting to CSV or Excel, converting to SQLite, and diagnosing a file that won't open. Every guide is written for Database Viewer on Android and iPhone; every word applies on-device, with nothing uploaded.</p>
+
+  <div class="cta-row">
+    <a class="btn btn-accent" href="https://apps.apple.com/app/database-viewer-sqlite-dbf/id6811615295" rel="noopener">Download on the App Store</a>
+    <a class="btn btn-accent" href="https://play.google.com/store/apps/details?id=com.lababacy.accessviewer&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dseo" rel="noopener">Get it on Google Play</a>
+  </div>
+
+  <div class="strip">
+    <p class="strip-label">All ten formats are decoded on the phone itself:</p>
+    <ul class="chips">
+      <li>MDB</li>
+      <li>ACCDB</li>
+      <li>SQLite</li>
+      <li>CSV</li>
+      <li>TSV</li>
+      <li>XLSX</li>
+      <li>XLSM</li>
+      <li>ODS</li>
+      <li>DBF</li>
+      <li>SQL dump</li>
+    </ul>
+  </div>
+
+  <h2>All guides</h2>
+  <p>Each guide covers one job, end to end — start with the one that matches what you are holding.</p>
+  <div class="vs-grid">
+    <div class="vs-card">
+      <h3><a href="/guides/what-is-an-mdb-file/">What is an MDB file?</a></h3>
+      <p>A Microsoft Access database in one file — tables, queries, indexes and relationships — explained from the ground up.</p>
+    </div>
+    <div class="vs-card">
+      <h3><a href="/guides/open-mdb-file-without-microsoft-access/">Opening an MDB file without Microsoft Access</a></h3>
+      <p>No copy of Access needed: read an MDB file on Android or iPhone, health check first, entirely on-device.</p>
+    </div>
+    <div class="vs-card">
+      <h3><a href="/guides/mdb-vs-accdb/">MDB vs ACCDB</a></h3>
+      <p>The two Access generations compared — Jet-era MDB against the ACCDB format Access 2007 made the default.</p>
+    </div>
+    <div class="vs-card">
+      <h3><a href="/guides/open-access-database-android/">Opening an Access database on Android</a></h3>
+      <p>Read MDB and ACCDB files on an Android phone with a native engine — no Microsoft software involved.</p>
+    </div>
+    <div class="vs-card">
+      <h3><a href="/guides/open-access-database-iphone-ipad/">Opening an Access database on iPhone &amp; iPad</a></h3>
+      <p>MDB and ACCDB files open on-device on iPhone and iPad, with a health check before any table appears.</p>
+    </div>
+    <div class="vs-card">
+      <h3><a href="/guides/view-access-queries-and-relationships/">View Access queries &amp; relationships</a></h3>
+      <p>Every saved query in an Access database, with the SQL rebuilt for reading, plus the foreign-key diagram.</p>
+    </div>
+    <div class="vs-card">
+      <h3><a href="/guides/export-access-data-csv-excel/">Exporting Access data to CSV or Excel</a></h3>
+      <p>One table as CSV or the whole database as an XLSX workbook, written on the phone — the original file untouched.</p>
+    </div>
+    <div class="vs-card">
+      <h3><a href="/guides/convert-mdb-to-sqlite/">Converting MDB to SQLite</a></h3>
+      <p>All tables land in one .sqlite file, converted on-device in the background with progress you can cancel.</p>
+    </div>
+    <div class="vs-card">
+      <h3><a href="/guides/mdb-file-wont-open/">MDB file won't open?</a></h3>
+      <p>The usual causes, from incomplete transfers to damaged media, and the health check that tells you which one you have.</p>
+    </div>
+    <div class="vs-card">
+      <h3><a href="/guides/microsoft-access-alternatives-mobile/">Microsoft Access alternatives on mobile</a></h3>
+      <p>Remote desktop, online converters and on-device viewers compared, with a five-point checklist for choosing.</p>
+    </div>
+  </div>
+
+  <h2>Frequently asked questions</h2>
+  <div class="faq">
+    <details><summary>Are these guides free to read?</summary><p>Yes — every guide on this page is free to read, no account needed. Database Viewer itself is free to start with a generous free preview; Pro is a one-time purchase.</p></details>
+    <details><summary>Which formats does the app support?</summary><p>Database Viewer opens ten formats on Android and iPhone: MDB and ACCDB (Microsoft Access), SQLite, DBF (dBase), ODS (OpenDocument spreadsheets), XLSX and XLSM (Excel workbooks), and CSV, TSV and SQL dump as plain-text data. The formats index links a guide for each.</p></details>
+    <details><summary>Is my data uploaded?</summary><p>No. Every file is read on the phone itself: nothing is sent to a server, no account is required, and the original file opens read-only.</p></details>
+  </div>
+
+  <h2 id="get">Get Database Viewer</h2>
+  <div class="cta-row">
+    <a class="btn btn-accent" href="https://apps.apple.com/app/database-viewer-sqlite-dbf/id6811615295" rel="noopener">Download on the App Store</a>
+    <a class="btn btn-ghost" href="https://play.google.com/store/apps/details?id=com.lababacy.accessviewer&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dseo" rel="noopener">Get it on Google Play</a>
+  </div>
+  <p class="fineprint">Free to start with a generous free preview — Pro is a one-time purchase.</p>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <ul class="foot-links">
+      <li><a href="/">All apps</a></li>
+      <li><a href="/databaseviewer/">Database Viewer</a></li>
+      <li><a href="/databaseviewer/privacy/">Privacy Policy</a></li>
+      <li><a href="/databaseviewer/support/">Support</a></li>
+      <li><a href="mailto:w4n9we1@gmail.com">Contact</a></li>
+    </ul>
+    <p class="copyright">© 2026 Lababacy</p>
+  </div>
+</footer>
+
+</body>
+</html>
